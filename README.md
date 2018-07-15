@@ -1,1 +1,2 @@
-# Scientific-CalculatorAdvanced featured desktop scientific calculator.
+# Scientific-Calculator
+Advanced featured desktop scientific calculator.
