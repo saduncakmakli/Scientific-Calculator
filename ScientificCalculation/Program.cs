@@ -17,7 +17,8 @@ namespace ScientificCalculation
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Console.WriteLine("Program started.");
-            Application.Run(new CalculatorUI());
+            CalculatorUI calculatorUI = new CalculatorUI();
+            Application.Run(calculatorUI);
         }
     }
 }

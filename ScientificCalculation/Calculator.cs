@@ -2125,6 +2125,7 @@ namespace ScientificCalculation
             isHaveNumber = false;
             isHaveComma = false;
             isFirstStart = true;
+            whichBracket = 0;
             isHaveNegativeBracket = false;
             isOperationHavePermit = false;
             wasEqualZeroTheTemporaryOperationPriorityInThePreviousStep = true;

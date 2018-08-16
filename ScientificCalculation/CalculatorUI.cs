@@ -701,6 +701,7 @@ namespace ScientificCalculation
         internal static Calculator eCalculator = new Calculator(5);
         internal static Calculator fCalculator = new Calculator(6);
         Debug debug = new Debug();
+        Options options = new Options();
 
         bool isVersiyonActivePassive;
 
@@ -746,6 +747,7 @@ namespace ScientificCalculation
                 tb_sonuc.Text = fCalculator.EnterNumber(Convert.ToInt32(number));
 
             //Optionsla istenirse kapatma özelliği gelecek.
+            if(options.IsEnableOtomatikComma() == true)
             tb_sonuc.Text = Calculator.DotNotationResultScreen(tb_sonuc.Text);
         }
 
@@ -789,7 +791,8 @@ namespace ScientificCalculation
             Logs.logs_record.Add("Pressed positive/negative brackets button.");
 
             //Optionsla istenirse kapatma özelliği gelecek.
-            tb_sonuc.Text = Calculator.DotNotationResultScreen(tb_sonuc.Text);
+            if (options.IsEnableOtomatikComma() == true)
+                tb_sonuc.Text = Calculator.DotNotationResultScreen(tb_sonuc.Text);
         }
 
         private void CommaButton_Click(object sender, EventArgs e)
@@ -832,7 +835,8 @@ namespace ScientificCalculation
             Logs.logs_record.Add("Pressed Comma Button.");
 
             //Optionsla istenirse kapatma özelliği gelecek.
-            tb_sonuc.Text = Calculator.DotNotationResultScreen(tb_sonuc.Text);
+            if (options.IsEnableOtomatikComma() == true)
+                tb_sonuc.Text = Calculator.DotNotationResultScreen(tb_sonuc.Text);
         }
 
         private void PlusButton_Click(object sender, EventArgs e)
@@ -1589,7 +1593,8 @@ namespace ScientificCalculation
             }
 
             //Optionsla istenirse kapatma özelliği gelecek.
-            tb_sonuc.Text = Calculator.DotNotationResultScreen(tb_sonuc.Text);
+            if (options.IsEnableOtomatikComma() == true)
+                tb_sonuc.Text = Calculator.DotNotationResultScreen(tb_sonuc.Text);
         }
 
         private void button_CE_Click(object sender, EventArgs e)
@@ -1874,6 +1879,25 @@ namespace ScientificCalculation
 
         }
 
+        Boolean isOptionsActivePassive = false;
+        internal void button_options_Click(object sender, EventArgs e)
+        {
+            Logs.logs_record.Add("Double Pressed Versiyon Text.");
+            if (isOptionsActivePassive == true)
+            {
+                Logs.logs_record.Add("DEBUG MODE OFF.");
+                isOptionsActivePassive = false;
+                button_options.BackColor = Color.White;
+                options.Hide();
+            }
+            else
+            {
+                Logs.logs_record.Add("DEBUG MODE ON!");
+                isOptionsActivePassive = true;
+                button_options.BackColor = Color.Red;
+                options.Show();
+            }
+        }
     }
 }
 

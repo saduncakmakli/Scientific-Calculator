@@ -79,6 +79,7 @@
             this.help_label_1 = new System.Windows.Forms.Label();
             this.help_label_2 = new System.Windows.Forms.Label();
             this.help_label_3 = new System.Windows.Forms.Label();
+            this.button_options = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.button_help)).BeginInit();
             this.SuspendLayout();
             // 
@@ -590,10 +591,18 @@
             resources.ApplyResources(this.help_label_3, "help_label_3");
             this.help_label_3.Name = "help_label_3";
             // 
+            // button_options
+            // 
+            resources.ApplyResources(this.button_options, "button_options");
+            this.button_options.Name = "button_options";
+            this.button_options.UseVisualStyleBackColor = true;
+            this.button_options.Click += new System.EventHandler(this.button_options_Click);
+            // 
             // CalculatorUI
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.button_options);
             this.Controls.Add(this.help_label_3);
             this.Controls.Add(this.help_label_2);
             this.Controls.Add(this.help_label_1);
@@ -711,6 +720,7 @@
         private System.Windows.Forms.Label help_label_1;
         private System.Windows.Forms.Label help_label_2;
         private System.Windows.Forms.Label help_label_3;
+        private System.Windows.Forms.Button button_options;
     }
 }
 
