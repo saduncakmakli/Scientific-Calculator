@@ -701,7 +701,7 @@ namespace ScientificCalculation
         internal static Calculator eCalculator = new Calculator(5);
         internal static Calculator fCalculator = new Calculator(6);
         Debug debug = new Debug();
-        Options options = new Options();
+        internal static Options options = new Options();
 
         bool isVersiyonActivePassive;
 
@@ -709,6 +709,26 @@ namespace ScientificCalculation
         {
             Logs.logs_record.Add("Form Component Initialized.");
             InitializeComponent();
+        }
+        internal void RewriteResultScreen()
+        {
+            if (Calculator.selectedRec == String.Empty)
+                tb_sonuc.Text = mainCalculator.ResultScreen;
+            else if (Calculator.selectedRec == "A")
+                tb_sonuc.Text = aCalculator.ResultScreen;
+            else if (Calculator.selectedRec == "B")
+                tb_sonuc.Text = bCalculator.ResultScreen;
+            else if (Calculator.selectedRec == "C")
+                tb_sonuc.Text = cCalculator.ResultScreen;
+            else if (Calculator.selectedRec == "D")
+                tb_sonuc.Text = dCalculator.ResultScreen;
+            else if (Calculator.selectedRec == "E")
+                tb_sonuc.Text = eCalculator.ResultScreen;
+            else if (Calculator.selectedRec == "F")
+                tb_sonuc.Text = fCalculator.ResultScreen;
+
+            if (options.IsEnableOtomatikComma() == true)
+                tb_sonuc.Text = Calculator.DotNotationResultScreen(tb_sonuc.Text);
         }
 
         private void CalculatorUI_Load(object sender, EventArgs e)
