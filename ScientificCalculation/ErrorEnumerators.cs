@@ -10,4 +10,9 @@ namespace ScientificCalculation
     {
         UNSUCCESSFUL, SUCCESSFUL, INVALID_OPERATION, NUMBER_NOT_FOUND
     }
+
+    enum Resource
+    {
+        KEYBOARD, MOUSE, SCREEN
+    }
 }

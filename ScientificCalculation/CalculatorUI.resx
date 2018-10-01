@@ -1483,22 +1483,22 @@
     <value>True</value>
   </data>
   <data name="help_label_3.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Trebuchet MS, 12pt</value>
+    <value>Trebuchet MS, 11.25pt</value>
   </data>
   <data name="help_label_3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="help_label_3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>26, 0</value>
+    <value>0, 0</value>
   </data>
   <data name="help_label_3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>352, 22</value>
+    <value>380, 20</value>
   </data>
   <data name="help_label_3.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
   </data>
   <data name="help_label_3.Text" xml:space="preserve">
-    <value>PLEASE PRESS F1 TO CLOSE THE EXPLANATIONS </value>
+    <value>PLEASE PRESS DOWN F1 TO CLOSE THE EXPLANATIONS </value>
   </data>
   <data name="help_label_3.Visible" type="System.Boolean, mscorlib">
     <value>False</value>

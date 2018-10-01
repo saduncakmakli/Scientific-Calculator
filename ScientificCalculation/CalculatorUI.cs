@@ -693,7 +693,7 @@ namespace ScientificCalculation
     public partial class CalculatorUI : Form
     {
         //Objects
-        internal static Calculator mainCalculator = new Calculator(0);
+        internal static Calculator mainCalculator = new Calculator(0); //Calculator(0) is always main calculator. Others it doesn't matter.
         internal static Calculator aCalculator = new Calculator(1);
         internal static Calculator bCalculator = new Calculator(2);
         internal static Calculator cCalculator = new Calculator(3);
@@ -1624,13 +1624,17 @@ namespace ScientificCalculation
 
         private void button_help_MouseDown(object sender, MouseEventArgs e)
         {
+            button_help.Visible = false;
             help_label_1.Visible = true;
             help_label_2.Visible = true;
+            help_label_3.Location = new Point(0, 0);
+            help_label_3.Text = "PLEASE PRESS DOWN MOUSE TO CLOSE THE EXPLANATIONS";
             help_label_3.Visible = true;
         }
 
         private void button_help_MouseUp(object sender, MouseEventArgs e)
         {
+            button_help.Visible = true;
             help_label_1.Visible = false;
             help_label_2.Visible = false;
             help_label_3.Visible = false;
@@ -1648,6 +1652,7 @@ namespace ScientificCalculation
         private bool special_key_altGr = false;
         private bool special_key_ctrl = false;
         private bool special_key_shift = false;
+
         //TUSLARI YAKALAYAN METHOD
         private void CalculatorUI_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
         {
@@ -1866,7 +1871,12 @@ namespace ScientificCalculation
 
             if (e.KeyCode == Keys.F1)
             {
-                button_help_MouseDown(null, null);
+                button_help.Visible = false;
+                help_label_1.Visible = true;
+                help_label_2.Visible = true;
+                help_label_3.Location = new Point(15, 0);
+                help_label_3.Text = "PLEASE PRESS DOWN F1 TO CLOSE THE EXPLANATIONS";
+                help_label_3.Visible = true;
             }
 
         }
@@ -1890,16 +1900,21 @@ namespace ScientificCalculation
 
             if (e.KeyCode == Keys.F1)
             {
-                button_help_MouseUp(null, null);
+                button_help.Visible = true;
+                help_label_1.Visible = false;
+                help_label_2.Visible = false;
+                help_label_3.Visible = false;
             }
         }
 
         private void button_equals_Click(object sender, EventArgs e)
         {
-
+            mainCalculator.Equals();
         }
 
+        List<int> debuglist = new List<int>();
         Boolean isOptionsActivePassive = false;
+
         internal void button_options_Click(object sender, EventArgs e)
         {
             Logs.logs_record.Add("Double Pressed Versiyon Text.");

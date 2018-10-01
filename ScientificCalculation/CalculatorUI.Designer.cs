@@ -363,6 +363,7 @@
             resources.ApplyResources(this.button_equals, "button_equals");
             this.button_equals.Name = "button_equals";
             this.button_equals.UseVisualStyleBackColor = false;
+            this.button_equals.Click += new System.EventHandler(this.button_equals_Click);
             this.button_equals.KeyDown += new System.Windows.Forms.KeyEventHandler(this.CalculatorUI_KeyDown);
             this.button_equals.KeyUp += new System.Windows.Forms.KeyEventHandler(this.CalculatorUI_KeyUp);
             this.button_equals.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.CalculatorUI_PreviewKeyDown);
