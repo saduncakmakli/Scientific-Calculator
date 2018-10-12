@@ -11,7 +11,7 @@ namespace ScientificCalculation
         UNSUCCESSFUL, SUCCESSFUL, INVALID_OPERATION, NUMBER_NOT_FOUND
     }
 
-    enum Resource
+    enum ResourceEnumerators
     {
         KEYBOARD, MOUSE, SCREEN
     }

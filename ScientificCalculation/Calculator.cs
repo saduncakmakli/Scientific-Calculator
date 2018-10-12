@@ -716,7 +716,7 @@ namespace ScientificCalculation
         /// <summary>
         /// 
         /// </summary>
-        private int rec;
+        private readonly int rec;
 
         /// <summary>
         /// 
@@ -775,7 +775,7 @@ namespace ScientificCalculation
         /// 
         /// </summary>
         private bool[] isBracketsHaveOperation = new bool[100];
-        
+
 
         /// <summary>
         /// 
@@ -856,21 +856,21 @@ namespace ScientificCalculation
 
         }
 
-        public int Rec { get => rec;}
-        public int WhichNumber { get => whichNumber;}
-        public int WhichOperation { get => whichOperation;}
-        public int WhichBracket { get => whichBracket;}
-        public int TemporaryProcessingPriority { get => temporaryProcessingPriority;}
-        public bool IsHaveOperation { get => isHaveOperation;}
-        public bool IsHaveNumber { get => isHaveNumber;}
-        public bool IsHaveComma { get => isHaveComma;}
-        public bool IsFirstStart { get => isFirstStart;}
-        public bool IsHaveNegativeBracket { get => isHaveNegativeBracket;}
-        public bool IsOperationHavePermit { get => isOperationHavePermit;}
-        public bool[] IsBracketsHaveOperation { get => isBracketsHaveOperation;}
-        public List<double> MemorizedNumbers { get => memorizedNumbers;}
-        public List<int> MemorizedProcessPiority { get => memorizedProcessPiority;}
-        public List<int> MemorizedOperations { get => memorizedOperations;}
+        public int Rec { get => rec; }
+        public int WhichNumber { get => whichNumber; }
+        public int WhichOperation { get => whichOperation; }
+        public int WhichBracket { get => whichBracket; }
+        public int TemporaryProcessingPriority { get => temporaryProcessingPriority; }
+        public bool IsHaveOperation { get => isHaveOperation; }
+        public bool IsHaveNumber { get => isHaveNumber; }
+        public bool IsHaveComma { get => isHaveComma; }
+        public bool IsFirstStart { get => isFirstStart; }
+        public bool IsHaveNegativeBracket { get => isHaveNegativeBracket; }
+        public bool IsOperationHavePermit { get => isOperationHavePermit; }
+        public bool[] IsBracketsHaveOperation { get => isBracketsHaveOperation; }
+        public List<double> MemorizedNumbers { get => memorizedNumbers; }
+        public List<int> MemorizedProcessPiority { get => memorizedProcessPiority; }
+        public List<int> MemorizedOperations { get => memorizedOperations; }
 
         //METHODS ----------------------------------------------------------------------------------
 
@@ -935,9 +935,9 @@ namespace ScientificCalculation
             string integerSectionDotNotation = String.Empty;
             char[] tempCharArray = integerSection.ToCharArray();
             int timer2 = 0;
-            for (int timer = tempCharArray.Length-1; timer > -1; timer--)
+            for (int timer = tempCharArray.Length - 1; timer > -1; timer--)
             {
-                if (timer == tempCharArray.Length-1)
+                if (timer == tempCharArray.Length - 1)
                 {
                     integerSectionDotNotationInverted = tempCharArray[timer].ToString();
                     timer2++;
@@ -948,7 +948,7 @@ namespace ScientificCalculation
                     timer2++;
                     if (timer2 % 3 == 0)
                     {
-                        if (timer-1 != -1)
+                        if (timer - 1 != -1)
                         {
                             integerSectionDotNotationInverted += '.';
                         }
@@ -1001,7 +1001,7 @@ namespace ScientificCalculation
             string decimalSection = String.Empty;
 
             int timer = -1;
-            foreach(char element in tempCharArray)
+            foreach (char element in tempCharArray)
             {
                 timer++;
                 if (element == ',')
@@ -1084,7 +1084,7 @@ namespace ScientificCalculation
             return false;
         }
 
-        public static string NumberItself (string Number)
+        public static string NumberItself(string Number)
         {
             bool isHaveSelfBracketing = false;
             char[] tempCharArray = Number.ToCharArray();
@@ -1141,6 +1141,7 @@ namespace ScientificCalculation
             }
             return isHaveSelfBracketing == true ? numberItself : Number;
         }
+
         /// <summary>
         /// The button used to enter numbers in the calculator.
         /// Enter a single digit (number) as a parameter.
@@ -1296,7 +1297,7 @@ namespace ScientificCalculation
                 {
                     string tempResultScreen = NumberItself(resultScreen);
                     tempResultScreen += ",";
-                    resultScreen = "(" + tempResultScreen + ")"; 
+                    resultScreen = "(" + tempResultScreen + ")";
                     isHaveComma = true;
                     isHaveNumber = false;
                 }
@@ -1338,12 +1339,10 @@ namespace ScientificCalculation
                 wasEqualZeroTheTemporaryOperationPriorityInThePreviousStep = temporaryProcessingPriority == 0 ? true : false;
                 wasEqualTrueTheCriticalPointInThePreviousStep = temporaryProcessingPriority == 0 && wasEqualZeroTheTemporaryOperationPriorityInThePreviousStep == false ? true : false;
                 temporaryProcessingPriority += 1;
-                whichBracket ++;
+                whichBracket++;
                 highestProcessPriorityInLastParanthesesGroup++;
                 operationScreen += " ( ";
             }
-            //FOR DEBUG
-            Console.WriteLine("Which bracket now " + whichBracket);
             return operationScreen;
         }
 
@@ -1386,8 +1385,6 @@ namespace ScientificCalculation
                     whichBracket = 0;
                 }
             }
-            //FOR DEBUG
-            Console.WriteLine("Which bracket now " + whichBracket);
             return operationScreen;
         }
 
@@ -2152,35 +2149,9 @@ namespace ScientificCalculation
 
         }
 
-        
-        public void Equals()
-        {
 
-            bool kendindenparantez = false;
-            char[] GeciciChar = resultScreen.ToCharArray();
-            string sayınınkendisi = "";
-            //Sayının kendisindeki "-"den dolayı parantezi var mı?
-            if (resultScreen.Length > 2)
-            {
-                if (resultScreen[0] == '(' && resultScreen[1] == '-')
-                {
-                    //Sayı "(-a)" şeklindeyse değişkeni true yap.
-                    kendindenparantez = true;
-                    //Parentezi olan sayının kendisini ortaya çıkarma (Sadece parantez kalkar sayının başındaki eksi durur.)
-                    int sayac;
-                    for (sayac = 1; sayac < GeciciChar.Length - 1; sayac++)
-                    {
-                        if (sayac == 1)
-                        {
-                            sayınınkendisi = GeciciChar[sayac].ToString();
-                        }
-                        else
-                        {
-                            sayınınkendisi += GeciciChar[sayac].ToString();
-                        }
-                    }
-                }
-            }
+        public void EqualsProcess()
+        {
 
             //Farklı bir işlem yoksa veya parantez yeni kapatıldığı için işlem izni varsa.
             if ((isHaveNumber == true && isHaveOperation == false) || isOperationHavePermit == true)
@@ -2191,143 +2162,94 @@ namespace ScientificCalculation
                 if (isOperationHavePermit == false)
                 {
                     //Sayıyı hafızaya ekleme bölümü
-                    if (kendindenparantez == false)
+                    if (IsHaveNumberSelfBracketing(resultScreen))
+                        memorizedNumbers.Add(Convert.ToDouble(NumberItself(resultScreen)));
+                    else
                         memorizedNumbers.Add(Convert.ToDouble(resultScreen));
-                    if (kendindenparantez == true)
-                        memorizedNumbers.Add(Convert.ToDouble(sayınınkendisi));
+
                     whichNumber++;
                 }
 
-                //İşlemleri hafızaya ekleme bölümü
-                memorizedOperations.Add(DIVISION);
-                memorizedProcessPiority.Add(temporaryProcessingPriority);
-                whichOperation++;
+                int maximumMemorizedProcessPiority = -1;
+                int maximumMemorizedProcessPiorityIndex = 0;
+                int x;
 
-                operationScreen += resultScreen;
-                resultScreen = "";
-                operationScreen += " / ";
-                isHaveNumber = false;
-                isHaveComma = false;
-                isHaveNegativeBracket = false;
-                isHaveOperation = true;
-                isFirstStart = false;
-                isOperationHavePermit = false;
-
-                //Aynı parantez içindeki işlem kontrolü
-                if (temporaryProcessingPriority > 0)
+                for (x = 0; x < memorizedProcessPiority.Count; x++)
                 {
-                    //İşlem önceliği 1 iken, parantez_islem_iceriyor_mu dizisinin 0. değişkeni kullanılır.
-                    //Her zaman parantez_islem_iceriyor_mu dizisinin ilgili olduğu değişkenin hafızadaki yeri
-                    //gecici islem önceliği değişkenin gösterdiği değerin bir altıdır.
-                    isBracketsHaveOperation[whichBracket] = true;
+                    if (memorizedProcessPiority.ElementAt(x) > maximumMemorizedProcessPiority)
+                    {
+                        maximumMemorizedProcessPiority = memorizedProcessPiority.ElementAt(x);
+                        maximumMemorizedProcessPiorityIndex = x;
+                    }
                 }
-            }
-            //Farklı bir işlem varsa (Son işlem değiştirilir.)
-            else if (isHaveNumber == false && isHaveOperation == true)
-            {
-                memorizedOperations[whichOperation - 1] = DIVISION;
 
-                //ESKİ İŞLEMİ SİLME
-                DeleteOneOperationScreenString();
-                DeleteOneOperationScreenString();
-                DeleteOneOperationScreenString();
+                List<int> maximumMemorizedProcessPiorityIndexs = new List<int>();
 
-                operationScreen += " / ";
-                isHaveNumber = false;
-                isHaveComma = false;
-                isHaveNegativeBracket = false;
-                isHaveOperation = true;
-                isFirstStart = false;
-
-                //Aynı parantez içindeki işlem kontrolü
-                if (temporaryProcessingPriority > 0)
+                int x2;
+                for (x2 = maximumMemorizedProcessPiorityIndex; x2 < memorizedProcessPiority.Count; x2++)
                 {
-                    //İşlem önceliği 1 iken, parantez_islem_iceriyor_mu dizisinin 0. değişkeni kullanılır.
-                    //Her zaman parantez_islem_iceriyor_mu dizisinin ilgili olduğu değişkenin hafızadaki yeri
-                    //gecici islem önceliği değişkenin gösterdiği değerin bir altıdır.
-                    isBracketsHaveOperation[whichBracket] = true;
+                    if (memorizedProcessPiority.ElementAt(x2) == maximumMemorizedProcessPiority)
+                    {
+                        maximumMemorizedProcessPiorityIndexs.Add(x2);
+                    }
                 }
-            }
-            //return operationScreen;
 
-            int maximumMemorizedProcessPiority = -1;
-            int maximumMemorizedProcessPiorityIndex = 0;
-            int x;
-            for (x = 0; x < memorizedProcessPiority.Count; x++)
-            {
-                if (memorizedProcessPiority.ElementAt(x) > maximumMemorizedProcessPiority)
+                //Parantezlerden dolayı oluşan işlem önceliğinde en öncelikli işlemler arasından işlem olarak öncelikli olanı bulmak
+                int maximumOperationPiority = int.MaxValue;
+                int maximumOperationPiorityIndex = -1;
+                int x3;
+                for (x3 = 0; x3 < maximumMemorizedProcessPiorityIndexs.Count; x3++)
                 {
-                    maximumMemorizedProcessPiority = memorizedProcessPiority.ElementAt(x);
-                    maximumMemorizedProcessPiorityIndex = x;
+                    if (memorizedOperations.ElementAt(x3) < maximumOperationPiority)
+                    {
+                        maximumOperationPiorityIndex = x3;
+                        maximumOperationPiority = memorizedOperations.ElementAt(x3);
+                    }
                 }
-            }
 
-            List<int> maximumMemorizedProcessPiorityIndexs = new List<int>();
-
-            int x2;
-            for (x2 = maximumMemorizedProcessPiorityIndex; x2 < memorizedProcessPiority.Count; x2++)
-            {
-                if (memorizedProcessPiority.ElementAt(x2) == maximumMemorizedProcessPiority)
+                //İslemin yapılması
+                double newNumber = 0;
+                switch (maximumOperationPiority)
                 {
-                    maximumMemorizedProcessPiorityIndexs.Add(x2);
+                    case (3):
+                        newNumber = memorizedNumbers.ElementAt(maximumOperationPiorityIndex) * memorizedNumbers.ElementAt(maximumOperationPiorityIndex + 1);
+                        break;
+                    case (4):
+                        newNumber = memorizedNumbers.ElementAt(maximumOperationPiorityIndex) / memorizedNumbers.ElementAt(maximumOperationPiorityIndex + 1);
+                        break;
+                    case (5):
+                        newNumber = memorizedNumbers.ElementAt(maximumOperationPiorityIndex) + memorizedNumbers.ElementAt(maximumOperationPiorityIndex + 1);
+                        break;
+                    case (6):
+                        newNumber = memorizedNumbers.ElementAt(maximumOperationPiorityIndex) - memorizedNumbers.ElementAt(maximumOperationPiorityIndex + 1);
+                        break;
                 }
-            }
 
-            //Parantezlerden dolayı oluşan işlem önceliğinde en öncelikli işlemler arasından işlem olarak öncelikli olanı bulmak
-            int maximumOperationPiority = int.MaxValue;
-            int maximumOperationPiorityIndex = -1;
-            int x3;
-            for (x3 = 0; x3 < maximumMemorizedProcessPiorityIndexs.Count; x3++)
-            {
-                if (memorizedOperations.ElementAt(x3) < maximumOperationPiority)
+
+                memorizedNumbers.RemoveAt(maximumOperationPiorityIndex + 1);
+                memorizedNumbers.Insert(maximumOperationPiorityIndex + 1, newNumber);
+
+                //Listede bir kaydırma işlemi
+
+                //double tempNumber;
+                //int tempOperation;
+                //int tempProcessPiority;
+
+                int x4;
+                for (x4 = maximumOperationPiorityIndex; x4 < memorizedNumbers.Count - 1; x4++)
                 {
-                    maximumOperationPiorityIndex = x3;
-                    maximumOperationPiority = memorizedOperations.ElementAt(x3);
+                    memorizedNumbers.RemoveAt(x4);
+                    memorizedOperations.RemoveAt(x4);
+                    memorizedProcessPiority.RemoveAt(x4);
                 }
+
+                //DEBUG
+                foreach (double number in memorizedNumbers)
+                {
+                    Console.WriteLine(number);
+                }
+
             }
-
-            //İslemin yapılması
-            double newNumber = 0;
-            switch(maximumOperationPiority)
-            {
-                case (3):
-                    newNumber = memorizedNumbers.ElementAt(maximumOperationPiorityIndex) * memorizedNumbers.ElementAt(maximumOperationPiorityIndex + 1);
-                    break;
-                case (4):
-                    newNumber = memorizedNumbers.ElementAt(maximumOperationPiorityIndex) / memorizedNumbers.ElementAt(maximumOperationPiorityIndex + 1);
-                    break;
-                case (5):
-                    newNumber = memorizedNumbers.ElementAt(maximumOperationPiorityIndex) + memorizedNumbers.ElementAt(maximumOperationPiorityIndex + 1);
-                    break;
-                case (6):
-                    newNumber = memorizedNumbers.ElementAt(maximumOperationPiorityIndex) - memorizedNumbers.ElementAt(maximumOperationPiorityIndex + 1);
-                    break;
-            }
-
-            
-            memorizedNumbers.RemoveAt(maximumOperationPiorityIndex + 1);
-            memorizedNumbers.Insert(maximumOperationPiorityIndex + 1, newNumber);
-
-            //Listede bir kaydırma işlemi
-
-            //double tempNumber;
-            //int tempOperation;
-            //int tempProcessPiority;
-
-            int x4;
-            for (x4 = maximumOperationPiorityIndex; x4<memorizedNumbers.Count-1; x4++ )
-            {
-                memorizedNumbers.RemoveAt(x4);
-                memorizedOperations.RemoveAt(x4);
-                memorizedProcessPiority.RemoveAt(x4);
-            }
-
-            //DEBUG
-            foreach (double number in memorizedNumbers)
-            {
-                Console.WriteLine(number);
-            }
-            
         }
     }
 }

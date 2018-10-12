@@ -6,8 +6,10 @@ using System.Windows.Forms;
 
 namespace ScientificCalculation
 {
+    
     static class Program
     {
+        
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
@@ -16,9 +18,10 @@ namespace ScientificCalculation
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Console.WriteLine("Program started.");
             CalculatorUI calculatorUI = new CalculatorUI();
             Application.Run(calculatorUI);
         }
+        
     }
+    
 }

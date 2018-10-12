@@ -702,6 +702,7 @@ namespace ScientificCalculation
         internal static Calculator fCalculator = new Calculator(6);
         Debug debug = new Debug();
         internal static Options options = new Options();
+        internal static AlwaysRunDebugClass DebugClass = new AlwaysRunDebugClass(); //For debug
 
         bool isVersiyonActivePassive;
 
@@ -1501,7 +1502,7 @@ namespace ScientificCalculation
             }
         }
 
-        private void button_C_Click(object sender, EventArgs e)
+        private void CButton_Click(object sender, EventArgs e)
         {
             Logs.logs_record.Add("Calculator is cleared.");
             tb_islem.Text = String.Empty;
@@ -1513,9 +1514,10 @@ namespace ScientificCalculation
             dCalculator.CalculatorReset();
             eCalculator.CalculatorReset();
             fCalculator.CalculatorReset();
+            Console.Clear();
         }
 
-        private void button_DEL_Click(object sender, EventArgs e)
+        private void DELButton_Click(object sender, EventArgs e)
         {
             Logs.logs_record.Add("Pressed DEL button.");
             switch (Calculator.selectedRec)
@@ -1617,12 +1619,12 @@ namespace ScientificCalculation
                 tb_sonuc.Text = Calculator.DotNotationResultScreen(tb_sonuc.Text);
         }
 
-        private void button_CE_Click(object sender, EventArgs e)
+        private void CEButton_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void button_help_MouseDown(object sender, MouseEventArgs e)
+        private void HelpButton_MouseDown(object sender, MouseEventArgs e)
         {
             button_help.Visible = false;
             help_label_1.Visible = true;
@@ -1632,7 +1634,7 @@ namespace ScientificCalculation
             help_label_3.Visible = true;
         }
 
-        private void button_help_MouseUp(object sender, MouseEventArgs e)
+        private void HelpButton_MouseUp(object sender, MouseEventArgs e)
         {
             button_help.Visible = true;
             help_label_1.Visible = false;
@@ -1797,7 +1799,7 @@ namespace ScientificCalculation
 
                     case (8):
                     case (46):
-                        button_DEL_Click(null, null);
+                        DELButton_Click(null, null);
                         break;
                 }
             }
@@ -1846,7 +1848,7 @@ namespace ScientificCalculation
                         break;
 
                     case (48):
-                        button_equals_Click(null, null);
+                        EqualsButton_Click(null, null);
                         break;
                 }
             }
@@ -1907,15 +1909,15 @@ namespace ScientificCalculation
             }
         }
 
-        private void button_equals_Click(object sender, EventArgs e)
+        private void EqualsButton_Click(object sender, EventArgs e)
         {
-            mainCalculator.Equals();
+            mainCalculator.EqualsProcess();
         }
 
         List<int> debuglist = new List<int>();
         Boolean isOptionsActivePassive = false;
 
-        internal void button_options_Click(object sender, EventArgs e)
+        internal void OptionsButton_Click(object sender, EventArgs e)
         {
             Logs.logs_record.Add("Double Pressed Versiyon Text.");
             if (isOptionsActivePassive == true)

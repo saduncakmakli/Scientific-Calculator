@@ -7,8 +7,8 @@
     <ProjectGuid>{262F182B-680A-4DC7-B223-4420DBF03338}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>BILIMSEL_HESAP</RootNamespace>
-    <AssemblyName>BILIMSEL HESAP</AssemblyName>
+    <RootNamespace>ScientificCalculation</RootNamespace>
+    <AssemblyName>ScientificCalculation</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -32,6 +32,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -46,6 +49,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AlwaysRunDebugClass.cs" />
     <Compile Include="Calculator.cs" />
     <Compile Include="CalculatorUI.cs">
       <SubType>Form</SubType>
@@ -59,7 +63,7 @@
     <Compile Include="CalculatorUI.Designer.cs">
       <DependentUpon>CalculatorUI.cs</DependentUpon>
     </Compile>
-    <Compile Include="ErrorEnumerators.cs" />
+    <Compile Include="Enumerators.cs" />
     <Compile Include="Logs.cs" />
     <Compile Include="Options.cs">
       <SubType>Form</SubType>
@@ -69,6 +73,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RunnableDebugClass.cs" />
     <EmbeddedResource Include="Debug.resx">
       <DependentUpon>Debug.cs</DependentUpon>
     </EmbeddedResource>
@@ -92,6 +97,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

@@ -141,7 +141,7 @@
             this.button_CE.ForeColor = System.Drawing.SystemColors.ControlText;
             this.button_CE.Name = "button_CE";
             this.button_CE.UseVisualStyleBackColor = false;
-            this.button_CE.Click += new System.EventHandler(this.button_CE_Click);
+            this.button_CE.Click += new System.EventHandler(this.CEButton_Click);
             this.button_CE.KeyDown += new System.Windows.Forms.KeyEventHandler(this.CalculatorUI_KeyDown);
             this.button_CE.KeyUp += new System.Windows.Forms.KeyEventHandler(this.CalculatorUI_KeyUp);
             this.button_CE.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.CalculatorUI_PreviewKeyDown);
@@ -153,7 +153,7 @@
             this.button_C.ForeColor = System.Drawing.SystemColors.ControlText;
             this.button_C.Name = "button_C";
             this.button_C.UseVisualStyleBackColor = false;
-            this.button_C.Click += new System.EventHandler(this.button_C_Click);
+            this.button_C.Click += new System.EventHandler(this.CButton_Click);
             this.button_C.KeyDown += new System.Windows.Forms.KeyEventHandler(this.CalculatorUI_KeyDown);
             this.button_C.KeyUp += new System.Windows.Forms.KeyEventHandler(this.CalculatorUI_KeyUp);
             this.button_C.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.CalculatorUI_PreviewKeyDown);
@@ -165,7 +165,7 @@
             this.button_DEL.ForeColor = System.Drawing.SystemColors.ControlText;
             this.button_DEL.Name = "button_DEL";
             this.button_DEL.UseVisualStyleBackColor = false;
-            this.button_DEL.Click += new System.EventHandler(this.button_DEL_Click);
+            this.button_DEL.Click += new System.EventHandler(this.DELButton_Click);
             this.button_DEL.KeyDown += new System.Windows.Forms.KeyEventHandler(this.CalculatorUI_KeyDown);
             this.button_DEL.KeyUp += new System.Windows.Forms.KeyEventHandler(this.CalculatorUI_KeyUp);
             this.button_DEL.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.CalculatorUI_PreviewKeyDown);
@@ -363,7 +363,7 @@
             resources.ApplyResources(this.button_equals, "button_equals");
             this.button_equals.Name = "button_equals";
             this.button_equals.UseVisualStyleBackColor = false;
-            this.button_equals.Click += new System.EventHandler(this.button_equals_Click);
+            this.button_equals.Click += new System.EventHandler(this.EqualsButton_Click);
             this.button_equals.KeyDown += new System.Windows.Forms.KeyEventHandler(this.CalculatorUI_KeyDown);
             this.button_equals.KeyUp += new System.Windows.Forms.KeyEventHandler(this.CalculatorUI_KeyUp);
             this.button_equals.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.CalculatorUI_PreviewKeyDown);
@@ -571,8 +571,8 @@
             resources.ApplyResources(this.button_help, "button_help");
             this.button_help.Name = "button_help";
             this.button_help.TabStop = false;
-            this.button_help.MouseDown += new System.Windows.Forms.MouseEventHandler(this.button_help_MouseDown);
-            this.button_help.MouseUp += new System.Windows.Forms.MouseEventHandler(this.button_help_MouseUp);
+            this.button_help.MouseDown += new System.Windows.Forms.MouseEventHandler(this.HelpButton_MouseDown);
+            this.button_help.MouseUp += new System.Windows.Forms.MouseEventHandler(this.HelpButton_MouseUp);
             this.button_help.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.CalculatorUI_PreviewKeyDown);
             // 
             // help_label_1
@@ -597,7 +597,7 @@
             resources.ApplyResources(this.button_options, "button_options");
             this.button_options.Name = "button_options";
             this.button_options.UseVisualStyleBackColor = true;
-            this.button_options.Click += new System.EventHandler(this.button_options_Click);
+            this.button_options.Click += new System.EventHandler(this.OptionsButton_Click);
             // 
             // CalculatorUI
             // 
