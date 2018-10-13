@@ -6,13 +6,18 @@ using System.Threading.Tasks;
 
 namespace ScientificCalculation
 {
-    enum ErrorEnumerators
+    internal enum ErrorEnumerators
     {
         UNSUCCESSFUL, SUCCESSFUL, INVALID_OPERATION, NUMBER_NOT_FOUND
     }
 
-    enum ResourceEnumerators
+    internal enum ResourceEnumerators
     {
         KEYBOARD, MOUSE, SCREEN
+    }
+    
+    internal enum Operations
+    {
+        NULL,EXP,ROOT,CROSS,DIVISION,PLUS,MINUS
     }
 }

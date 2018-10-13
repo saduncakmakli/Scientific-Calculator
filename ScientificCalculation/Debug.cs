@@ -768,27 +768,27 @@ namespace ScientificCalculation
                 //Hatanın çözümü için parantez yeni kapatıldığında debugger listview, güncellemeyi durduracak, yeni işleme basıldığında tekrar başlayacak
                 if (CalculatorUI.mainCalculator.MemorizedOperations.Count > sayac)
                 {
-                    if (CalculatorUI.mainCalculator.MemorizedOperations[sayac] == Calculator.EXP)
+                    if (CalculatorUI.mainCalculator.MemorizedOperations[sayac] == Operations.EXP)
                     {
                         listviewItem.SubItems.Add("^");
                     }
-                    else if (CalculatorUI.mainCalculator.MemorizedOperations[sayac] == Calculator.ROOT)
+                    else if (CalculatorUI.mainCalculator.MemorizedOperations[sayac] == Operations.ROOT)
                     {
                         listviewItem.SubItems.Add("√¯");
                     }
-                    else if (CalculatorUI.mainCalculator.MemorizedOperations[sayac] == Calculator.CROSS)
+                    else if (CalculatorUI.mainCalculator.MemorizedOperations[sayac] == Operations.CROSS)
                     {
                         listviewItem.SubItems.Add("*");
                     }
-                    else if (CalculatorUI.mainCalculator.MemorizedOperations[sayac] == Calculator.DIVISION)
+                    else if (CalculatorUI.mainCalculator.MemorizedOperations[sayac] == Operations.DIVISION)
                     {
                         listviewItem.SubItems.Add("/");
                     }
-                    else if (CalculatorUI.mainCalculator.MemorizedOperations[sayac] == Calculator.PLUS)
+                    else if (CalculatorUI.mainCalculator.MemorizedOperations[sayac] == Operations.PLUS)
                     {
                         listviewItem.SubItems.Add("+");
                     }
-                    else if (CalculatorUI.mainCalculator.MemorizedOperations[sayac] == Calculator.MINUS)
+                    else if (CalculatorUI.mainCalculator.MemorizedOperations[sayac] == Operations.MINUS)
                     {
                         listviewItem.SubItems.Add("-");
                     }

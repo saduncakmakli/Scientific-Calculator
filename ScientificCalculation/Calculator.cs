@@ -703,14 +703,6 @@ namespace ScientificCalculation
             CalculatorReset();
         }
 
-        //İşlemleri ifade eden sayılar
-        public const int EXP = 1;
-        public const int ROOT = 2;
-        public const int CROSS = 3;
-        public const int DIVISION = 4;
-        public const int PLUS = 5;
-        public const int MINUS = 6;
-
         //Hesap sınıfının ilk nesnesinde rec "0"a eşittir.
         //Ve ana hesabı o yapar.
         /// <summary>
@@ -794,7 +786,7 @@ namespace ScientificCalculation
         /// <summary>
         /// 
         /// </summary>
-        private List<int> memorizedOperations = new List<int>();
+        private List<Operations> memorizedOperations = new List<Operations>();
 
 
         /// <summary>
@@ -870,7 +862,7 @@ namespace ScientificCalculation
         public bool[] IsBracketsHaveOperation { get => isBracketsHaveOperation; }
         public List<double> MemorizedNumbers { get => memorizedNumbers; }
         public List<int> MemorizedProcessPiority { get => memorizedProcessPiority; }
-        public List<int> MemorizedOperations { get => memorizedOperations; }
+        public List<Operations> MemorizedOperations { get => memorizedOperations; }
 
         //METHODS ----------------------------------------------------------------------------------
 
@@ -1737,7 +1729,7 @@ namespace ScientificCalculation
                 }
 
                 //İşlemleri hafızaya ekleme bölümü
-                memorizedOperations.Add(PLUS);
+                memorizedOperations.Add(Operations.PLUS);
                 memorizedProcessPiority.Add(temporaryProcessingPriority);
                 whichOperation++;
 
@@ -1763,7 +1755,7 @@ namespace ScientificCalculation
             //Farklı bir işlem varsa (Son işlem değiştirilir.)
             else if (isHaveNumber == false && isHaveOperation == true)
             {
-                memorizedOperations[whichOperation - 1] = PLUS;
+                memorizedOperations[whichOperation - 1] = Operations.PLUS;
 
                 //ESKİ İŞLEMİ SİLME
                 DeleteOneOperationScreenString();
@@ -1839,7 +1831,7 @@ namespace ScientificCalculation
                 }
 
                 //İşlemleri hafızaya ekleme bölümü
-                memorizedOperations.Add(MINUS);
+                memorizedOperations.Add(Operations.MINUS);
                 memorizedProcessPiority.Add(temporaryProcessingPriority);
                 whichOperation++;
 
@@ -1865,7 +1857,7 @@ namespace ScientificCalculation
             //Farklı bir işlem varsa (Son işlem değiştirilir.)
             else if (isHaveNumber == false && isHaveOperation == true)
             {
-                memorizedOperations[whichOperation - 1] = MINUS;
+                memorizedOperations[whichOperation - 1] = Operations.MINUS;
 
                 //ESKİ İŞLEMİ SİLME
                 DeleteOneOperationScreenString();
@@ -1940,7 +1932,7 @@ namespace ScientificCalculation
                 }
 
                 //İşlemleri hafızaya ekleme bölümü
-                memorizedOperations.Add(CROSS);
+                memorizedOperations.Add(Operations.CROSS);
                 memorizedProcessPiority.Add(temporaryProcessingPriority);
                 whichOperation++;
 
@@ -1966,7 +1958,7 @@ namespace ScientificCalculation
             //Farklı bir işlem varsa (Son işlem değiştirilir.)
             else if (isHaveNumber == false && isHaveOperation == true)
             {
-                memorizedOperations[whichOperation - 1] = CROSS;
+                memorizedOperations[whichOperation - 1] = Operations.CROSS;
 
                 //ESKİ İŞLEMİ SİLME
                 DeleteOneOperationScreenString();
@@ -2041,7 +2033,7 @@ namespace ScientificCalculation
                 }
 
                 //İşlemleri hafızaya ekleme bölümü
-                memorizedOperations.Add(DIVISION);
+                memorizedOperations.Add(Operations.DIVISION);
                 memorizedProcessPiority.Add(temporaryProcessingPriority);
                 whichOperation++;
 
@@ -2067,7 +2059,7 @@ namespace ScientificCalculation
             //Farklı bir işlem varsa (Son işlem değiştirilir.)
             else if (isHaveNumber == false && isHaveOperation == true)
             {
-                memorizedOperations[whichOperation - 1] = DIVISION;
+                memorizedOperations[whichOperation - 1] = Operations.DIVISION;
 
                 //ESKİ İŞLEMİ SİLME
                 DeleteOneOperationScreenString();
@@ -2200,10 +2192,10 @@ namespace ScientificCalculation
                 int x3;
                 for (x3 = 0; x3 < maximumMemorizedProcessPiorityIndexs.Count; x3++)
                 {
-                    if (memorizedOperations.ElementAt(x3) < maximumOperationPiority)
+                    if (Convert.ToInt32(memorizedOperations.ElementAt(x3)) < maximumOperationPiority)
                     {
                         maximumOperationPiorityIndex = x3;
-                        maximumOperationPiority = memorizedOperations.ElementAt(x3);
+                        maximumOperationPiority = Convert.ToInt32(memorizedOperations.ElementAt(x3));
                     }
                 }
 
