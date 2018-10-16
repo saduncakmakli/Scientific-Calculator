@@ -194,6 +194,820 @@
   <metadata name="tmr_auto_refresh.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
+  <data name="&gt;&gt;lblMainScreen.Name" xml:space="preserve">
+    <value>lblMainScreen</value>
+  </data>
+  <data name="&gt;&gt;lblMainScreen.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblMainScreen.Parent" xml:space="preserve">
+    <value>tabPageMainRec</value>
+  </data>
+  <data name="&gt;&gt;lblMainScreen.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;tbMainSonuc.Name" xml:space="preserve">
+    <value>tbMainSonuc</value>
+  </data>
+  <data name="&gt;&gt;tbMainSonuc.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tbMainSonuc.Parent" xml:space="preserve">
+    <value>tabPageMainRec</value>
+  </data>
+  <data name="&gt;&gt;tbMainSonuc.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;tbMainIslem.Name" xml:space="preserve">
+    <value>tbMainIslem</value>
+  </data>
+  <data name="&gt;&gt;tbMainIslem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tbMainIslem.Parent" xml:space="preserve">
+    <value>tabPageMainRec</value>
+  </data>
+  <data name="&gt;&gt;tbMainIslem.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;lblMainRecTemporaryProcessingPriority.Name" xml:space="preserve">
+    <value>lblMainRecTemporaryProcessingPriority</value>
+  </data>
+  <data name="&gt;&gt;lblMainRecTemporaryProcessingPriority.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblMainRecTemporaryProcessingPriority.Parent" xml:space="preserve">
+    <value>tabPageMainRec</value>
+  </data>
+  <data name="&gt;&gt;lblMainRecTemporaryProcessingPriority.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;lblMainRecWhichBracket.Name" xml:space="preserve">
+    <value>lblMainRecWhichBracket</value>
+  </data>
+  <data name="&gt;&gt;lblMainRecWhichBracket.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblMainRecWhichBracket.Parent" xml:space="preserve">
+    <value>tabPageMainRec</value>
+  </data>
+  <data name="&gt;&gt;lblMainRecWhichBracket.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;lblMainRecWhichOperation.Name" xml:space="preserve">
+    <value>lblMainRecWhichOperation</value>
+  </data>
+  <data name="&gt;&gt;lblMainRecWhichOperation.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblMainRecWhichOperation.Parent" xml:space="preserve">
+    <value>tabPageMainRec</value>
+  </data>
+  <data name="&gt;&gt;lblMainRecWhichOperation.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;lblMainRecWhichNumber.Name" xml:space="preserve">
+    <value>lblMainRecWhichNumber</value>
+  </data>
+  <data name="&gt;&gt;lblMainRecWhichNumber.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblMainRecWhichNumber.Parent" xml:space="preserve">
+    <value>tabPageMainRec</value>
+  </data>
+  <data name="&gt;&gt;lblMainRecWhichNumber.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;lblMainRecIsOperationHavePermit.Name" xml:space="preserve">
+    <value>lblMainRecIsOperationHavePermit</value>
+  </data>
+  <data name="&gt;&gt;lblMainRecIsOperationHavePermit.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblMainRecIsOperationHavePermit.Parent" xml:space="preserve">
+    <value>tabPageMainRec</value>
+  </data>
+  <data name="&gt;&gt;lblMainRecIsOperationHavePermit.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;lblMainRecIsHaveNegativeBracket.Name" xml:space="preserve">
+    <value>lblMainRecIsHaveNegativeBracket</value>
+  </data>
+  <data name="&gt;&gt;lblMainRecIsHaveNegativeBracket.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblMainRecIsHaveNegativeBracket.Parent" xml:space="preserve">
+    <value>tabPageMainRec</value>
+  </data>
+  <data name="&gt;&gt;lblMainRecIsHaveNegativeBracket.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;lblMainRecIsHaveComma.Name" xml:space="preserve">
+    <value>lblMainRecIsHaveComma</value>
+  </data>
+  <data name="&gt;&gt;lblMainRecIsHaveComma.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblMainRecIsHaveComma.Parent" xml:space="preserve">
+    <value>tabPageMainRec</value>
+  </data>
+  <data name="&gt;&gt;lblMainRecIsHaveComma.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;lblMainRecIsHaveOperation.Name" xml:space="preserve">
+    <value>lblMainRecIsHaveOperation</value>
+  </data>
+  <data name="&gt;&gt;lblMainRecIsHaveOperation.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblMainRecIsHaveOperation.Parent" xml:space="preserve">
+    <value>tabPageMainRec</value>
+  </data>
+  <data name="&gt;&gt;lblMainRecIsHaveOperation.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;lblMainRecIsHaveNumber.Name" xml:space="preserve">
+    <value>lblMainRecIsHaveNumber</value>
+  </data>
+  <data name="&gt;&gt;lblMainRecIsHaveNumber.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblMainRecIsHaveNumber.Parent" xml:space="preserve">
+    <value>tabPageMainRec</value>
+  </data>
+  <data name="&gt;&gt;lblMainRecIsHaveNumber.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;lblMainRecIsFirstStart.Name" xml:space="preserve">
+    <value>lblMainRecIsFirstStart</value>
+  </data>
+  <data name="&gt;&gt;lblMainRecIsFirstStart.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblMainRecIsFirstStart.Parent" xml:space="preserve">
+    <value>tabPageMainRec</value>
+  </data>
+  <data name="&gt;&gt;lblMainRecIsFirstStart.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="&gt;&gt;listviewMainRec.Name" xml:space="preserve">
+    <value>listviewMainRec</value>
+  </data>
+  <data name="&gt;&gt;listviewMainRec.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;listviewMainRec.Parent" xml:space="preserve">
+    <value>tabPageMainRec</value>
+  </data>
+  <data name="&gt;&gt;listviewMainRec.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="tabPageMainRec.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 22</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="tabPageMainRec.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="tabPageMainRec.Size" type="System.Drawing.Size, System.Drawing">
+    <value>581, 379</value>
+  </data>
+  <data name="tabPageMainRec.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="tabPageMainRec.Text" xml:space="preserve">
+    <value>Main</value>
+  </data>
+  <data name="&gt;&gt;tabPageMainRec.Name" xml:space="preserve">
+    <value>tabPageMainRec</value>
+  </data>
+  <data name="&gt;&gt;tabPageMainRec.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabPageMainRec.Parent" xml:space="preserve">
+    <value>tabControl1</value>
+  </data>
+  <data name="&gt;&gt;tabPageMainRec.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="lblRecATemporaryProcessingPriority.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblRecATemporaryProcessingPriority.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblRecATemporaryProcessingPriority.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 305</value>
+  </data>
+  <data name="lblRecATemporaryProcessingPriority.Size" type="System.Drawing.Size, System.Drawing">
+    <value>146, 13</value>
+  </data>
+  <data name="lblRecATemporaryProcessingPriority.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="lblRecATemporaryProcessingPriority.Text" xml:space="preserve">
+    <value>Current Process Priority Value</value>
+  </data>
+  <data name="&gt;&gt;lblRecATemporaryProcessingPriority.Name" xml:space="preserve">
+    <value>lblRecATemporaryProcessingPriority</value>
+  </data>
+  <data name="&gt;&gt;lblRecATemporaryProcessingPriority.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblRecATemporaryProcessingPriority.Parent" xml:space="preserve">
+    <value>tabPageARec</value>
+  </data>
+  <data name="&gt;&gt;lblRecATemporaryProcessingPriority.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="lblRecAWhichBracket.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblRecAWhichBracket.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblRecAWhichBracket.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 292</value>
+  </data>
+  <data name="lblRecAWhichBracket.Size" type="System.Drawing.Size, System.Drawing">
+    <value>72, 13</value>
+  </data>
+  <data name="lblRecAWhichBracket.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="lblRecAWhichBracket.Text" xml:space="preserve">
+    <value>whichBracket</value>
+  </data>
+  <data name="&gt;&gt;lblRecAWhichBracket.Name" xml:space="preserve">
+    <value>lblRecAWhichBracket</value>
+  </data>
+  <data name="&gt;&gt;lblRecAWhichBracket.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblRecAWhichBracket.Parent" xml:space="preserve">
+    <value>tabPageARec</value>
+  </data>
+  <data name="&gt;&gt;lblRecAWhichBracket.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="lblRecAWhichOperation.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblRecAWhichOperation.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblRecAWhichOperation.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 279</value>
+  </data>
+  <data name="lblRecAWhichOperation.Size" type="System.Drawing.Size, System.Drawing">
+    <value>81, 13</value>
+  </data>
+  <data name="lblRecAWhichOperation.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="lblRecAWhichOperation.Text" xml:space="preserve">
+    <value>whichOperation</value>
+  </data>
+  <data name="&gt;&gt;lblRecAWhichOperation.Name" xml:space="preserve">
+    <value>lblRecAWhichOperation</value>
+  </data>
+  <data name="&gt;&gt;lblRecAWhichOperation.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblRecAWhichOperation.Parent" xml:space="preserve">
+    <value>tabPageARec</value>
+  </data>
+  <data name="&gt;&gt;lblRecAWhichOperation.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="lblRecAWhichNumber.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblRecAWhichNumber.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblRecAWhichNumber.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 266</value>
+  </data>
+  <data name="lblRecAWhichNumber.Size" type="System.Drawing.Size, System.Drawing">
+    <value>72, 13</value>
+  </data>
+  <data name="lblRecAWhichNumber.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="lblRecAWhichNumber.Text" xml:space="preserve">
+    <value>whichNumber</value>
+  </data>
+  <data name="&gt;&gt;lblRecAWhichNumber.Name" xml:space="preserve">
+    <value>lblRecAWhichNumber</value>
+  </data>
+  <data name="&gt;&gt;lblRecAWhichNumber.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblRecAWhichNumber.Parent" xml:space="preserve">
+    <value>tabPageARec</value>
+  </data>
+  <data name="&gt;&gt;lblRecAWhichNumber.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="lblRecAIsOperationHavePermit.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblRecAIsOperationHavePermit.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblRecAIsOperationHavePermit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 73</value>
+  </data>
+  <data name="lblRecAIsOperationHavePermit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>115, 13</value>
+  </data>
+  <data name="lblRecAIsOperationHavePermit.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="lblRecAIsOperationHavePermit.Text" xml:space="preserve">
+    <value>isOperationHavePermit</value>
+  </data>
+  <data name="&gt;&gt;lblRecAIsOperationHavePermit.Name" xml:space="preserve">
+    <value>lblRecAIsOperationHavePermit</value>
+  </data>
+  <data name="&gt;&gt;lblRecAIsOperationHavePermit.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblRecAIsOperationHavePermit.Parent" xml:space="preserve">
+    <value>tabPageARec</value>
+  </data>
+  <data name="&gt;&gt;lblRecAIsOperationHavePermit.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="lblRecAIsHaveNegativeBracket.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblRecAIsHaveNegativeBracket.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblRecAIsHaveNegativeBracket.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 60</value>
+  </data>
+  <data name="lblRecAIsHaveNegativeBracket.Size" type="System.Drawing.Size, System.Drawing">
+    <value>120, 13</value>
+  </data>
+  <data name="lblRecAIsHaveNegativeBracket.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="lblRecAIsHaveNegativeBracket.Text" xml:space="preserve">
+    <value>isHaveNegativeBracket</value>
+  </data>
+  <data name="&gt;&gt;lblRecAIsHaveNegativeBracket.Name" xml:space="preserve">
+    <value>lblRecAIsHaveNegativeBracket</value>
+  </data>
+  <data name="&gt;&gt;lblRecAIsHaveNegativeBracket.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblRecAIsHaveNegativeBracket.Parent" xml:space="preserve">
+    <value>tabPageARec</value>
+  </data>
+  <data name="&gt;&gt;lblRecAIsHaveNegativeBracket.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="lblRecAIsHaveComma.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblRecAIsHaveComma.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblRecAIsHaveComma.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 47</value>
+  </data>
+  <data name="lblRecAIsHaveComma.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 13</value>
+  </data>
+  <data name="lblRecAIsHaveComma.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="lblRecAIsHaveComma.Text" xml:space="preserve">
+    <value>isHaveComma</value>
+  </data>
+  <data name="&gt;&gt;lblRecAIsHaveComma.Name" xml:space="preserve">
+    <value>lblRecAIsHaveComma</value>
+  </data>
+  <data name="&gt;&gt;lblRecAIsHaveComma.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblRecAIsHaveComma.Parent" xml:space="preserve">
+    <value>tabPageARec</value>
+  </data>
+  <data name="&gt;&gt;lblRecAIsHaveComma.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="lblRecAIsHaveOperation.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblRecAIsHaveOperation.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblRecAIsHaveOperation.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 34</value>
+  </data>
+  <data name="lblRecAIsHaveOperation.Size" type="System.Drawing.Size, System.Drawing">
+    <value>86, 13</value>
+  </data>
+  <data name="lblRecAIsHaveOperation.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="lblRecAIsHaveOperation.Text" xml:space="preserve">
+    <value>isHaveOperation</value>
+  </data>
+  <data name="&gt;&gt;lblRecAIsHaveOperation.Name" xml:space="preserve">
+    <value>lblRecAIsHaveOperation</value>
+  </data>
+  <data name="&gt;&gt;lblRecAIsHaveOperation.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblRecAIsHaveOperation.Parent" xml:space="preserve">
+    <value>tabPageARec</value>
+  </data>
+  <data name="&gt;&gt;lblRecAIsHaveOperation.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="lblRecAIsHaveNumber.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblRecAIsHaveNumber.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblRecAIsHaveNumber.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 21</value>
+  </data>
+  <data name="lblRecAIsHaveNumber.Size" type="System.Drawing.Size, System.Drawing">
+    <value>77, 13</value>
+  </data>
+  <data name="lblRecAIsHaveNumber.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="lblRecAIsHaveNumber.Text" xml:space="preserve">
+    <value>isHaveNumber</value>
+  </data>
+  <data name="&gt;&gt;lblRecAIsHaveNumber.Name" xml:space="preserve">
+    <value>lblRecAIsHaveNumber</value>
+  </data>
+  <data name="&gt;&gt;lblRecAIsHaveNumber.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblRecAIsHaveNumber.Parent" xml:space="preserve">
+    <value>tabPageARec</value>
+  </data>
+  <data name="&gt;&gt;lblRecAIsHaveNumber.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="lblRecAIsFirstStart.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblRecAIsFirstStart.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblRecAIsFirstStart.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 8</value>
+  </data>
+  <data name="lblRecAIsFirstStart.Size" type="System.Drawing.Size, System.Drawing">
+    <value>55, 13</value>
+  </data>
+  <data name="lblRecAIsFirstStart.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="lblRecAIsFirstStart.Text" xml:space="preserve">
+    <value>isFirstStart</value>
+  </data>
+  <data name="&gt;&gt;lblRecAIsFirstStart.Name" xml:space="preserve">
+    <value>lblRecAIsFirstStart</value>
+  </data>
+  <data name="&gt;&gt;lblRecAIsFirstStart.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblRecAIsFirstStart.Parent" xml:space="preserve">
+    <value>tabPageARec</value>
+  </data>
+  <data name="&gt;&gt;lblRecAIsFirstStart.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="listviewRecANumbers.Location" type="System.Drawing.Point, System.Drawing">
+    <value>214, 6</value>
+  </data>
+  <data name="listviewRecANumbers.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 366</value>
+  </data>
+  <data name="listviewRecANumbers.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;listviewRecANumbers.Name" xml:space="preserve">
+    <value>listviewRecANumbers</value>
+  </data>
+  <data name="&gt;&gt;listviewRecANumbers.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;listviewRecANumbers.Parent" xml:space="preserve">
+    <value>tabPageARec</value>
+  </data>
+  <data name="&gt;&gt;listviewRecANumbers.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="columnHeader5.Text" xml:space="preserve">
+    <value>Operation</value>
+  </data>
+  <data name="columnHeader5.Width" type="System.Int32, mscorlib">
+    <value>117</value>
+  </data>
+  <data name="listviewRecAOperation.Location" type="System.Drawing.Point, System.Drawing">
+    <value>334, 6</value>
+  </data>
+  <data name="listviewRecAOperation.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 366</value>
+  </data>
+  <data name="listviewRecAOperation.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;listviewRecAOperation.Name" xml:space="preserve">
+    <value>listviewRecAOperation</value>
+  </data>
+  <data name="&gt;&gt;listviewRecAOperation.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;listviewRecAOperation.Parent" xml:space="preserve">
+    <value>tabPageARec</value>
+  </data>
+  <data name="&gt;&gt;listviewRecAOperation.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="columnHeader6.Text" xml:space="preserve">
+    <value>ProcessPiority</value>
+  </data>
+  <data name="columnHeader6.Width" type="System.Int32, mscorlib">
+    <value>117</value>
+  </data>
+  <data name="listviewRecAProcessPiority.Location" type="System.Drawing.Point, System.Drawing">
+    <value>454, 6</value>
+  </data>
+  <data name="listviewRecAProcessPiority.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 366</value>
+  </data>
+  <data name="listviewRecAProcessPiority.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;listviewRecAProcessPiority.Name" xml:space="preserve">
+    <value>listviewRecAProcessPiority</value>
+  </data>
+  <data name="&gt;&gt;listviewRecAProcessPiority.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;listviewRecAProcessPiority.Parent" xml:space="preserve">
+    <value>tabPageARec</value>
+  </data>
+  <data name="&gt;&gt;listviewRecAProcessPiority.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="tabPageARec.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 22</value>
+  </data>
+  <data name="tabPageARec.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="tabPageARec.Size" type="System.Drawing.Size, System.Drawing">
+    <value>581, 379</value>
+  </data>
+  <data name="tabPageARec.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="tabPageARec.Text" xml:space="preserve">
+    <value>A</value>
+  </data>
+  <data name="&gt;&gt;tabPageARec.Name" xml:space="preserve">
+    <value>tabPageARec</value>
+  </data>
+  <data name="&gt;&gt;tabPageARec.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabPageARec.Parent" xml:space="preserve">
+    <value>tabControl1</value>
+  </data>
+  <data name="&gt;&gt;tabPageARec.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;listView3.Name" xml:space="preserve">
+    <value>listView3</value>
+  </data>
+  <data name="&gt;&gt;listView3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;listView3.Parent" xml:space="preserve">
+    <value>tabPageBRec</value>
+  </data>
+  <data name="&gt;&gt;listView3.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="tabPageBRec.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 22</value>
+  </data>
+  <data name="tabPageBRec.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="tabPageBRec.Size" type="System.Drawing.Size, System.Drawing">
+    <value>581, 379</value>
+  </data>
+  <data name="tabPageBRec.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="tabPageBRec.Text" xml:space="preserve">
+    <value>B</value>
+  </data>
+  <data name="&gt;&gt;tabPageBRec.Name" xml:space="preserve">
+    <value>tabPageBRec</value>
+  </data>
+  <data name="&gt;&gt;tabPageBRec.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabPageBRec.Parent" xml:space="preserve">
+    <value>tabControl1</value>
+  </data>
+  <data name="&gt;&gt;tabPageBRec.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;listView4.Name" xml:space="preserve">
+    <value>listView4</value>
+  </data>
+  <data name="&gt;&gt;listView4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;listView4.Parent" xml:space="preserve">
+    <value>tabPageCRec</value>
+  </data>
+  <data name="&gt;&gt;listView4.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="tabPageCRec.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 22</value>
+  </data>
+  <data name="tabPageCRec.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="tabPageCRec.Size" type="System.Drawing.Size, System.Drawing">
+    <value>581, 379</value>
+  </data>
+  <data name="tabPageCRec.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="tabPageCRec.Text" xml:space="preserve">
+    <value>C</value>
+  </data>
+  <data name="&gt;&gt;tabPageCRec.Name" xml:space="preserve">
+    <value>tabPageCRec</value>
+  </data>
+  <data name="&gt;&gt;tabPageCRec.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabPageCRec.Parent" xml:space="preserve">
+    <value>tabControl1</value>
+  </data>
+  <data name="&gt;&gt;tabPageCRec.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;listView5.Name" xml:space="preserve">
+    <value>listView5</value>
+  </data>
+  <data name="&gt;&gt;listView5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;listView5.Parent" xml:space="preserve">
+    <value>tabPageDRec</value>
+  </data>
+  <data name="&gt;&gt;listView5.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="tabPageDRec.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 22</value>
+  </data>
+  <data name="tabPageDRec.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="tabPageDRec.Size" type="System.Drawing.Size, System.Drawing">
+    <value>581, 379</value>
+  </data>
+  <data name="tabPageDRec.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="tabPageDRec.Text" xml:space="preserve">
+    <value>D</value>
+  </data>
+  <data name="&gt;&gt;tabPageDRec.Name" xml:space="preserve">
+    <value>tabPageDRec</value>
+  </data>
+  <data name="&gt;&gt;tabPageDRec.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabPageDRec.Parent" xml:space="preserve">
+    <value>tabControl1</value>
+  </data>
+  <data name="&gt;&gt;tabPageDRec.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;listView6.Name" xml:space="preserve">
+    <value>listView6</value>
+  </data>
+  <data name="&gt;&gt;listView6.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;listView6.Parent" xml:space="preserve">
+    <value>tabPageERec</value>
+  </data>
+  <data name="&gt;&gt;listView6.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="tabPageERec.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 22</value>
+  </data>
+  <data name="tabPageERec.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="tabPageERec.Size" type="System.Drawing.Size, System.Drawing">
+    <value>581, 379</value>
+  </data>
+  <data name="tabPageERec.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="tabPageERec.Text" xml:space="preserve">
+    <value>E</value>
+  </data>
+  <data name="&gt;&gt;tabPageERec.Name" xml:space="preserve">
+    <value>tabPageERec</value>
+  </data>
+  <data name="&gt;&gt;tabPageERec.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabPageERec.Parent" xml:space="preserve">
+    <value>tabControl1</value>
+  </data>
+  <data name="&gt;&gt;tabPageERec.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;listView7.Name" xml:space="preserve">
+    <value>listView7</value>
+  </data>
+  <data name="&gt;&gt;listView7.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;listView7.Parent" xml:space="preserve">
+    <value>tabPageFRec</value>
+  </data>
+  <data name="&gt;&gt;listView7.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="tabPageFRec.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 22</value>
+  </data>
+  <data name="tabPageFRec.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="tabPageFRec.Size" type="System.Drawing.Size, System.Drawing">
+    <value>581, 379</value>
+  </data>
+  <data name="tabPageFRec.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="tabPageFRec.Text" xml:space="preserve">
+    <value>F</value>
+  </data>
+  <data name="&gt;&gt;tabPageFRec.Name" xml:space="preserve">
+    <value>tabPageFRec</value>
+  </data>
+  <data name="&gt;&gt;tabPageFRec.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabPageFRec.Parent" xml:space="preserve">
+    <value>tabControl1</value>
+  </data>
+  <data name="&gt;&gt;tabPageFRec.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="tabControl1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 12</value>
+  </data>
+  <data name="tabControl1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>589, 405</value>
+  </data>
+  <data name="tabControl1.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;tabControl1.Name" xml:space="preserve">
+    <value>tabControl1</value>
+  </data>
+  <data name="&gt;&gt;tabControl1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabControl1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;tabControl1.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
   <data name="lblMainScreen.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -260,7 +1074,6 @@
   <data name="tbMainIslem.Multiline" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="tbMainIslem.ScrollBars" type="System.Windows.Forms.ScrollBars, System.Windows.Forms">
     <value>Vertical</value>
   </data>
@@ -600,288 +1413,6 @@
   <data name="&gt;&gt;listviewMainRec.ZOrder" xml:space="preserve">
     <value>13</value>
   </data>
-  <data name="tabPageMainRec.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 22</value>
-  </data>
-  <data name="tabPageMainRec.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 3</value>
-  </data>
-  <data name="tabPageMainRec.Size" type="System.Drawing.Size, System.Drawing">
-    <value>581, 379</value>
-  </data>
-  <data name="tabPageMainRec.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="tabPageMainRec.Text" xml:space="preserve">
-    <value>Main</value>
-  </data>
-  <data name="&gt;&gt;tabPageMainRec.Name" xml:space="preserve">
-    <value>tabPageMainRec</value>
-  </data>
-  <data name="&gt;&gt;tabPageMainRec.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tabPageMainRec.Parent" xml:space="preserve">
-    <value>tabControl1</value>
-  </data>
-  <data name="&gt;&gt;tabPageMainRec.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;listView2.Name" xml:space="preserve">
-    <value>listView2</value>
-  </data>
-  <data name="&gt;&gt;listView2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ListView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;listView2.Parent" xml:space="preserve">
-    <value>tabPageARec</value>
-  </data>
-  <data name="&gt;&gt;listView2.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="tabPageARec.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 22</value>
-  </data>
-  <data name="tabPageARec.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 3</value>
-  </data>
-  <data name="tabPageARec.Size" type="System.Drawing.Size, System.Drawing">
-    <value>921, 379</value>
-  </data>
-  <data name="tabPageARec.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="tabPageARec.Text" xml:space="preserve">
-    <value>A</value>
-  </data>
-  <data name="&gt;&gt;tabPageARec.Name" xml:space="preserve">
-    <value>tabPageARec</value>
-  </data>
-  <data name="&gt;&gt;tabPageARec.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tabPageARec.Parent" xml:space="preserve">
-    <value>tabControl1</value>
-  </data>
-  <data name="&gt;&gt;tabPageARec.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;listView3.Name" xml:space="preserve">
-    <value>listView3</value>
-  </data>
-  <data name="&gt;&gt;listView3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ListView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;listView3.Parent" xml:space="preserve">
-    <value>tabPageBRec</value>
-  </data>
-  <data name="&gt;&gt;listView3.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="tabPageBRec.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 22</value>
-  </data>
-  <data name="tabPageBRec.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 3</value>
-  </data>
-  <data name="tabPageBRec.Size" type="System.Drawing.Size, System.Drawing">
-    <value>921, 379</value>
-  </data>
-  <data name="tabPageBRec.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="tabPageBRec.Text" xml:space="preserve">
-    <value>B</value>
-  </data>
-  <data name="&gt;&gt;tabPageBRec.Name" xml:space="preserve">
-    <value>tabPageBRec</value>
-  </data>
-  <data name="&gt;&gt;tabPageBRec.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tabPageBRec.Parent" xml:space="preserve">
-    <value>tabControl1</value>
-  </data>
-  <data name="&gt;&gt;tabPageBRec.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;listView4.Name" xml:space="preserve">
-    <value>listView4</value>
-  </data>
-  <data name="&gt;&gt;listView4.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ListView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;listView4.Parent" xml:space="preserve">
-    <value>tabPageCRec</value>
-  </data>
-  <data name="&gt;&gt;listView4.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="tabPageCRec.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 22</value>
-  </data>
-  <data name="tabPageCRec.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 3</value>
-  </data>
-  <data name="tabPageCRec.Size" type="System.Drawing.Size, System.Drawing">
-    <value>921, 379</value>
-  </data>
-  <data name="tabPageCRec.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="tabPageCRec.Text" xml:space="preserve">
-    <value>C</value>
-  </data>
-  <data name="&gt;&gt;tabPageCRec.Name" xml:space="preserve">
-    <value>tabPageCRec</value>
-  </data>
-  <data name="&gt;&gt;tabPageCRec.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tabPageCRec.Parent" xml:space="preserve">
-    <value>tabControl1</value>
-  </data>
-  <data name="&gt;&gt;tabPageCRec.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;listView5.Name" xml:space="preserve">
-    <value>listView5</value>
-  </data>
-  <data name="&gt;&gt;listView5.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ListView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;listView5.Parent" xml:space="preserve">
-    <value>tabPageDRec</value>
-  </data>
-  <data name="&gt;&gt;listView5.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="tabPageDRec.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 22</value>
-  </data>
-  <data name="tabPageDRec.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 3</value>
-  </data>
-  <data name="tabPageDRec.Size" type="System.Drawing.Size, System.Drawing">
-    <value>581, 379</value>
-  </data>
-  <data name="tabPageDRec.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="tabPageDRec.Text" xml:space="preserve">
-    <value>D</value>
-  </data>
-  <data name="&gt;&gt;tabPageDRec.Name" xml:space="preserve">
-    <value>tabPageDRec</value>
-  </data>
-  <data name="&gt;&gt;tabPageDRec.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tabPageDRec.Parent" xml:space="preserve">
-    <value>tabControl1</value>
-  </data>
-  <data name="&gt;&gt;tabPageDRec.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;listView6.Name" xml:space="preserve">
-    <value>listView6</value>
-  </data>
-  <data name="&gt;&gt;listView6.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ListView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;listView6.Parent" xml:space="preserve">
-    <value>tabPageERec</value>
-  </data>
-  <data name="&gt;&gt;listView6.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="tabPageERec.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 22</value>
-  </data>
-  <data name="tabPageERec.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 3</value>
-  </data>
-  <data name="tabPageERec.Size" type="System.Drawing.Size, System.Drawing">
-    <value>921, 379</value>
-  </data>
-  <data name="tabPageERec.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="tabPageERec.Text" xml:space="preserve">
-    <value>E</value>
-  </data>
-  <data name="&gt;&gt;tabPageERec.Name" xml:space="preserve">
-    <value>tabPageERec</value>
-  </data>
-  <data name="&gt;&gt;tabPageERec.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tabPageERec.Parent" xml:space="preserve">
-    <value>tabControl1</value>
-  </data>
-  <data name="&gt;&gt;tabPageERec.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;listView7.Name" xml:space="preserve">
-    <value>listView7</value>
-  </data>
-  <data name="&gt;&gt;listView7.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ListView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;listView7.Parent" xml:space="preserve">
-    <value>tabPageFRec</value>
-  </data>
-  <data name="&gt;&gt;listView7.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="tabPageFRec.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 22</value>
-  </data>
-  <data name="tabPageFRec.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 3</value>
-  </data>
-  <data name="tabPageFRec.Size" type="System.Drawing.Size, System.Drawing">
-    <value>921, 379</value>
-  </data>
-  <data name="tabPageFRec.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="tabPageFRec.Text" xml:space="preserve">
-    <value>F</value>
-  </data>
-  <data name="&gt;&gt;tabPageFRec.Name" xml:space="preserve">
-    <value>tabPageFRec</value>
-  </data>
-  <data name="&gt;&gt;tabPageFRec.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tabPageFRec.Parent" xml:space="preserve">
-    <value>tabControl1</value>
-  </data>
-  <data name="&gt;&gt;tabPageFRec.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="tabControl1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>9, 12</value>
-  </data>
-  <data name="tabControl1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>589, 405</value>
-  </data>
-  <data name="tabControl1.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;tabControl1.Name" xml:space="preserve">
-    <value>tabControl1</value>
-  </data>
-  <data name="&gt;&gt;tabControl1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tabControl1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;tabControl1.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
   <data name="columnHeader1.Text" xml:space="preserve">
     <value>Index</value>
   </data>
@@ -905,27 +1436,6 @@
   </data>
   <data name="columnHeader4.Width" type="System.Int32, mscorlib">
     <value>82</value>
-  </data>
-  <data name="listView2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>264, 6</value>
-  </data>
-  <data name="listView2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>308, 367</value>
-  </data>
-  <data name="listView2.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;listView2.Name" xml:space="preserve">
-    <value>listView2</value>
-  </data>
-  <data name="&gt;&gt;listView2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ListView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;listView2.Parent" xml:space="preserve">
-    <value>tabPageARec</value>
-  </data>
-  <data name="&gt;&gt;listView2.ZOrder" xml:space="preserve">
-    <value>0</value>
   </data>
   <data name="listView3.Location" type="System.Drawing.Point, System.Drawing">
     <value>264, 6</value>
@@ -1119,6 +1629,12 @@
   <data name="&gt;&gt;btn_screens.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="Numbers.Text" xml:space="preserve">
+    <value>Numbers</value>
+  </data>
+  <data name="Numbers.Width" type="System.Int32, mscorlib">
+    <value>117</value>
+  </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -1169,6 +1685,24 @@
   </data>
   <data name="&gt;&gt;tmr_auto_logs_clean.Type" xml:space="preserve">
     <value>System.Windows.Forms.Timer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Numbers.Name" xml:space="preserve">
+    <value>Numbers</value>
+  </data>
+  <data name="&gt;&gt;Numbers.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;columnHeader5.Name" xml:space="preserve">
+    <value>columnHeader5</value>
+  </data>
+  <data name="&gt;&gt;columnHeader5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;columnHeader6.Name" xml:space="preserve">
+    <value>columnHeader6</value>
+  </data>
+  <data name="&gt;&gt;columnHeader6.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>Debug</value>

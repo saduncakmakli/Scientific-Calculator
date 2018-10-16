@@ -55,7 +55,6 @@
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tabPageARec = new System.Windows.Forms.TabPage();
-            this.listView2 = new System.Windows.Forms.ListView();
             this.tabPageBRec = new System.Windows.Forms.TabPage();
             this.listView3 = new System.Windows.Forms.ListView();
             this.tabPageCRec = new System.Windows.Forms.TabPage();
@@ -70,6 +69,22 @@
             this.tmr_auto_logs_clean = new System.Windows.Forms.Timer(this.components);
             this.btn_logs = new System.Windows.Forms.Button();
             this.btn_screens = new System.Windows.Forms.Button();
+            this.listviewRecAProcessPiority = new System.Windows.Forms.ListView();
+            this.listviewRecAOperation = new System.Windows.Forms.ListView();
+            this.listviewRecANumbers = new System.Windows.Forms.ListView();
+            this.Numbers = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.lblRecATemporaryProcessingPriority = new System.Windows.Forms.Label();
+            this.lblRecAWhichBracket = new System.Windows.Forms.Label();
+            this.lblRecAWhichOperation = new System.Windows.Forms.Label();
+            this.lblRecAWhichNumber = new System.Windows.Forms.Label();
+            this.lblRecAIsOperationHavePermit = new System.Windows.Forms.Label();
+            this.lblRecAIsHaveNegativeBracket = new System.Windows.Forms.Label();
+            this.lblRecAIsHaveComma = new System.Windows.Forms.Label();
+            this.lblRecAIsHaveOperation = new System.Windows.Forms.Label();
+            this.lblRecAIsHaveNumber = new System.Windows.Forms.Label();
+            this.lblRecAIsFirstStart = new System.Windows.Forms.Label();
+            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tabControl1.SuspendLayout();
             this.tabPageMainRec.SuspendLayout();
             this.tabPageARec.SuspendLayout();
@@ -92,7 +107,7 @@
             resources.ApplyResources(this.btn_refresh, "btn_refresh");
             this.btn_refresh.Name = "btn_refresh";
             this.btn_refresh.UseVisualStyleBackColor = false;
-            this.btn_refresh.Click += new System.EventHandler(this.btn_refresh_Click);
+            this.btn_refresh.Click += new System.EventHandler(this.RefreshAll);
             // 
             // btn_auto_refresh
             // 
@@ -237,16 +252,22 @@
             // 
             // tabPageARec
             // 
-            this.tabPageARec.Controls.Add(this.listView2);
+            this.tabPageARec.Controls.Add(this.lblRecATemporaryProcessingPriority);
+            this.tabPageARec.Controls.Add(this.lblRecAWhichBracket);
+            this.tabPageARec.Controls.Add(this.lblRecAWhichOperation);
+            this.tabPageARec.Controls.Add(this.lblRecAWhichNumber);
+            this.tabPageARec.Controls.Add(this.lblRecAIsOperationHavePermit);
+            this.tabPageARec.Controls.Add(this.lblRecAIsHaveNegativeBracket);
+            this.tabPageARec.Controls.Add(this.lblRecAIsHaveComma);
+            this.tabPageARec.Controls.Add(this.lblRecAIsHaveOperation);
+            this.tabPageARec.Controls.Add(this.lblRecAIsHaveNumber);
+            this.tabPageARec.Controls.Add(this.lblRecAIsFirstStart);
+            this.tabPageARec.Controls.Add(this.listviewRecANumbers);
+            this.tabPageARec.Controls.Add(this.listviewRecAOperation);
+            this.tabPageARec.Controls.Add(this.listviewRecAProcessPiority);
             resources.ApplyResources(this.tabPageARec, "tabPageARec");
             this.tabPageARec.Name = "tabPageARec";
             this.tabPageARec.UseVisualStyleBackColor = true;
-            // 
-            // listView2
-            // 
-            resources.ApplyResources(this.listView2, "listView2");
-            this.listView2.Name = "listView2";
-            this.listView2.UseCompatibleStateImageBehavior = false;
             // 
             // tabPageBRec
             // 
@@ -342,6 +363,96 @@
             this.btn_screens.UseVisualStyleBackColor = false;
             this.btn_screens.Click += new System.EventHandler(this.btn_screens_Click);
             // 
+            // listviewRecAProcessPiority
+            // 
+            this.listviewRecAProcessPiority.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader6});
+            resources.ApplyResources(this.listviewRecAProcessPiority, "listviewRecAProcessPiority");
+            this.listviewRecAProcessPiority.Name = "listviewRecAProcessPiority";
+            this.listviewRecAProcessPiority.UseCompatibleStateImageBehavior = false;
+            this.listviewRecAProcessPiority.View = System.Windows.Forms.View.Details;
+            // 
+            // listviewRecAOperation
+            // 
+            this.listviewRecAOperation.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader5});
+            resources.ApplyResources(this.listviewRecAOperation, "listviewRecAOperation");
+            this.listviewRecAOperation.Name = "listviewRecAOperation";
+            this.listviewRecAOperation.UseCompatibleStateImageBehavior = false;
+            this.listviewRecAOperation.View = System.Windows.Forms.View.Details;
+            // 
+            // listviewRecANumbers
+            // 
+            this.listviewRecANumbers.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.Numbers});
+            resources.ApplyResources(this.listviewRecANumbers, "listviewRecANumbers");
+            this.listviewRecANumbers.Name = "listviewRecANumbers";
+            this.listviewRecANumbers.UseCompatibleStateImageBehavior = false;
+            this.listviewRecANumbers.View = System.Windows.Forms.View.Details;
+            // 
+            // Numbers
+            // 
+            this.Numbers.Tag = "";
+            resources.ApplyResources(this.Numbers, "Numbers");
+            // 
+            // lblRecATemporaryProcessingPriority
+            // 
+            resources.ApplyResources(this.lblRecATemporaryProcessingPriority, "lblRecATemporaryProcessingPriority");
+            this.lblRecATemporaryProcessingPriority.Name = "lblRecATemporaryProcessingPriority";
+            // 
+            // lblRecAWhichBracket
+            // 
+            resources.ApplyResources(this.lblRecAWhichBracket, "lblRecAWhichBracket");
+            this.lblRecAWhichBracket.Name = "lblRecAWhichBracket";
+            // 
+            // lblRecAWhichOperation
+            // 
+            resources.ApplyResources(this.lblRecAWhichOperation, "lblRecAWhichOperation");
+            this.lblRecAWhichOperation.Name = "lblRecAWhichOperation";
+            // 
+            // lblRecAWhichNumber
+            // 
+            resources.ApplyResources(this.lblRecAWhichNumber, "lblRecAWhichNumber");
+            this.lblRecAWhichNumber.Name = "lblRecAWhichNumber";
+            // 
+            // lblRecAIsOperationHavePermit
+            // 
+            resources.ApplyResources(this.lblRecAIsOperationHavePermit, "lblRecAIsOperationHavePermit");
+            this.lblRecAIsOperationHavePermit.Name = "lblRecAIsOperationHavePermit";
+            // 
+            // lblRecAIsHaveNegativeBracket
+            // 
+            resources.ApplyResources(this.lblRecAIsHaveNegativeBracket, "lblRecAIsHaveNegativeBracket");
+            this.lblRecAIsHaveNegativeBracket.Name = "lblRecAIsHaveNegativeBracket";
+            // 
+            // lblRecAIsHaveComma
+            // 
+            resources.ApplyResources(this.lblRecAIsHaveComma, "lblRecAIsHaveComma");
+            this.lblRecAIsHaveComma.Name = "lblRecAIsHaveComma";
+            // 
+            // lblRecAIsHaveOperation
+            // 
+            resources.ApplyResources(this.lblRecAIsHaveOperation, "lblRecAIsHaveOperation");
+            this.lblRecAIsHaveOperation.Name = "lblRecAIsHaveOperation";
+            // 
+            // lblRecAIsHaveNumber
+            // 
+            resources.ApplyResources(this.lblRecAIsHaveNumber, "lblRecAIsHaveNumber");
+            this.lblRecAIsHaveNumber.Name = "lblRecAIsHaveNumber";
+            // 
+            // lblRecAIsFirstStart
+            // 
+            resources.ApplyResources(this.lblRecAIsFirstStart, "lblRecAIsFirstStart");
+            this.lblRecAIsFirstStart.Name = "lblRecAIsFirstStart";
+            // 
+            // columnHeader5
+            // 
+            resources.ApplyResources(this.columnHeader5, "columnHeader5");
+            // 
+            // columnHeader6
+            // 
+            resources.ApplyResources(this.columnHeader6, "columnHeader6");
+            // 
             // Debug
             // 
             resources.ApplyResources(this, "$this");
@@ -363,6 +474,7 @@
             this.tabPageMainRec.ResumeLayout(false);
             this.tabPageMainRec.PerformLayout();
             this.tabPageARec.ResumeLayout(false);
+            this.tabPageARec.PerformLayout();
             this.tabPageBRec.ResumeLayout(false);
             this.tabPageCRec.ResumeLayout(false);
             this.tabPageDRec.ResumeLayout(false);
@@ -391,7 +503,6 @@
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.ColumnHeader columnHeader4;
-        private System.Windows.Forms.ListView listView2;
         private System.Windows.Forms.ListView listView3;
         private System.Windows.Forms.ListView listView4;
         private System.Windows.Forms.ListView listView5;
@@ -414,5 +525,21 @@
         private System.Windows.Forms.TextBox tbMainSonuc;
         private System.Windows.Forms.Button btn_logs;
         private System.Windows.Forms.Button btn_screens;
+        private System.Windows.Forms.ListView listviewRecANumbers;
+        private System.Windows.Forms.ListView listviewRecAOperation;
+        private System.Windows.Forms.ListView listviewRecAProcessPiority;
+        private System.Windows.Forms.Label lblRecATemporaryProcessingPriority;
+        private System.Windows.Forms.Label lblRecAWhichBracket;
+        private System.Windows.Forms.Label lblRecAWhichOperation;
+        private System.Windows.Forms.Label lblRecAWhichNumber;
+        private System.Windows.Forms.Label lblRecAIsOperationHavePermit;
+        private System.Windows.Forms.Label lblRecAIsHaveNegativeBracket;
+        private System.Windows.Forms.Label lblRecAIsHaveComma;
+        private System.Windows.Forms.Label lblRecAIsHaveOperation;
+        private System.Windows.Forms.Label lblRecAIsHaveNumber;
+        private System.Windows.Forms.Label lblRecAIsFirstStart;
+        private System.Windows.Forms.ColumnHeader Numbers;
+        private System.Windows.Forms.ColumnHeader columnHeader5;
+        private System.Windows.Forms.ColumnHeader columnHeader6;
     }
 }

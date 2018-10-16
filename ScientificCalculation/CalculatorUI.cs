@@ -711,6 +711,7 @@ namespace ScientificCalculation
             Logs.logs_record.Add("Form Component Initialized.");
             InitializeComponent();
         }
+
         internal void RewriteResultScreen()
         {
             if (Calculator.selectedRec == String.Empty)

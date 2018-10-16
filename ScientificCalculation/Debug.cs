@@ -704,18 +704,20 @@ namespace ScientificCalculation
 
         private void Debug_Load(object sender, EventArgs e)
         {
-            RefreshListBoxLogs();
-            RefreshListViewMainRec();
-            RefreshMainRec();
-            RefleshMainScreens();
+            RefreshAll(null, null);
         }
 
-        private void btn_refresh_Click(object sender, EventArgs e)
+        private void RefreshAll(object sender, EventArgs e)
         {
+            //General
+            RefleshMainScreens();
             RefreshListBoxLogs();
+            //Main Rec
             RefreshListViewMainRec();
             RefreshMainRec();
-            RefleshMainScreens();
+            //RecA
+            RefreshListViewRecA();
+            RefreshRecA();
         }
 
         private void btn_auto_refresh_Click(object sender, EventArgs e)
@@ -734,11 +736,7 @@ namespace ScientificCalculation
 
         private void tmr_auto_refresh_Tick(object sender, EventArgs e)
         {
-            RefreshListBoxLogs();
-            RefreshListViewMainRec();
-            RefreshMainRec();
-            RefleshMainScreens();
-
+            RefreshAll(null,null);
         }
 
         private void RefreshListBoxLogs()
@@ -798,6 +796,65 @@ namespace ScientificCalculation
             }
         }
 
+        private void RefreshListViewRecA()
+        {
+            //For Numbers ListView
+            listviewRecANumbers.Items.Clear();
+            for (int sayac = 0; sayac < CalculatorUI.aCalculator.MemorizedNumbers.Count; sayac++)
+            {
+                ListViewItem listviewItem = new ListViewItem
+                {
+                    Text = CalculatorUI.aCalculator.MemorizedNumbers[sayac].ToString()
+                };
+                listviewRecANumbers.Items.Add(listviewItem);
+            }
+
+            //For Operation ListView
+            listviewRecAOperation.Items.Clear();
+            for (int sayac = 0; sayac < CalculatorUI.aCalculator.MemorizedOperations.Count; sayac++)
+            {
+                ListViewItem listviewItem = new ListViewItem();
+
+                if (CalculatorUI.aCalculator.MemorizedOperations[sayac] == Operations.EXP)
+                {
+                    listviewItem.Text = "^";
+                }
+                else if (CalculatorUI.aCalculator.MemorizedOperations[sayac] == Operations.ROOT)
+                {
+                    listviewItem.Text = "√¯";
+                }
+                else if (CalculatorUI.aCalculator.MemorizedOperations[sayac] == Operations.CROSS)
+                {
+                    listviewItem.Text = "*";
+                }
+                else if (CalculatorUI.aCalculator.MemorizedOperations[sayac] == Operations.DIVISION)
+                {
+                    listviewItem.Text = "/";
+                }
+                else if (CalculatorUI.aCalculator.MemorizedOperations[sayac] == Operations.PLUS)
+                {
+                    listviewItem.Text = "+";
+                }
+                else if (CalculatorUI.aCalculator.MemorizedOperations[sayac] == Operations.MINUS)
+                {
+                    listviewItem.Text = "-";
+                }
+
+                listviewRecAOperation.Items.Add(listviewItem);
+            }
+
+            //For Process Piority ListView
+            listviewRecAProcessPiority.Items.Clear();
+            for (int sayac = 0; sayac < CalculatorUI.aCalculator.MemorizedProcessPiority.Count; sayac++)
+            {
+                ListViewItem listviewItem = new ListViewItem
+                {
+                    Text = CalculatorUI.aCalculator.MemorizedProcessPiority[sayac].ToString()
+                };
+                listviewRecAProcessPiority.Items.Add(listviewItem);
+            }
+        }
+
         private void RefreshMainRec()
         {
             lblMainRecIsFirstStart.ForeColor = CalculatorUI.mainCalculator.IsFirstStart ? Color.Green : Color.Red;
@@ -811,6 +868,21 @@ namespace ScientificCalculation
             lblMainRecWhichOperation.Text = "Which Operation " + CalculatorUI.mainCalculator.WhichNumber;
             lblMainRecWhichBracket.Text = "Which Bracket " + CalculatorUI.mainCalculator.WhichBracket;
             lblMainRecTemporaryProcessingPriority.Text = "Current Process Priority Value " + CalculatorUI.mainCalculator.TemporaryProcessingPriority;
+        }
+
+        private void RefreshRecA()
+        {
+            lblRecAIsFirstStart.ForeColor = CalculatorUI.aCalculator.IsFirstStart ? Color.Green : Color.Red;
+            lblRecAIsHaveNumber.ForeColor = CalculatorUI.aCalculator.IsHaveNumber ? Color.Green : Color.Red;
+            lblRecAIsHaveOperation.ForeColor = CalculatorUI.aCalculator.IsHaveOperation ? Color.Green : Color.Red;
+            lblRecAIsHaveComma.ForeColor = CalculatorUI.aCalculator.IsHaveComma ? Color.Green : Color.Red;
+            lblRecAIsHaveNegativeBracket.ForeColor = CalculatorUI.aCalculator.IsHaveNegativeBracket ? Color.Green : Color.Red;
+            lblRecAIsOperationHavePermit.ForeColor = CalculatorUI.aCalculator.IsOperationHavePermit ? Color.Green : Color.Red;
+
+            lblRecAWhichNumber.Text = "Which Number " + CalculatorUI.aCalculator.WhichNumber;
+            lblRecAWhichOperation.Text = "Which Operation " + CalculatorUI.aCalculator.WhichNumber;
+            lblRecAWhichBracket.Text = "Which Bracket " + CalculatorUI.aCalculator.WhichBracket;
+            lblRecATemporaryProcessingPriority.Text = "Current Process Priority Value " + CalculatorUI.aCalculator.TemporaryProcessingPriority;
         }
 
         private void RefleshMainScreens()
