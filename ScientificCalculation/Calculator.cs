@@ -681,8 +681,6 @@ Public License instead of this License.  But first, please read
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ScientificCalculation
 {

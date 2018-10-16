@@ -50,6 +50,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AlwaysRunDebugClass.cs" />
+    <Compile Include="BaseClass.cs" />
     <Compile Include="Calculator.cs" />
     <Compile Include="CalculatorUI.cs">
       <SubType>Form</SubType>
@@ -73,7 +74,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RunnableDebugClass.cs" />
     <EmbeddedResource Include="Debug.resx">
       <DependentUpon>Debug.cs</DependentUpon>
     </EmbeddedResource>

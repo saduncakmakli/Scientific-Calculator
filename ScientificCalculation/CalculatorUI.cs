@@ -680,12 +680,7 @@ Public License instead of this License.  But first, please read
 
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ScientificCalculation
@@ -1392,7 +1387,7 @@ namespace ScientificCalculation
             }
         }
 
-        private void VersionLabel_DoubleClick(object sender, EventArgs e)
+        internal void VersionLabel_DoubleClick(object sender, EventArgs e)
         {
             Logs.logs_record.Add("Double Pressed Versiyon Text.");
             if (isVersiyonActivePassive == true)

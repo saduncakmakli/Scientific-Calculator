@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ScientificCalculation
@@ -24,21 +17,24 @@ namespace ScientificCalculation
 
         private Boolean isEnableOtomatikComma = false;
 
-        private void Options_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            
-        }
-
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
             if (checkBox1.Checked == true)
             {
                 CalculatorUI.options.isEnableOtomatikComma = true;
+                BaseClass.calculatorUI.RewriteResultScreen();
             }
             else
             {
                 CalculatorUI.options.isEnableOtomatikComma = false;
+                BaseClass.calculatorUI.RewriteResultScreen();
             }
+        }
+
+        private void Options_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            e.Cancel = true;
+            BaseClass.calculatorUI.OptionsButton_Click(sender,e);
         }
     }
 }

@@ -194,6 +194,105 @@
   <metadata name="tmr_auto_refresh.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
+  <data name="columnHeader1.Text" xml:space="preserve">
+    <value>Numbers</value>
+  </data>
+  <data name="columnHeader1.Width" type="System.Int32, mscorlib">
+    <value>117</value>
+  </data>
+  <data name="listviewMainRecNumbers.Location" type="System.Drawing.Point, System.Drawing">
+    <value>211, 6</value>
+  </data>
+  <data name="listviewMainRecNumbers.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 366</value>
+  </data>
+  <data name="listviewMainRecNumbers.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;listviewMainRecNumbers.Name" xml:space="preserve">
+    <value>listviewMainRecNumbers</value>
+  </data>
+  <data name="&gt;&gt;listviewMainRecNumbers.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;listviewMainRecNumbers.Parent" xml:space="preserve">
+    <value>tabPageMainRec</value>
+  </data>
+  <data name="&gt;&gt;listviewMainRecNumbers.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="columnHeader2.Text" xml:space="preserve">
+    <value>Operation</value>
+  </data>
+  <data name="columnHeader2.Width" type="System.Int32, mscorlib">
+    <value>117</value>
+  </data>
+  <data name="listviewMainRecOperation.Location" type="System.Drawing.Point, System.Drawing">
+    <value>331, 6</value>
+  </data>
+  <data name="listviewMainRecOperation.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 366</value>
+  </data>
+  <data name="listviewMainRecOperation.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;listviewMainRecOperation.Name" xml:space="preserve">
+    <value>listviewMainRecOperation</value>
+  </data>
+  <data name="&gt;&gt;listviewMainRecOperation.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;listviewMainRecOperation.Parent" xml:space="preserve">
+    <value>tabPageMainRec</value>
+  </data>
+  <data name="&gt;&gt;listviewMainRecOperation.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="columnHeader3.Text" xml:space="preserve">
+    <value>ProcessPiority</value>
+  </data>
+  <data name="columnHeader3.Width" type="System.Int32, mscorlib">
+    <value>117</value>
+  </data>
+  <data name="listviewMainRecProcessPiority.Location" type="System.Drawing.Point, System.Drawing">
+    <value>451, 6</value>
+  </data>
+  <data name="listviewMainRecProcessPiority.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 366</value>
+  </data>
+  <data name="listviewMainRecProcessPiority.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;listviewMainRecProcessPiority.Name" xml:space="preserve">
+    <value>listviewMainRecProcessPiority</value>
+  </data>
+  <data name="&gt;&gt;listviewMainRecProcessPiority.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;listviewMainRecProcessPiority.Parent" xml:space="preserve">
+    <value>tabPageMainRec</value>
+  </data>
+  <data name="&gt;&gt;listviewMainRecProcessPiority.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="lblMainScreen.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblMainScreen.Location" type="System.Drawing.Point, System.Drawing">
+    <value>582, 19</value>
+  </data>
+  <data name="lblMainScreen.Size" type="System.Drawing.Size, System.Drawing">
+    <value>171, 13</value>
+  </data>
+  <data name="lblMainScreen.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="lblMainScreen.Text" xml:space="preserve">
+    <value>CALCULATOR CLASS' SCREENS</value>
+  </data>
+  <data name="lblMainScreen.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="&gt;&gt;lblMainScreen.Name" xml:space="preserve">
     <value>lblMainScreen</value>
   </data>
@@ -204,7 +303,22 @@
     <value>tabPageMainRec</value>
   </data>
   <data name="&gt;&gt;lblMainScreen.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>3</value>
+  </data>
+  <data name="tbMainSonuc.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt</value>
+  </data>
+  <data name="tbMainSonuc.Location" type="System.Drawing.Point, System.Drawing">
+    <value>582, 155</value>
+  </data>
+  <data name="tbMainSonuc.Size" type="System.Drawing.Size, System.Drawing">
+    <value>330, 26</value>
+  </data>
+  <data name="tbMainSonuc.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="tbMainSonuc.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="&gt;&gt;tbMainSonuc.Name" xml:space="preserve">
     <value>tbMainSonuc</value>
@@ -216,7 +330,29 @@
     <value>tabPageMainRec</value>
   </data>
   <data name="&gt;&gt;tbMainSonuc.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>4</value>
+  </data>
+  <data name="tbMainIslem.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 20.25pt</value>
+  </data>
+  <data name="tbMainIslem.Location" type="System.Drawing.Point, System.Drawing">
+    <value>582, 41</value>
+  </data>
+  <data name="tbMainIslem.Multiline" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="tbMainIslem.ScrollBars" type="System.Windows.Forms.ScrollBars, System.Windows.Forms">
+    <value>Vertical</value>
+  </data>
+  <data name="tbMainIslem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>330, 108</value>
+  </data>
+  <data name="tbMainIslem.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="tbMainIslem.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="&gt;&gt;tbMainIslem.Name" xml:space="preserve">
     <value>tbMainIslem</value>
@@ -228,7 +364,25 @@
     <value>tabPageMainRec</value>
   </data>
   <data name="&gt;&gt;tbMainIslem.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="lblMainRecTemporaryProcessingPriority.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblMainRecTemporaryProcessingPriority.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblMainRecTemporaryProcessingPriority.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 304</value>
+  </data>
+  <data name="lblMainRecTemporaryProcessingPriority.Size" type="System.Drawing.Size, System.Drawing">
+    <value>146, 13</value>
+  </data>
+  <data name="lblMainRecTemporaryProcessingPriority.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
+  </data>
+  <data name="lblMainRecTemporaryProcessingPriority.Text" xml:space="preserve">
+    <value>Current Process Priority Value</value>
   </data>
   <data name="&gt;&gt;lblMainRecTemporaryProcessingPriority.Name" xml:space="preserve">
     <value>lblMainRecTemporaryProcessingPriority</value>
@@ -240,7 +394,25 @@
     <value>tabPageMainRec</value>
   </data>
   <data name="&gt;&gt;lblMainRecTemporaryProcessingPriority.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>6</value>
+  </data>
+  <data name="lblMainRecWhichBracket.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblMainRecWhichBracket.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblMainRecWhichBracket.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 291</value>
+  </data>
+  <data name="lblMainRecWhichBracket.Size" type="System.Drawing.Size, System.Drawing">
+    <value>72, 13</value>
+  </data>
+  <data name="lblMainRecWhichBracket.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="lblMainRecWhichBracket.Text" xml:space="preserve">
+    <value>whichBracket</value>
   </data>
   <data name="&gt;&gt;lblMainRecWhichBracket.Name" xml:space="preserve">
     <value>lblMainRecWhichBracket</value>
@@ -252,7 +424,22 @@
     <value>tabPageMainRec</value>
   </data>
   <data name="&gt;&gt;lblMainRecWhichBracket.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>7</value>
+  </data>
+  <data name="lblMainRecWhichOperation.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblMainRecWhichOperation.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 278</value>
+  </data>
+  <data name="lblMainRecWhichOperation.Size" type="System.Drawing.Size, System.Drawing">
+    <value>81, 13</value>
+  </data>
+  <data name="lblMainRecWhichOperation.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="lblMainRecWhichOperation.Text" xml:space="preserve">
+    <value>whichOperation</value>
   </data>
   <data name="&gt;&gt;lblMainRecWhichOperation.Name" xml:space="preserve">
     <value>lblMainRecWhichOperation</value>
@@ -264,7 +451,25 @@
     <value>tabPageMainRec</value>
   </data>
   <data name="&gt;&gt;lblMainRecWhichOperation.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>8</value>
+  </data>
+  <data name="lblMainRecWhichNumber.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblMainRecWhichNumber.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblMainRecWhichNumber.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 265</value>
+  </data>
+  <data name="lblMainRecWhichNumber.Size" type="System.Drawing.Size, System.Drawing">
+    <value>72, 13</value>
+  </data>
+  <data name="lblMainRecWhichNumber.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="lblMainRecWhichNumber.Text" xml:space="preserve">
+    <value>whichNumber</value>
   </data>
   <data name="&gt;&gt;lblMainRecWhichNumber.Name" xml:space="preserve">
     <value>lblMainRecWhichNumber</value>
@@ -276,7 +481,25 @@
     <value>tabPageMainRec</value>
   </data>
   <data name="&gt;&gt;lblMainRecWhichNumber.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>9</value>
+  </data>
+  <data name="lblMainRecIsOperationHavePermit.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblMainRecIsOperationHavePermit.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblMainRecIsOperationHavePermit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 72</value>
+  </data>
+  <data name="lblMainRecIsOperationHavePermit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>115, 13</value>
+  </data>
+  <data name="lblMainRecIsOperationHavePermit.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="lblMainRecIsOperationHavePermit.Text" xml:space="preserve">
+    <value>isOperationHavePermit</value>
   </data>
   <data name="&gt;&gt;lblMainRecIsOperationHavePermit.Name" xml:space="preserve">
     <value>lblMainRecIsOperationHavePermit</value>
@@ -288,7 +511,25 @@
     <value>tabPageMainRec</value>
   </data>
   <data name="&gt;&gt;lblMainRecIsOperationHavePermit.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>10</value>
+  </data>
+  <data name="lblMainRecIsHaveNegativeBracket.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblMainRecIsHaveNegativeBracket.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblMainRecIsHaveNegativeBracket.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 59</value>
+  </data>
+  <data name="lblMainRecIsHaveNegativeBracket.Size" type="System.Drawing.Size, System.Drawing">
+    <value>120, 13</value>
+  </data>
+  <data name="lblMainRecIsHaveNegativeBracket.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="lblMainRecIsHaveNegativeBracket.Text" xml:space="preserve">
+    <value>isHaveNegativeBracket</value>
   </data>
   <data name="&gt;&gt;lblMainRecIsHaveNegativeBracket.Name" xml:space="preserve">
     <value>lblMainRecIsHaveNegativeBracket</value>
@@ -300,7 +541,25 @@
     <value>tabPageMainRec</value>
   </data>
   <data name="&gt;&gt;lblMainRecIsHaveNegativeBracket.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>11</value>
+  </data>
+  <data name="lblMainRecIsHaveComma.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblMainRecIsHaveComma.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblMainRecIsHaveComma.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 46</value>
+  </data>
+  <data name="lblMainRecIsHaveComma.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 13</value>
+  </data>
+  <data name="lblMainRecIsHaveComma.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="lblMainRecIsHaveComma.Text" xml:space="preserve">
+    <value>isHaveComma</value>
   </data>
   <data name="&gt;&gt;lblMainRecIsHaveComma.Name" xml:space="preserve">
     <value>lblMainRecIsHaveComma</value>
@@ -312,7 +571,25 @@
     <value>tabPageMainRec</value>
   </data>
   <data name="&gt;&gt;lblMainRecIsHaveComma.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>12</value>
+  </data>
+  <data name="lblMainRecIsHaveOperation.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblMainRecIsHaveOperation.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblMainRecIsHaveOperation.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 33</value>
+  </data>
+  <data name="lblMainRecIsHaveOperation.Size" type="System.Drawing.Size, System.Drawing">
+    <value>86, 13</value>
+  </data>
+  <data name="lblMainRecIsHaveOperation.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="lblMainRecIsHaveOperation.Text" xml:space="preserve">
+    <value>isHaveOperation</value>
   </data>
   <data name="&gt;&gt;lblMainRecIsHaveOperation.Name" xml:space="preserve">
     <value>lblMainRecIsHaveOperation</value>
@@ -324,7 +601,25 @@
     <value>tabPageMainRec</value>
   </data>
   <data name="&gt;&gt;lblMainRecIsHaveOperation.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>13</value>
+  </data>
+  <data name="lblMainRecIsHaveNumber.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblMainRecIsHaveNumber.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblMainRecIsHaveNumber.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 20</value>
+  </data>
+  <data name="lblMainRecIsHaveNumber.Size" type="System.Drawing.Size, System.Drawing">
+    <value>77, 13</value>
+  </data>
+  <data name="lblMainRecIsHaveNumber.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="lblMainRecIsHaveNumber.Text" xml:space="preserve">
+    <value>isHaveNumber</value>
   </data>
   <data name="&gt;&gt;lblMainRecIsHaveNumber.Name" xml:space="preserve">
     <value>lblMainRecIsHaveNumber</value>
@@ -336,7 +631,22 @@
     <value>tabPageMainRec</value>
   </data>
   <data name="&gt;&gt;lblMainRecIsHaveNumber.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>14</value>
+  </data>
+  <data name="lblMainRecIsFirstStart.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblMainRecIsFirstStart.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 7</value>
+  </data>
+  <data name="lblMainRecIsFirstStart.Size" type="System.Drawing.Size, System.Drawing">
+    <value>55, 13</value>
+  </data>
+  <data name="lblMainRecIsFirstStart.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="lblMainRecIsFirstStart.Text" xml:space="preserve">
+    <value>isFirstStart</value>
   </data>
   <data name="&gt;&gt;lblMainRecIsFirstStart.Name" xml:space="preserve">
     <value>lblMainRecIsFirstStart</value>
@@ -348,24 +658,11 @@
     <value>tabPageMainRec</value>
   </data>
   <data name="&gt;&gt;lblMainRecIsFirstStart.ZOrder" xml:space="preserve">
-    <value>12</value>
-  </data>
-  <data name="&gt;&gt;listviewMainRec.Name" xml:space="preserve">
-    <value>listviewMainRec</value>
-  </data>
-  <data name="&gt;&gt;listviewMainRec.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ListView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;listviewMainRec.Parent" xml:space="preserve">
-    <value>tabPageMainRec</value>
-  </data>
-  <data name="&gt;&gt;listviewMainRec.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>15</value>
   </data>
   <data name="tabPageMainRec.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 22</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="tabPageMainRec.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 3, 3, 3</value>
   </data>
@@ -690,6 +987,12 @@
   <data name="&gt;&gt;lblRecAIsFirstStart.ZOrder" xml:space="preserve">
     <value>9</value>
   </data>
+  <data name="Numbers.Text" xml:space="preserve">
+    <value>Numbers</value>
+  </data>
+  <data name="Numbers.Width" type="System.Int32, mscorlib">
+    <value>117</value>
+  </data>
   <data name="listviewRecANumbers.Location" type="System.Drawing.Point, System.Drawing">
     <value>214, 6</value>
   </data>
@@ -792,18 +1095,6 @@
   <data name="&gt;&gt;tabPageARec.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="&gt;&gt;listView3.Name" xml:space="preserve">
-    <value>listView3</value>
-  </data>
-  <data name="&gt;&gt;listView3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ListView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;listView3.Parent" xml:space="preserve">
-    <value>tabPageBRec</value>
-  </data>
-  <data name="&gt;&gt;listView3.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
   <data name="tabPageBRec.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 22</value>
   </data>
@@ -830,18 +1121,6 @@
   </data>
   <data name="&gt;&gt;tabPageBRec.ZOrder" xml:space="preserve">
     <value>2</value>
-  </data>
-  <data name="&gt;&gt;listView4.Name" xml:space="preserve">
-    <value>listView4</value>
-  </data>
-  <data name="&gt;&gt;listView4.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ListView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;listView4.Parent" xml:space="preserve">
-    <value>tabPageCRec</value>
-  </data>
-  <data name="&gt;&gt;listView4.ZOrder" xml:space="preserve">
-    <value>0</value>
   </data>
   <data name="tabPageCRec.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 22</value>
@@ -870,18 +1149,6 @@
   <data name="&gt;&gt;tabPageCRec.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="&gt;&gt;listView5.Name" xml:space="preserve">
-    <value>listView5</value>
-  </data>
-  <data name="&gt;&gt;listView5.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ListView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;listView5.Parent" xml:space="preserve">
-    <value>tabPageDRec</value>
-  </data>
-  <data name="&gt;&gt;listView5.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
   <data name="tabPageDRec.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 22</value>
   </data>
@@ -909,18 +1176,6 @@
   <data name="&gt;&gt;tabPageDRec.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
-  <data name="&gt;&gt;listView6.Name" xml:space="preserve">
-    <value>listView6</value>
-  </data>
-  <data name="&gt;&gt;listView6.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ListView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;listView6.Parent" xml:space="preserve">
-    <value>tabPageERec</value>
-  </data>
-  <data name="&gt;&gt;listView6.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
   <data name="tabPageERec.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 22</value>
   </data>
@@ -947,18 +1202,6 @@
   </data>
   <data name="&gt;&gt;tabPageERec.ZOrder" xml:space="preserve">
     <value>5</value>
-  </data>
-  <data name="&gt;&gt;listView7.Name" xml:space="preserve">
-    <value>listView7</value>
-  </data>
-  <data name="&gt;&gt;listView7.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ListView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;listView7.Parent" xml:space="preserve">
-    <value>tabPageFRec</value>
-  </data>
-  <data name="&gt;&gt;listView7.ZOrder" xml:space="preserve">
-    <value>0</value>
   </data>
   <data name="tabPageFRec.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 22</value>
@@ -1007,540 +1250,6 @@
   </data>
   <data name="&gt;&gt;tabControl1.ZOrder" xml:space="preserve">
     <value>3</value>
-  </data>
-  <data name="lblMainScreen.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lblMainScreen.Location" type="System.Drawing.Point, System.Drawing">
-    <value>582, 19</value>
-  </data>
-  <data name="lblMainScreen.Size" type="System.Drawing.Size, System.Drawing">
-    <value>171, 13</value>
-  </data>
-  <data name="lblMainScreen.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="lblMainScreen.Text" xml:space="preserve">
-    <value>CALCULATOR CLASS' SCREENS</value>
-  </data>
-  <data name="lblMainScreen.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;lblMainScreen.Name" xml:space="preserve">
-    <value>lblMainScreen</value>
-  </data>
-  <data name="&gt;&gt;lblMainScreen.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblMainScreen.Parent" xml:space="preserve">
-    <value>tabPageMainRec</value>
-  </data>
-  <data name="&gt;&gt;lblMainScreen.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="tbMainSonuc.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt</value>
-  </data>
-  <data name="tbMainSonuc.Location" type="System.Drawing.Point, System.Drawing">
-    <value>582, 155</value>
-  </data>
-  <data name="tbMainSonuc.Size" type="System.Drawing.Size, System.Drawing">
-    <value>330, 26</value>
-  </data>
-  <data name="tbMainSonuc.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="tbMainSonuc.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;tbMainSonuc.Name" xml:space="preserve">
-    <value>tbMainSonuc</value>
-  </data>
-  <data name="&gt;&gt;tbMainSonuc.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tbMainSonuc.Parent" xml:space="preserve">
-    <value>tabPageMainRec</value>
-  </data>
-  <data name="&gt;&gt;tbMainSonuc.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="tbMainIslem.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 20.25pt</value>
-  </data>
-  <data name="tbMainIslem.Location" type="System.Drawing.Point, System.Drawing">
-    <value>582, 41</value>
-  </data>
-  <data name="tbMainIslem.Multiline" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="tbMainIslem.ScrollBars" type="System.Windows.Forms.ScrollBars, System.Windows.Forms">
-    <value>Vertical</value>
-  </data>
-  <data name="tbMainIslem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>330, 108</value>
-  </data>
-  <data name="tbMainIslem.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="tbMainIslem.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;tbMainIslem.Name" xml:space="preserve">
-    <value>tbMainIslem</value>
-  </data>
-  <data name="&gt;&gt;tbMainIslem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tbMainIslem.Parent" xml:space="preserve">
-    <value>tabPageMainRec</value>
-  </data>
-  <data name="&gt;&gt;tbMainIslem.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="lblMainRecTemporaryProcessingPriority.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lblMainRecTemporaryProcessingPriority.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="lblMainRecTemporaryProcessingPriority.Location" type="System.Drawing.Point, System.Drawing">
-    <value>7, 317</value>
-  </data>
-  <data name="lblMainRecTemporaryProcessingPriority.Size" type="System.Drawing.Size, System.Drawing">
-    <value>146, 13</value>
-  </data>
-  <data name="lblMainRecTemporaryProcessingPriority.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="lblMainRecTemporaryProcessingPriority.Text" xml:space="preserve">
-    <value>Current Process Priority Value</value>
-  </data>
-  <data name="&gt;&gt;lblMainRecTemporaryProcessingPriority.Name" xml:space="preserve">
-    <value>lblMainRecTemporaryProcessingPriority</value>
-  </data>
-  <data name="&gt;&gt;lblMainRecTemporaryProcessingPriority.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblMainRecTemporaryProcessingPriority.Parent" xml:space="preserve">
-    <value>tabPageMainRec</value>
-  </data>
-  <data name="&gt;&gt;lblMainRecTemporaryProcessingPriority.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="lblMainRecWhichBracket.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lblMainRecWhichBracket.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="lblMainRecWhichBracket.Location" type="System.Drawing.Point, System.Drawing">
-    <value>7, 304</value>
-  </data>
-  <data name="lblMainRecWhichBracket.Size" type="System.Drawing.Size, System.Drawing">
-    <value>72, 13</value>
-  </data>
-  <data name="lblMainRecWhichBracket.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="lblMainRecWhichBracket.Text" xml:space="preserve">
-    <value>whichBracket</value>
-  </data>
-  <data name="&gt;&gt;lblMainRecWhichBracket.Name" xml:space="preserve">
-    <value>lblMainRecWhichBracket</value>
-  </data>
-  <data name="&gt;&gt;lblMainRecWhichBracket.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblMainRecWhichBracket.Parent" xml:space="preserve">
-    <value>tabPageMainRec</value>
-  </data>
-  <data name="&gt;&gt;lblMainRecWhichBracket.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="lblMainRecWhichOperation.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lblMainRecWhichOperation.Location" type="System.Drawing.Point, System.Drawing">
-    <value>7, 291</value>
-  </data>
-  <data name="lblMainRecWhichOperation.Size" type="System.Drawing.Size, System.Drawing">
-    <value>81, 13</value>
-  </data>
-  <data name="lblMainRecWhichOperation.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="lblMainRecWhichOperation.Text" xml:space="preserve">
-    <value>whichOperation</value>
-  </data>
-  <data name="&gt;&gt;lblMainRecWhichOperation.Name" xml:space="preserve">
-    <value>lblMainRecWhichOperation</value>
-  </data>
-  <data name="&gt;&gt;lblMainRecWhichOperation.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblMainRecWhichOperation.Parent" xml:space="preserve">
-    <value>tabPageMainRec</value>
-  </data>
-  <data name="&gt;&gt;lblMainRecWhichOperation.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="lblMainRecWhichNumber.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lblMainRecWhichNumber.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="lblMainRecWhichNumber.Location" type="System.Drawing.Point, System.Drawing">
-    <value>7, 278</value>
-  </data>
-  <data name="lblMainRecWhichNumber.Size" type="System.Drawing.Size, System.Drawing">
-    <value>72, 13</value>
-  </data>
-  <data name="lblMainRecWhichNumber.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="lblMainRecWhichNumber.Text" xml:space="preserve">
-    <value>whichNumber</value>
-  </data>
-  <data name="&gt;&gt;lblMainRecWhichNumber.Name" xml:space="preserve">
-    <value>lblMainRecWhichNumber</value>
-  </data>
-  <data name="&gt;&gt;lblMainRecWhichNumber.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblMainRecWhichNumber.Parent" xml:space="preserve">
-    <value>tabPageMainRec</value>
-  </data>
-  <data name="&gt;&gt;lblMainRecWhichNumber.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="lblMainRecIsOperationHavePermit.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lblMainRecIsOperationHavePermit.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="lblMainRecIsOperationHavePermit.Location" type="System.Drawing.Point, System.Drawing">
-    <value>7, 85</value>
-  </data>
-  <data name="lblMainRecIsOperationHavePermit.Size" type="System.Drawing.Size, System.Drawing">
-    <value>115, 13</value>
-  </data>
-  <data name="lblMainRecIsOperationHavePermit.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="lblMainRecIsOperationHavePermit.Text" xml:space="preserve">
-    <value>isOperationHavePermit</value>
-  </data>
-  <data name="&gt;&gt;lblMainRecIsOperationHavePermit.Name" xml:space="preserve">
-    <value>lblMainRecIsOperationHavePermit</value>
-  </data>
-  <data name="&gt;&gt;lblMainRecIsOperationHavePermit.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblMainRecIsOperationHavePermit.Parent" xml:space="preserve">
-    <value>tabPageMainRec</value>
-  </data>
-  <data name="&gt;&gt;lblMainRecIsOperationHavePermit.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="lblMainRecIsHaveNegativeBracket.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lblMainRecIsHaveNegativeBracket.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="lblMainRecIsHaveNegativeBracket.Location" type="System.Drawing.Point, System.Drawing">
-    <value>7, 72</value>
-  </data>
-  <data name="lblMainRecIsHaveNegativeBracket.Size" type="System.Drawing.Size, System.Drawing">
-    <value>120, 13</value>
-  </data>
-  <data name="lblMainRecIsHaveNegativeBracket.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="lblMainRecIsHaveNegativeBracket.Text" xml:space="preserve">
-    <value>isHaveNegativeBracket</value>
-  </data>
-  <data name="&gt;&gt;lblMainRecIsHaveNegativeBracket.Name" xml:space="preserve">
-    <value>lblMainRecIsHaveNegativeBracket</value>
-  </data>
-  <data name="&gt;&gt;lblMainRecIsHaveNegativeBracket.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblMainRecIsHaveNegativeBracket.Parent" xml:space="preserve">
-    <value>tabPageMainRec</value>
-  </data>
-  <data name="&gt;&gt;lblMainRecIsHaveNegativeBracket.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="lblMainRecIsHaveComma.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lblMainRecIsHaveComma.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="lblMainRecIsHaveComma.Location" type="System.Drawing.Point, System.Drawing">
-    <value>7, 59</value>
-  </data>
-  <data name="lblMainRecIsHaveComma.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 13</value>
-  </data>
-  <data name="lblMainRecIsHaveComma.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="lblMainRecIsHaveComma.Text" xml:space="preserve">
-    <value>isHaveComma</value>
-  </data>
-  <data name="&gt;&gt;lblMainRecIsHaveComma.Name" xml:space="preserve">
-    <value>lblMainRecIsHaveComma</value>
-  </data>
-  <data name="&gt;&gt;lblMainRecIsHaveComma.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblMainRecIsHaveComma.Parent" xml:space="preserve">
-    <value>tabPageMainRec</value>
-  </data>
-  <data name="&gt;&gt;lblMainRecIsHaveComma.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="lblMainRecIsHaveOperation.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lblMainRecIsHaveOperation.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="lblMainRecIsHaveOperation.Location" type="System.Drawing.Point, System.Drawing">
-    <value>7, 46</value>
-  </data>
-  <data name="lblMainRecIsHaveOperation.Size" type="System.Drawing.Size, System.Drawing">
-    <value>86, 13</value>
-  </data>
-  <data name="lblMainRecIsHaveOperation.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="lblMainRecIsHaveOperation.Text" xml:space="preserve">
-    <value>isHaveOperation</value>
-  </data>
-  <data name="&gt;&gt;lblMainRecIsHaveOperation.Name" xml:space="preserve">
-    <value>lblMainRecIsHaveOperation</value>
-  </data>
-  <data name="&gt;&gt;lblMainRecIsHaveOperation.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblMainRecIsHaveOperation.Parent" xml:space="preserve">
-    <value>tabPageMainRec</value>
-  </data>
-  <data name="&gt;&gt;lblMainRecIsHaveOperation.ZOrder" xml:space="preserve">
-    <value>10</value>
-  </data>
-  <data name="lblMainRecIsHaveNumber.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lblMainRecIsHaveNumber.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="lblMainRecIsHaveNumber.Location" type="System.Drawing.Point, System.Drawing">
-    <value>7, 33</value>
-  </data>
-  <data name="lblMainRecIsHaveNumber.Size" type="System.Drawing.Size, System.Drawing">
-    <value>77, 13</value>
-  </data>
-  <data name="lblMainRecIsHaveNumber.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="lblMainRecIsHaveNumber.Text" xml:space="preserve">
-    <value>isHaveNumber</value>
-  </data>
-  <data name="&gt;&gt;lblMainRecIsHaveNumber.Name" xml:space="preserve">
-    <value>lblMainRecIsHaveNumber</value>
-  </data>
-  <data name="&gt;&gt;lblMainRecIsHaveNumber.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblMainRecIsHaveNumber.Parent" xml:space="preserve">
-    <value>tabPageMainRec</value>
-  </data>
-  <data name="&gt;&gt;lblMainRecIsHaveNumber.ZOrder" xml:space="preserve">
-    <value>11</value>
-  </data>
-  <data name="lblMainRecIsFirstStart.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lblMainRecIsFirstStart.Location" type="System.Drawing.Point, System.Drawing">
-    <value>7, 20</value>
-  </data>
-  <data name="lblMainRecIsFirstStart.Size" type="System.Drawing.Size, System.Drawing">
-    <value>55, 13</value>
-  </data>
-  <data name="lblMainRecIsFirstStart.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="lblMainRecIsFirstStart.Text" xml:space="preserve">
-    <value>isFirstStart</value>
-  </data>
-  <data name="&gt;&gt;lblMainRecIsFirstStart.Name" xml:space="preserve">
-    <value>lblMainRecIsFirstStart</value>
-  </data>
-  <data name="&gt;&gt;lblMainRecIsFirstStart.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblMainRecIsFirstStart.Parent" xml:space="preserve">
-    <value>tabPageMainRec</value>
-  </data>
-  <data name="&gt;&gt;lblMainRecIsFirstStart.ZOrder" xml:space="preserve">
-    <value>12</value>
-  </data>
-  <data name="listviewMainRec.Location" type="System.Drawing.Point, System.Drawing">
-    <value>264, 6</value>
-  </data>
-  <data name="listviewMainRec.Size" type="System.Drawing.Size, System.Drawing">
-    <value>308, 367</value>
-  </data>
-  <data name="listviewMainRec.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;listviewMainRec.Name" xml:space="preserve">
-    <value>listviewMainRec</value>
-  </data>
-  <data name="&gt;&gt;listviewMainRec.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ListView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;listviewMainRec.Parent" xml:space="preserve">
-    <value>tabPageMainRec</value>
-  </data>
-  <data name="&gt;&gt;listviewMainRec.ZOrder" xml:space="preserve">
-    <value>13</value>
-  </data>
-  <data name="columnHeader1.Text" xml:space="preserve">
-    <value>Index</value>
-  </data>
-  <data name="columnHeader1.Width" type="System.Int32, mscorlib">
-    <value>38</value>
-  </data>
-  <data name="columnHeader2.Text" xml:space="preserve">
-    <value>Numbers</value>
-  </data>
-  <data name="columnHeader2.Width" type="System.Int32, mscorlib">
-    <value>125</value>
-  </data>
-  <data name="columnHeader3.Text" xml:space="preserve">
-    <value>Operation</value>
-  </data>
-  <data name="columnHeader3.Width" type="System.Int32, mscorlib">
-    <value>58</value>
-  </data>
-  <data name="columnHeader4.Text" xml:space="preserve">
-    <value>ProcessPiority</value>
-  </data>
-  <data name="columnHeader4.Width" type="System.Int32, mscorlib">
-    <value>82</value>
-  </data>
-  <data name="listView3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>264, 6</value>
-  </data>
-  <data name="listView3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>308, 367</value>
-  </data>
-  <data name="listView3.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;listView3.Name" xml:space="preserve">
-    <value>listView3</value>
-  </data>
-  <data name="&gt;&gt;listView3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ListView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;listView3.Parent" xml:space="preserve">
-    <value>tabPageBRec</value>
-  </data>
-  <data name="&gt;&gt;listView3.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="listView4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>264, 6</value>
-  </data>
-  <data name="listView4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>308, 367</value>
-  </data>
-  <data name="listView4.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;listView4.Name" xml:space="preserve">
-    <value>listView4</value>
-  </data>
-  <data name="&gt;&gt;listView4.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ListView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;listView4.Parent" xml:space="preserve">
-    <value>tabPageCRec</value>
-  </data>
-  <data name="&gt;&gt;listView4.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="listView5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>264, 6</value>
-  </data>
-  <data name="listView5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>308, 367</value>
-  </data>
-  <data name="listView5.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;listView5.Name" xml:space="preserve">
-    <value>listView5</value>
-  </data>
-  <data name="&gt;&gt;listView5.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ListView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;listView5.Parent" xml:space="preserve">
-    <value>tabPageDRec</value>
-  </data>
-  <data name="&gt;&gt;listView5.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="listView6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>264, 6</value>
-  </data>
-  <data name="listView6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>308, 367</value>
-  </data>
-  <data name="listView6.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;listView6.Name" xml:space="preserve">
-    <value>listView6</value>
-  </data>
-  <data name="&gt;&gt;listView6.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ListView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;listView6.Parent" xml:space="preserve">
-    <value>tabPageERec</value>
-  </data>
-  <data name="&gt;&gt;listView6.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="listView7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>264, 6</value>
-  </data>
-  <data name="listView7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>308, 367</value>
-  </data>
-  <data name="listView7.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;listView7.Name" xml:space="preserve">
-    <value>listView7</value>
-  </data>
-  <data name="&gt;&gt;listView7.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ListView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;listView7.Parent" xml:space="preserve">
-    <value>tabPageFRec</value>
-  </data>
-  <data name="&gt;&gt;listView7.ZOrder" xml:space="preserve">
-    <value>0</value>
   </data>
   <data name="btn_auto_log_clean.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -1629,12 +1338,6 @@
   <data name="&gt;&gt;btn_screens.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="Numbers.Text" xml:space="preserve">
-    <value>Numbers</value>
-  </data>
-  <data name="Numbers.Width" type="System.Int32, mscorlib">
-    <value>117</value>
-  </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -1656,36 +1359,6 @@
   <data name="&gt;&gt;tmr_auto_refresh.Type" xml:space="preserve">
     <value>System.Windows.Forms.Timer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;columnHeader1.Name" xml:space="preserve">
-    <value>columnHeader1</value>
-  </data>
-  <data name="&gt;&gt;columnHeader1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;columnHeader2.Name" xml:space="preserve">
-    <value>columnHeader2</value>
-  </data>
-  <data name="&gt;&gt;columnHeader2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;columnHeader3.Name" xml:space="preserve">
-    <value>columnHeader3</value>
-  </data>
-  <data name="&gt;&gt;columnHeader3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;columnHeader4.Name" xml:space="preserve">
-    <value>columnHeader4</value>
-  </data>
-  <data name="&gt;&gt;columnHeader4.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tmr_auto_logs_clean.Name" xml:space="preserve">
-    <value>tmr_auto_logs_clean</value>
-  </data>
-  <data name="&gt;&gt;tmr_auto_logs_clean.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Timer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="&gt;&gt;Numbers.Name" xml:space="preserve">
     <value>Numbers</value>
   </data>
@@ -1702,6 +1375,30 @@
     <value>columnHeader6</value>
   </data>
   <data name="&gt;&gt;columnHeader6.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tmr_auto_logs_clean.Name" xml:space="preserve">
+    <value>tmr_auto_logs_clean</value>
+  </data>
+  <data name="&gt;&gt;tmr_auto_logs_clean.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Timer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;columnHeader1.Name" xml:space="preserve">
+    <value>columnHeader1</value>
+  </data>
+  <data name="&gt;&gt;columnHeader1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;columnHeader2.Name" xml:space="preserve">
+    <value>columnHeader2</value>
+  </data>
+  <data name="&gt;&gt;columnHeader2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;columnHeader3.Name" xml:space="preserve">
+    <value>columnHeader3</value>
+  </data>
+  <data name="&gt;&gt;columnHeader3.Type" xml:space="preserve">
     <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">

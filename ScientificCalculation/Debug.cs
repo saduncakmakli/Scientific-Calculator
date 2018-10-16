@@ -679,13 +679,7 @@ Public License instead of this License.  But first, please read
  */
 
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ScientificCalculation
@@ -700,6 +694,7 @@ namespace ScientificCalculation
         private void Debug_FormClosing(object sender, FormClosingEventArgs e)
         {
             e.Cancel = true;
+            BaseClass.calculatorUI.VersionLabel_DoubleClick(sender, e);
         }
 
         private void Debug_Load(object sender, EventArgs e)
@@ -754,45 +749,60 @@ namespace ScientificCalculation
 
         private void RefreshListViewMainRec()
         {
-            //ListView için
-            listviewMainRec.Items.Clear();
+            //For Numbers ListView
+            listviewMainRecNumbers.Items.Clear();
             for (int sayac = 0; sayac < CalculatorUI.mainCalculator.MemorizedNumbers.Count; sayac++)
             {
-                ListViewItem listviewItem = new ListViewItem();
-                listviewItem.Text = (sayac + 1).ToString();
-                listviewItem.SubItems.Add(CalculatorUI.mainCalculator.MemorizedNumbers[sayac].ToString());
-                //İşlemlerin tabloya sembolü ile aktarımı için
-                //
-                //Hatanın çözümü için parantez yeni kapatıldığında debugger listview, güncellemeyi durduracak, yeni işleme basıldığında tekrar başlayacak
-                if (CalculatorUI.mainCalculator.MemorizedOperations.Count > sayac)
+                ListViewItem listviewItem = new ListViewItem
                 {
-                    if (CalculatorUI.mainCalculator.MemorizedOperations[sayac] == Operations.EXP)
-                    {
-                        listviewItem.SubItems.Add("^");
-                    }
-                    else if (CalculatorUI.mainCalculator.MemorizedOperations[sayac] == Operations.ROOT)
-                    {
-                        listviewItem.SubItems.Add("√¯");
-                    }
-                    else if (CalculatorUI.mainCalculator.MemorizedOperations[sayac] == Operations.CROSS)
-                    {
-                        listviewItem.SubItems.Add("*");
-                    }
-                    else if (CalculatorUI.mainCalculator.MemorizedOperations[sayac] == Operations.DIVISION)
-                    {
-                        listviewItem.SubItems.Add("/");
-                    }
-                    else if (CalculatorUI.mainCalculator.MemorizedOperations[sayac] == Operations.PLUS)
-                    {
-                        listviewItem.SubItems.Add("+");
-                    }
-                    else if (CalculatorUI.mainCalculator.MemorizedOperations[sayac] == Operations.MINUS)
-                    {
-                        listviewItem.SubItems.Add("-");
-                    }
-                    listviewItem.SubItems.Add(CalculatorUI.mainCalculator.MemorizedProcessPiority[sayac].ToString());
-                    listviewMainRec.Items.Add(listviewItem);
+                    Text = CalculatorUI.mainCalculator.MemorizedNumbers[sayac].ToString()
+                };
+                listviewMainRecNumbers.Items.Add(listviewItem);
+            }
+
+            //For Operation ListView
+            listviewMainRecOperation.Items.Clear();
+            for (int sayac = 0; sayac < CalculatorUI.mainCalculator.MemorizedOperations.Count; sayac++)
+            {
+                ListViewItem listviewItem = new ListViewItem();
+
+                if (CalculatorUI.mainCalculator.MemorizedOperations[sayac] == Operations.EXP)
+                {
+                    listviewItem.Text = "^";
                 }
+                else if (CalculatorUI.mainCalculator.MemorizedOperations[sayac] == Operations.ROOT)
+                {
+                    listviewItem.Text = "√¯";
+                }
+                else if (CalculatorUI.mainCalculator.MemorizedOperations[sayac] == Operations.CROSS)
+                {
+                    listviewItem.Text = "*";
+                }
+                else if (CalculatorUI.mainCalculator.MemorizedOperations[sayac] == Operations.DIVISION)
+                {
+                    listviewItem.Text = "/";
+                }
+                else if (CalculatorUI.mainCalculator.MemorizedOperations[sayac] == Operations.PLUS)
+                {
+                    listviewItem.Text = "+";
+                }
+                else if (CalculatorUI.mainCalculator.MemorizedOperations[sayac] == Operations.MINUS)
+                {
+                    listviewItem.Text = "-";
+                }
+
+                listviewMainRecOperation.Items.Add(listviewItem);
+            }
+
+            //For Process Piority ListView
+            listviewMainRecProcessPiority.Items.Clear();
+            for (int sayac = 0; sayac < CalculatorUI.mainCalculator.MemorizedProcessPiority.Count; sayac++)
+            {
+                ListViewItem listviewItem = new ListViewItem
+                {
+                    Text = CalculatorUI.mainCalculator.MemorizedProcessPiority[sayac].ToString()
+                };
+                listviewMainRecProcessPiority.Items.Add(listviewItem);
             }
         }
 

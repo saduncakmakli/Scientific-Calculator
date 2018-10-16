@@ -60,10 +60,14 @@
             this.ClientSize = new System.Drawing.Size(284, 261);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.label1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Options";
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
             this.Text = "Options";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Options_FormClosed);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Options_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 

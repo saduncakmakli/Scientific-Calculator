@@ -1,12 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ScientificCalculation
 {
-    
+
     static class Program
     {
         
@@ -18,8 +15,7 @@ namespace ScientificCalculation
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            CalculatorUI calculatorUI = new CalculatorUI();
-            Application.Run(calculatorUI);
+            BaseClass runnableDebugClass = new BaseClass();
         }
         
     }
