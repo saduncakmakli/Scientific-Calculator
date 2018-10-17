@@ -1638,14 +1638,6 @@ namespace ScientificCalculation
             help_label_3.Visible = false;
         }
 
-        private void CalculatorUI_Activated(object sender, EventArgs e)
-        {
-            //TEMPORARY PERIOD BUG FIX
-            //Forumun genişlik ve yüksekliğinin hatalı çıkması geçici çözüm
-            ActiveForm.Width = 420;
-            ActiveForm.Height = 620;
-        }
-
         //ALTGR, CTRL, SHIFT TUSLARININ GUNCEL DURUMU
         private bool special_key_altGr = false;
         private bool special_key_ctrl = false;

@@ -36,6 +36,12 @@
             this.tmr_auto_refresh = new System.Windows.Forms.Timer(this.components);
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPageMainRec = new System.Windows.Forms.TabPage();
+            this.listviewMainRecNumbers = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.listviewMainRecOperation = new System.Windows.Forms.ListView();
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.listviewMainRecProcessPiority = new System.Windows.Forms.ListView();
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.lblMainScreen = new System.Windows.Forms.Label();
             this.tbMainSonuc = new System.Windows.Forms.TextBox();
             this.tbMainIslem = new System.Windows.Forms.TextBox();
@@ -75,12 +81,6 @@
             this.tmr_auto_logs_clean = new System.Windows.Forms.Timer(this.components);
             this.btn_logs = new System.Windows.Forms.Button();
             this.btn_screens = new System.Windows.Forms.Button();
-            this.listviewMainRecNumbers = new System.Windows.Forms.ListView();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.listviewMainRecOperation = new System.Windows.Forms.ListView();
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.listviewMainRecProcessPiority = new System.Windows.Forms.ListView();
-            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tabControl1.SuspendLayout();
             this.tabPageMainRec.SuspendLayout();
             this.tabPageARec.SuspendLayout();
@@ -147,6 +147,46 @@
             resources.ApplyResources(this.tabPageMainRec, "tabPageMainRec");
             this.tabPageMainRec.Name = "tabPageMainRec";
             this.tabPageMainRec.UseVisualStyleBackColor = true;
+            // 
+            // listviewMainRecNumbers
+            // 
+            this.listviewMainRecNumbers.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1});
+            resources.ApplyResources(this.listviewMainRecNumbers, "listviewMainRecNumbers");
+            this.listviewMainRecNumbers.Name = "listviewMainRecNumbers";
+            this.listviewMainRecNumbers.UseCompatibleStateImageBehavior = false;
+            this.listviewMainRecNumbers.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Tag = "";
+            resources.ApplyResources(this.columnHeader1, "columnHeader1");
+            // 
+            // listviewMainRecOperation
+            // 
+            this.listviewMainRecOperation.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader2});
+            resources.ApplyResources(this.listviewMainRecOperation, "listviewMainRecOperation");
+            this.listviewMainRecOperation.Name = "listviewMainRecOperation";
+            this.listviewMainRecOperation.UseCompatibleStateImageBehavior = false;
+            this.listviewMainRecOperation.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader2
+            // 
+            resources.ApplyResources(this.columnHeader2, "columnHeader2");
+            // 
+            // listviewMainRecProcessPiority
+            // 
+            this.listviewMainRecProcessPiority.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader3});
+            resources.ApplyResources(this.listviewMainRecProcessPiority, "listviewMainRecProcessPiority");
+            this.listviewMainRecProcessPiority.Name = "listviewMainRecProcessPiority";
+            this.listviewMainRecProcessPiority.UseCompatibleStateImageBehavior = false;
+            this.listviewMainRecProcessPiority.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader3
+            // 
+            resources.ApplyResources(this.columnHeader3, "columnHeader3");
             // 
             // lblMainScreen
             // 
@@ -383,46 +423,6 @@
             this.btn_screens.UseVisualStyleBackColor = false;
             this.btn_screens.Click += new System.EventHandler(this.btn_screens_Click);
             // 
-            // listviewMainRecNumbers
-            // 
-            this.listviewMainRecNumbers.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1});
-            resources.ApplyResources(this.listviewMainRecNumbers, "listviewMainRecNumbers");
-            this.listviewMainRecNumbers.Name = "listviewMainRecNumbers";
-            this.listviewMainRecNumbers.UseCompatibleStateImageBehavior = false;
-            this.listviewMainRecNumbers.View = System.Windows.Forms.View.Details;
-            // 
-            // columnHeader1
-            // 
-            this.columnHeader1.Tag = "";
-            resources.ApplyResources(this.columnHeader1, "columnHeader1");
-            // 
-            // listviewMainRecOperation
-            // 
-            this.listviewMainRecOperation.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader2});
-            resources.ApplyResources(this.listviewMainRecOperation, "listviewMainRecOperation");
-            this.listviewMainRecOperation.Name = "listviewMainRecOperation";
-            this.listviewMainRecOperation.UseCompatibleStateImageBehavior = false;
-            this.listviewMainRecOperation.View = System.Windows.Forms.View.Details;
-            // 
-            // columnHeader2
-            // 
-            resources.ApplyResources(this.columnHeader2, "columnHeader2");
-            // 
-            // listviewMainRecProcessPiority
-            // 
-            this.listviewMainRecProcessPiority.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader3});
-            resources.ApplyResources(this.listviewMainRecProcessPiority, "listviewMainRecProcessPiority");
-            this.listviewMainRecProcessPiority.Name = "listviewMainRecProcessPiority";
-            this.listviewMainRecProcessPiority.UseCompatibleStateImageBehavior = false;
-            this.listviewMainRecProcessPiority.View = System.Windows.Forms.View.Details;
-            // 
-            // columnHeader3
-            // 
-            resources.ApplyResources(this.columnHeader3, "columnHeader3");
-            // 
             // Debug
             // 
             resources.ApplyResources(this, "$this");
@@ -434,10 +434,12 @@
             this.Controls.Add(this.btn_auto_refresh);
             this.Controls.Add(this.btn_refresh);
             this.Controls.Add(this.lB_logs);
+            this.Cursor = System.Windows.Forms.Cursors.Cross;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Debug";
+            this.Opacity = 0.9D;
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Debug_FormClosing);

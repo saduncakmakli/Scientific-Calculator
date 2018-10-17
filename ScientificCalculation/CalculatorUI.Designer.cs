@@ -654,11 +654,12 @@
             this.Controls.Add(this.button_n1);
             this.Controls.Add(this.tb_sonuc);
             this.Controls.Add(this.tb_islem);
+            this.Cursor = System.Windows.Forms.Cursors.Default;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.KeyPreview = true;
             this.MaximizeBox = false;
             this.Name = "CalculatorUI";
-            this.Activated += new System.EventHandler(this.CalculatorUI_Activated);
+            this.Opacity = 0.95D;
             this.Load += new System.EventHandler(this.CalculatorUI_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.CalculatorUI_KeyDown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.CalculatorUI_KeyUp);
