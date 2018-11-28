@@ -692,9 +692,12 @@ namespace ScientificCalculation
     {
 
         /// <summary>
-        /// 
+        /// The Constructor Method.
         /// </summary>
-        /// <param name="whichRec"></param>
+        /// <param name="whichRec">
+        /// <EN>WhichRec determines which calculator class object to use. WhichRec = 0 for main calculator class' object. </EN>
+        /// <TR>Hesap Makinesi sınıfının nesnesinin kaçıncısının kullanılacağını whichRec belirler. Ana hesap makinesi sınıfı nesnesi için rec=0 olmalıdır.</TR>
+        /// </param>
         public Calculator(int whichRec)
         {
             rec = whichRec;
@@ -759,19 +762,16 @@ namespace ScientificCalculation
         /// </summary>
         private bool isOperationHavePermit = false;
 
-
         //Geçici olarak kodu kullanabilmek için 100 değerini verdik. İleride dinamik dizi olarak kodlanıcak!
         /// <summary>
         /// 
         /// </summary>
         private bool[] isBracketsHaveOperation = new bool[100];
 
-
         /// <summary>
         /// 
         /// </summary>
         private List<double> memorizedNumbers = new List<double>();
-
 
         //Sayı kaç tane parantezin içinde onun tutulacağı list
         //İşlemlerin önceliği için (Not: İşleme tanımlanır, sayıya değil!)
@@ -780,12 +780,10 @@ namespace ScientificCalculation
         /// </summary>
         private List<int> memorizedProcessPiority = new List<int>();
 
-
         /// <summary>
         /// 
         /// </summary>
         private List<Operations> memorizedOperations = new List<Operations>();
-
 
         /// <summary>
         /// Older types of calculators are usually used as a superset, after which an operation is performed and the operation before it, the line in which the number is read.
@@ -824,28 +822,12 @@ namespace ScientificCalculation
         /// Returns the value of the operation screen variable.
         /// Older types of calculators are usually used as a superset, after which an operation is performed and the operation before it, the line in which the number is read.
         /// </summary>
-        public string OperationScreen
-        {
-            get
-            {
-                return operationScreen;
-            }
-        }
-
-
+        public string OperationScreen { get => operationScreen; }
         /// <summary>
         /// sonuc_ekrani değişkeninin değerini döndürür.
         /// Eski tip hesap makinelerinin genelde alt satırı olarak kullanılan, girilen sayının işleme geçmeden okunduğu satır.
         /// </summary>
-        public string ResultScreen
-        {
-            get
-            {
-                return resultScreen;
-            }
-
-        }
-
+        public string ResultScreen { get => resultScreen; }
         public int Rec { get => rec; }
         public int WhichNumber { get => whichNumber; }
         public int WhichOperation { get => whichOperation; }
@@ -872,7 +854,7 @@ namespace ScientificCalculation
             char[] tempChar = resultScreen.ToCharArray();
 
             //Eğer sayının başında eksi varsa
-            if (resultScreen[0] == '(' && resultScreen[1] == '-')
+            if (IsHaveNumberSelfBracketing(resultScreen))
             {
                 int timer;
                 for (timer = 2; timer < tempChar.Length - 1; timer++)
@@ -893,6 +875,7 @@ namespace ScientificCalculation
                 }
             }
         }
+
 
         public static string DotNotationResultScreen(string resultScreen)
         {
@@ -982,6 +965,7 @@ namespace ScientificCalculation
             }
         }
 
+
         public static string[] CommaFreeStateResultScreen(string resultScreenNumberItSelf)
         {
             bool isHaveComma = false;
@@ -1037,6 +1021,7 @@ namespace ScientificCalculation
 
         }
 
+
         public static bool IsHaveNumberComma(string Number)
         {
             bool isHaveComma = false;
@@ -1059,6 +1044,7 @@ namespace ScientificCalculation
             return isHaveComma;
         }
 
+
         public static bool IsHaveNumberSelfBracketing(string Number)
         {
             char[] tempCharArray = Number.ToCharArray();
@@ -1073,6 +1059,25 @@ namespace ScientificCalculation
             }
             return false;
         }
+
+
+        public static bool IsTheArrayEndsWithX(string stringparam, string control)
+        {
+            char[] tempCharStringparam = stringparam.ToCharArray();
+            char[] tempCharX = control.ToCharArray();
+            int x, y = 0;
+
+            if (stringparam.Length >= control.Length)
+            {
+                for (x = stringparam.Length-1, y = control.Length-1; y > 0; x--,y--)
+                {
+                    if (tempCharStringparam[x] != tempCharX[y]) return false;
+                }
+                return true;
+            }
+            else return false;
+         }
+
 
         public static string NumberItself(string Number)
         {
@@ -1103,6 +1108,7 @@ namespace ScientificCalculation
             return isHaveSelfBracketing == true ? numberItself : Number;
         }
 
+
         public static string NumberItselfAlwaysPositiveReturns(string Number)
         {
             bool isHaveSelfBracketing = false;
@@ -1131,6 +1137,7 @@ namespace ScientificCalculation
             }
             return isHaveSelfBracketing == true ? numberItself : Number;
         }
+
 
         /// <summary>
         /// The button used to enter numbers in the calculator.
@@ -1311,13 +1318,18 @@ namespace ScientificCalculation
             return resultScreen;
         }
 
+
         /// <summary>
         /// 
         /// </summary>
         /// <returns></returns>
         public string BracketOpenButton()
         {
-            if (isHaveOperation == true && isHaveNumber == false || IsFirstStart == true)
+            if (isHaveOperation == false && isHaveNumber == true)
+            {
+                CrossButton();
+            }
+            if (isHaveOperation == true && isHaveNumber == false || isFirstStart == true)
             {
                 //İSLEM NOKTASI
                 if (temporaryProcessingPriority == 0 && wasEqualZeroTheTemporaryOperationPriorityInThePreviousStep == false)
@@ -1335,6 +1347,7 @@ namespace ScientificCalculation
             }
             return operationScreen;
         }
+
 
         /// <summary>
         /// 
@@ -1645,7 +1658,7 @@ namespace ScientificCalculation
         /// <summary>
         /// Delete from operation screen string on minimum character size
         /// </summary>
-        /// <returns>Error Code in ErrorEnumerators Class</returns>
+        /// <returns>Error Code in ErrorEnumerators Class</returns> 
         private ErrorEnumerators DeleteOneOperationScreenString()
         {
             char[] CharHesap = operationScreen.ToCharArray();
@@ -1686,30 +1699,30 @@ namespace ScientificCalculation
         /// <returns>Returns operatorScreen</returns>
         public string PlusButton()
         {
-            bool kendindenparantez = false;
-            char[] GeciciChar = resultScreen.ToCharArray();
-            string sayınınkendisi = "";
-            //Sayının kendisindeki "-"den dolayı parantezi var mı?
-            if (resultScreen.Length > 2)
-            {
-                if (resultScreen[0] == '(' && resultScreen[1] == '-')
+                bool kendindenparantez = false;
+                char[] GeciciChar = resultScreen.ToCharArray();
+                string sayınınkendisi = "";
+                //Sayının kendisindeki "-"den dolayı parantezi var mı?
+                if (resultScreen.Length > 2)
                 {
-                    //Parentezi olan sayının kendisini ortaya çıkarma (Sadece parantez kalkar sayının başındaki eksi durur.
-                    kendindenparantez = true;
-                    int sayac;
-                    for (sayac = 1; sayac < GeciciChar.Length - 1; sayac++)
+                    if (resultScreen[0] == '(' && resultScreen[1] == '-')
                     {
-                        if (sayac == 1)
+                        //Parentezi olan sayının kendisini ortaya çıkarma (Sadece parantez kalkar sayının başındaki eksi durur.
+                        kendindenparantez = true;
+                        int sayac;
+                        for (sayac = 1; sayac < GeciciChar.Length - 1; sayac++)
                         {
-                            sayınınkendisi = GeciciChar[sayac].ToString();
-                        }
-                        else
-                        {
-                            sayınınkendisi += GeciciChar[sayac].ToString();
+                            if (sayac == 1)
+                            {
+                                sayınınkendisi = GeciciChar[sayac].ToString();
+                            }
+                            else
+                            {
+                                sayınınkendisi += GeciciChar[sayac].ToString();
+                            }
                         }
                     }
                 }
-            }
 
             //Farklı bir işlem yoksa veya parantez yeni kapatıldığı için işlem izni varsa.
             if ((isHaveNumber == true && isHaveOperation == false) || isOperationHavePermit == true)
@@ -1751,7 +1764,7 @@ namespace ScientificCalculation
                 }
             }
             //Farklı bir işlem varsa (Son işlem değiştirilir.)
-            else if (isHaveNumber == false && isHaveOperation == true)
+            else if ((isHaveNumber == false && isHaveOperation == true) && IsTheArrayEndsWithX(operationScreen, "(") == false) //HATALI ÇALIŞMA ÇÖZÜLECEK
             {
                 memorizedOperations[whichOperation - 1] = Operations.PLUS;
 
@@ -1881,6 +1894,7 @@ namespace ScientificCalculation
             return operationScreen;
         }
 
+
         /// <summary>
         /// Cross Operator for UI
         /// </summary>
@@ -1981,6 +1995,7 @@ namespace ScientificCalculation
             }
             return operationScreen;
         }
+
 
         /// <summary>
         /// Division Operator for UI
@@ -2083,6 +2098,7 @@ namespace ScientificCalculation
             return operationScreen;
         }
 
+
         /// <summary>
         /// Delete Button for UI
         /// Delete a character from the result screen
@@ -2099,6 +2115,7 @@ namespace ScientificCalculation
             }
             return ResultScreen;
         }
+
 
         /// <summary>
         /// Reset the default value in calculator class non-static variable

@@ -49,7 +49,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AlwaysRunDebugClass.cs" />
     <Compile Include="BaseClass.cs" />
     <Compile Include="Calculator.cs" />
     <Compile Include="CalculatorUI.cs">

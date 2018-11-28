@@ -697,7 +697,6 @@ namespace ScientificCalculation
         internal static Calculator fCalculator = new Calculator(6);
         Debug debug = new Debug();
         internal static Options options = new Options();
-        internal static AlwaysRunDebugClass DebugClass = new AlwaysRunDebugClass(); //For debug
 
         bool isVersiyonActivePassive;
 
@@ -1510,7 +1509,6 @@ namespace ScientificCalculation
             dCalculator.CalculatorReset();
             eCalculator.CalculatorReset();
             fCalculator.CalculatorReset();
-            Console.Clear();
         }
 
         private void DELButton_Click(object sender, EventArgs e)
