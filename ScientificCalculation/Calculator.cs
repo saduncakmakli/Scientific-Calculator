@@ -706,30 +706,18 @@ namespace ScientificCalculation
 
         //Hesap sınıfının ilk nesnesinde rec "0"a eşittir.
         //Ve ana hesabı o yapar.
-        /// <summary>
-        /// 
-        /// </summary>
+
         private readonly int rec;
 
-        /// <summary>
-        /// 
-        /// </summary>
         private int whichNumber = 0;
 
-        /// <summary>
-        /// 
-        /// </summary>
         private int whichOperation = 0;
 
-        //Parantezleri sayan ve onu işlem önceliğine yazan değişken.
         /// <summary>
-        /// 
+        /// Parantezleri sayan ve onu işlem önceliğine yazan değişken.
         /// </summary>
         private int whichBracket = 0;
 
-        /// <summary>
-        /// 
-        /// </summary>
         private int temporaryProcessingPriority = 0;
 
         /// <summary>
@@ -762,27 +750,16 @@ namespace ScientificCalculation
         /// </summary>
         private bool isOperationHavePermit = false;
 
+
         //Geçici olarak kodu kullanabilmek için 100 değerini verdik. İleride dinamik dizi olarak kodlanıcak!
-        /// <summary>
-        /// 
-        /// </summary>
         private bool[] isBracketsHaveOperation = new bool[100];
 
-        /// <summary>
-        /// 
-        /// </summary>
         private List<double> memorizedNumbers = new List<double>();
 
         //Sayı kaç tane parantezin içinde onun tutulacağı list
         //İşlemlerin önceliği için (Not: İşleme tanımlanır, sayıya değil!)
-        /// <summary>
-        /// 
-        /// </summary>
         private List<int> memorizedProcessPiority = new List<int>();
 
-        /// <summary>
-        /// 
-        /// </summary>
         private List<Operations> memorizedOperations = new List<Operations>();
 
         /// <summary>
@@ -1065,11 +1042,11 @@ namespace ScientificCalculation
         {
             char[] tempCharStringparam = stringparam.ToCharArray();
             char[] tempCharX = control.ToCharArray();
-            int x, y = 0;
+            int x, y;
 
             if (stringparam.Length >= control.Length)
             {
-                for (x = stringparam.Length-1, y = control.Length-1; y > 0; x--,y--)
+                for (x = stringparam.Length-1, y = control.Length-1; y >= 0; x--,y--)
                 {
                     if (tempCharStringparam[x] != tempCharX[y]) return false;
                 }
@@ -1692,6 +1669,128 @@ namespace ScientificCalculation
             }
         }
 
+        public static string GetOperationString (Operations operations)
+        {
+            switch (operations)
+            {
+                case Operations.PLUS:
+                    return " + ";
+
+                case Operations.MINUS:
+                    return " - ";
+
+                case Operations.DIVISION:
+                    return " / ";
+
+                case Operations.CROSS:
+                    return " * ";
+
+                case Operations.EXP:
+                    return " ^ ";
+
+                case Operations.ROOT:
+                    return " √ ";
+
+                case Operations.NULL:
+                default:
+                    return "";
+            }
+        }
+
+        public string OperationButton(Operations operations)
+        {
+            bool kendindenparantez = false;
+            char[] GeciciChar = resultScreen.ToCharArray();
+            string sayınınkendisi = "";
+            //Sayının kendisindeki "-"den dolayı parantezi var mı?
+            if (resultScreen.Length > 2)
+            {
+                if (resultScreen[0] == '(' && resultScreen[1] == '-')
+                {
+                    //Parentezi olan sayının kendisini ortaya çıkarma (Sadece parantez kalkar sayının başındaki eksi durur.
+                    kendindenparantez = true;
+                    int sayac;
+                    for (sayac = 1; sayac < GeciciChar.Length - 1; sayac++)
+                    {
+                        if (sayac == 1)
+                        {
+                            sayınınkendisi = GeciciChar[sayac].ToString();
+                        }
+                        else
+                        {
+                            sayınınkendisi += GeciciChar[sayac].ToString();
+                        }
+                    }
+                }
+            }
+
+            //Farklı bir işlem yoksa veya parantez yeni kapatıldığı için işlem izni varsa.
+            if ((isHaveNumber == true && isHaveOperation == false) || isOperationHavePermit == true)
+            {
+                //Sonuç kısmı islem_izni olduğunda boş olur
+                //Sonuç kısmı boşken işlemlerin hafızaya eklenmeye çalışılması hata oluşturacağı için.
+                if (isOperationHavePermit == false)
+                {
+                    //Sayıyı hafızaya ekleme bölümü
+                    if (kendindenparantez == false)
+                        memorizedNumbers.Add(Convert.ToDouble(resultScreen));
+                    if (kendindenparantez == true)
+                        memorizedNumbers.Add(Convert.ToDouble(sayınınkendisi));
+                    whichNumber++;
+                }
+
+                //İşlemleri hafızaya ekleme bölümü
+                memorizedOperations.Add(operations);
+                memorizedProcessPiority.Add(temporaryProcessingPriority);
+                whichOperation++;
+
+                operationScreen += resultScreen;
+                resultScreen = "";
+                operationScreen += GetOperationString(operations);
+                isHaveNumber = false;
+                isHaveComma = false;
+                isHaveNegativeBracket = false;
+                isHaveOperation = true;
+                isFirstStart = false;
+                isOperationHavePermit = false;
+
+                //Aynı parantez içindeki işlem kontrolü
+                if (temporaryProcessingPriority > 0)
+                {
+                    //İşlem önceliği 1 iken, parantez_islem_iceriyor_mu dizisinin 0. değişkeni kullanılır.
+                    //Her zaman parantez_islem_iceriyor_mu dizisinin ilgili olduğu değişkenin hafızadaki yeri
+                    //gecici islem önceliği değişkenin gösterdiği değerin bir altıdır.
+                    isBracketsHaveOperation[whichBracket] = true;
+                }
+            }
+            //Farklı bir işlem varsa (Son işlem değiştirilir.)
+            else if ((isHaveNumber == false && isHaveOperation == true) && IsTheArrayEndsWithX(operationScreen, " ( ") == false)
+            {
+                memorizedOperations[whichOperation - 1] = operations;
+
+                //ESKİ İŞLEMİ SİLME
+                DeleteOneOperationScreenString();
+                DeleteOneOperationScreenString();
+                DeleteOneOperationScreenString();
+
+                operationScreen += GetOperationString(operations);
+                isHaveNumber = false;
+                isHaveComma = false;
+                isHaveNegativeBracket = false;
+                isHaveOperation = true;
+                isFirstStart = false;
+
+                //Aynı parantez içindeki işlem kontrolü
+                if (temporaryProcessingPriority > 0)
+                {
+                    //İşlem önceliği 1 iken, parantez_islem_iceriyor_mu dizisinin 0. değişkeni kullanılır.
+                    //Her zaman parantez_islem_iceriyor_mu dizisinin ilgili olduğu değişkenin hafızadaki yeri
+                    //gecici islem önceliği değişkenin gösterdiği değerin bir altıdır.
+                    isBracketsHaveOperation[temporaryProcessingPriority - 1] = true;
+                }
+            }
+            return operationScreen;
+        }
 
         /// <summary>
         /// Plus Operator for UI
@@ -1699,30 +1798,30 @@ namespace ScientificCalculation
         /// <returns>Returns operatorScreen</returns>
         public string PlusButton()
         {
-                bool kendindenparantez = false;
-                char[] GeciciChar = resultScreen.ToCharArray();
-                string sayınınkendisi = "";
-                //Sayının kendisindeki "-"den dolayı parantezi var mı?
-                if (resultScreen.Length > 2)
+            bool kendindenparantez = false;
+            char[] GeciciChar = resultScreen.ToCharArray();
+            string sayınınkendisi = "";
+            //Sayının kendisindeki "-"den dolayı parantezi var mı?
+            if (resultScreen.Length > 2)
+            {
+                if (resultScreen[0] == '(' && resultScreen[1] == '-')
                 {
-                    if (resultScreen[0] == '(' && resultScreen[1] == '-')
+                    //Parentezi olan sayının kendisini ortaya çıkarma (Sadece parantez kalkar sayının başındaki eksi durur.
+                    kendindenparantez = true;
+                    int sayac;
+                    for (sayac = 1; sayac < GeciciChar.Length - 1; sayac++)
                     {
-                        //Parentezi olan sayının kendisini ortaya çıkarma (Sadece parantez kalkar sayının başındaki eksi durur.
-                        kendindenparantez = true;
-                        int sayac;
-                        for (sayac = 1; sayac < GeciciChar.Length - 1; sayac++)
+                        if (sayac == 1)
                         {
-                            if (sayac == 1)
-                            {
-                                sayınınkendisi = GeciciChar[sayac].ToString();
-                            }
-                            else
-                            {
-                                sayınınkendisi += GeciciChar[sayac].ToString();
-                            }
+                            sayınınkendisi = GeciciChar[sayac].ToString();
+                        }
+                        else
+                        {
+                            sayınınkendisi += GeciciChar[sayac].ToString();
                         }
                     }
                 }
+            }
 
             //Farklı bir işlem yoksa veya parantez yeni kapatıldığı için işlem izni varsa.
             if ((isHaveNumber == true && isHaveOperation == false) || isOperationHavePermit == true)
@@ -1764,7 +1863,7 @@ namespace ScientificCalculation
                 }
             }
             //Farklı bir işlem varsa (Son işlem değiştirilir.)
-            else if ((isHaveNumber == false && isHaveOperation == true) && IsTheArrayEndsWithX(operationScreen, "(") == false) //HATALI ÇALIŞMA ÇÖZÜLECEK
+            else if ((isHaveNumber == false && isHaveOperation == true) && IsTheArrayEndsWithX(operationScreen, " ( ") == false)
             {
                 memorizedOperations[whichOperation - 1] = Operations.PLUS;
 
