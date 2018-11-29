@@ -209,7 +209,7 @@
             resources.ApplyResources(this.btn_plus, "btn_plus");
             this.btn_plus.Name = "btn_plus";
             this.btn_plus.UseVisualStyleBackColor = false;
-            this.btn_plus.Click += new System.EventHandler(this.PlusButton_Click);
+            this.btn_plus.Click += new System.EventHandler(this.Operation_Click);
             this.btn_plus.KeyDown += new System.Windows.Forms.KeyEventHandler(this.CalculatorUI_KeyDown);
             this.btn_plus.KeyUp += new System.Windows.Forms.KeyEventHandler(this.CalculatorUI_KeyUp);
             this.btn_plus.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.CalculatorUI_PreviewKeyDown);
@@ -220,7 +220,7 @@
             resources.ApplyResources(this.btn_minus, "btn_minus");
             this.btn_minus.Name = "btn_minus";
             this.btn_minus.UseVisualStyleBackColor = false;
-            this.btn_minus.Click += new System.EventHandler(this.MinusButton_Click);
+            this.btn_minus.Click += new System.EventHandler(this.Operation_Click);
             this.btn_minus.KeyDown += new System.Windows.Forms.KeyEventHandler(this.CalculatorUI_KeyDown);
             this.btn_minus.KeyUp += new System.Windows.Forms.KeyEventHandler(this.CalculatorUI_KeyUp);
             this.btn_minus.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.CalculatorUI_PreviewKeyDown);
@@ -275,7 +275,7 @@
             resources.ApplyResources(this.btn_cross, "btn_cross");
             this.btn_cross.Name = "btn_cross";
             this.btn_cross.UseVisualStyleBackColor = false;
-            this.btn_cross.Click += new System.EventHandler(this.CrossButton_Click);
+            this.btn_cross.Click += new System.EventHandler(this.Operation_Click);
             this.btn_cross.KeyDown += new System.Windows.Forms.KeyEventHandler(this.CalculatorUI_KeyDown);
             this.btn_cross.KeyUp += new System.Windows.Forms.KeyEventHandler(this.CalculatorUI_KeyUp);
             this.btn_cross.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.CalculatorUI_PreviewKeyDown);
@@ -286,7 +286,7 @@
             resources.ApplyResources(this.btn_division, "btn_division");
             this.btn_division.Name = "btn_division";
             this.btn_division.UseVisualStyleBackColor = false;
-            this.btn_division.Click += new System.EventHandler(this.DivisionButton_Click);
+            this.btn_division.Click += new System.EventHandler(this.Operation_Click);
             this.btn_division.KeyDown += new System.Windows.Forms.KeyEventHandler(this.CalculatorUI_KeyDown);
             this.btn_division.KeyUp += new System.Windows.Forms.KeyEventHandler(this.CalculatorUI_KeyUp);
             this.btn_division.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.CalculatorUI_PreviewKeyDown);

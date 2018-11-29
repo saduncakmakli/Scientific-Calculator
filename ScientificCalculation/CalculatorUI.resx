@@ -610,7 +610,7 @@
     <value>1</value>
   </data>
   <data name="btn_cross.Text" xml:space="preserve">
-    <value>x</value>
+    <value>*</value>
   </data>
   <data name="&gt;&gt;btn_cross.Name" xml:space="preserve">
     <value>btn_cross</value>

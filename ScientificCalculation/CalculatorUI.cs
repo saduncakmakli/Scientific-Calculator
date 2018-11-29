@@ -750,17 +750,17 @@ namespace ScientificCalculation
             if (Calculator.selectedRec == String.Empty)
                 tb_sonuc.Text = mainCalculator.EnterNumber(number);
             else if (Calculator.selectedRec == "A")
-                tb_sonuc.Text = aCalculator.EnterNumber(Convert.ToInt32(number));
+                tb_sonuc.Text = aCalculator.EnterNumber(number);
             else if (Calculator.selectedRec == "B")
-                tb_sonuc.Text = bCalculator.EnterNumber(Convert.ToInt32(number));
+                tb_sonuc.Text = bCalculator.EnterNumber(number);
             else if (Calculator.selectedRec == "C")
-                tb_sonuc.Text = cCalculator.EnterNumber(Convert.ToInt32(number));
+                tb_sonuc.Text = cCalculator.EnterNumber(number);
             else if (Calculator.selectedRec == "D")
-                tb_sonuc.Text = dCalculator.EnterNumber(Convert.ToInt32(number));
+                tb_sonuc.Text = dCalculator.EnterNumber(number);
             else if (Calculator.selectedRec == "E")
-                tb_sonuc.Text = eCalculator.EnterNumber(Convert.ToInt32(number));
+                tb_sonuc.Text = eCalculator.EnterNumber(number);
             else if (Calculator.selectedRec == "F")
-                tb_sonuc.Text = fCalculator.EnterNumber(Convert.ToInt32(number));
+                tb_sonuc.Text = fCalculator.EnterNumber(number);
 
             //Optionsla istenirse kapatma özelliği gelecek.
             if(options.IsEnableOtomatikComma() == true)
@@ -811,6 +811,89 @@ namespace ScientificCalculation
                 tb_sonuc.Text = Calculator.DotNotationResultScreen(tb_sonuc.Text);
         }
 
+        private void Operation_Click(object sender, EventArgs e)
+        {
+            //Hangi işleme basıldığının tespiti için.
+            string operation_string;
+            string operation;
+
+            operation_string = sender.ToString();
+            operation = (operation_string[operation_string.Length - 1]).ToString();
+
+            string temp_tb_islem = String.Empty;
+            switch (Calculator.selectedRec)
+            {
+                case (""):
+                    temp_tb_islem = mainCalculator.OperationButton(Calculator.GetOperations(" "+operation+" "));
+                    if (temp_tb_islem != String.Empty)
+                    {
+                        tb_islem.Text = temp_tb_islem;
+                        tb_sonuc.Text = String.Empty;
+                    }
+                    break;
+
+                case ("A"):
+                    temp_tb_islem = aCalculator.OperationButton(Calculator.GetOperations(" " + operation + " "));
+                    if (temp_tb_islem != String.Empty)
+                    {
+                        tb_islem.Text = temp_tb_islem;
+                        tb_sonuc.Text = String.Empty;
+                    }
+                    break;
+
+                case ("B"):
+                    temp_tb_islem = bCalculator.OperationButton(Calculator.GetOperations(" " + operation + " "));
+                    if (temp_tb_islem != String.Empty)
+                    {
+                        tb_islem.Text = temp_tb_islem;
+                        tb_sonuc.Text = String.Empty;
+                    }
+                    break;
+
+                case ("C"):
+                    temp_tb_islem = cCalculator.OperationButton(Calculator.GetOperations(" " + operation + " "));
+                    if (temp_tb_islem != String.Empty)
+                    {
+                        tb_islem.Text = temp_tb_islem;
+                        tb_sonuc.Text = String.Empty;
+                    }
+                    break;
+
+                case ("D"):
+                    temp_tb_islem = dCalculator.OperationButton(Calculator.GetOperations(" " + operation + " "));
+                    if (temp_tb_islem != String.Empty)
+                    {
+                        tb_islem.Text = temp_tb_islem;
+                        tb_sonuc.Text = String.Empty;
+                    }
+                    break;
+
+                case ("E"):
+                    temp_tb_islem = eCalculator.OperationButton(Calculator.GetOperations(" " + operation + " "));
+                    if (temp_tb_islem != String.Empty)
+                    {
+                        tb_islem.Text = temp_tb_islem;
+                        tb_sonuc.Text = String.Empty;
+                    }
+                    break;
+
+                case ("F"):
+                    temp_tb_islem = fCalculator.OperationButton(Calculator.GetOperations(" " + operation + " "));
+                    if (temp_tb_islem != String.Empty)
+                    {
+                        tb_islem.Text = temp_tb_islem;
+                        tb_sonuc.Text = String.Empty;
+                    }
+                    break;
+            }
+
+            //İmleci sona almak için
+            tb_islem.ScrollToCaret();
+            tb_islem.Select(tb_islem.Text.Length, tb_islem.Lines.Length);
+
+            Logs.logs_record.Add("Pressed Operation Button.");
+        }
+
         private void CommaButton_Click(object sender, EventArgs e)
         {
             if (Calculator.selectedRec == String.Empty)
@@ -850,313 +933,8 @@ namespace ScientificCalculation
 
             Logs.logs_record.Add("Pressed Comma Button.");
 
-            //Optionsla istenirse kapatma özelliği gelecek.
             if (options.IsEnableOtomatikComma() == true)
                 tb_sonuc.Text = Calculator.DotNotationResultScreen(tb_sonuc.Text);
-        }
-
-        private void PlusButton_Click(object sender, EventArgs e)
-        {
-            string temp_tb_islem = String.Empty;
-            switch (Calculator.selectedRec)
-            {
-                case (""):
-                    temp_tb_islem = mainCalculator.PlusButton();
-                    if (temp_tb_islem != String.Empty)
-                    {
-                        tb_islem.Text = temp_tb_islem;
-                        tb_sonuc.Text = String.Empty;
-                    }
-                    break;
-
-                case ("A"):
-                    temp_tb_islem = aCalculator.PlusButton();
-                    if (temp_tb_islem != String.Empty)
-                    {
-                        tb_islem.Text = temp_tb_islem;
-                        tb_sonuc.Text = String.Empty;
-                    }
-                    break;
-
-                case ("B"):
-                    temp_tb_islem = bCalculator.PlusButton();
-                    if (temp_tb_islem != String.Empty)
-                    {
-                        tb_islem.Text = temp_tb_islem;
-                        tb_sonuc.Text = String.Empty;
-                    }
-                    break;
-
-                case ("C"):
-                    temp_tb_islem = cCalculator.PlusButton();
-                    if (temp_tb_islem != String.Empty)
-                    {
-                        tb_islem.Text = temp_tb_islem;
-                        tb_sonuc.Text = String.Empty;
-                    }
-                    break;
-
-                case ("D"):
-                    temp_tb_islem = dCalculator.PlusButton();
-                    if (temp_tb_islem != String.Empty)
-                    {
-                        tb_islem.Text = temp_tb_islem;
-                        tb_sonuc.Text = String.Empty;
-                    }
-                    break;
-
-                case ("E"):
-                    temp_tb_islem = eCalculator.PlusButton();
-                    if (temp_tb_islem != String.Empty)
-                    {
-                        tb_islem.Text = temp_tb_islem;
-                        tb_sonuc.Text = String.Empty;
-                    }
-                    break;
-
-                case ("F"):
-                    temp_tb_islem = fCalculator.PlusButton();
-                    if (temp_tb_islem != String.Empty)
-                    {
-                        tb_islem.Text = temp_tb_islem;
-                        tb_sonuc.Text = String.Empty;
-                    }
-                    break;
-            }
-
-            //İmleci sona almak için
-            tb_islem.ScrollToCaret();
-            tb_islem.Select(tb_islem.Text.Length, tb_islem.Lines.Length);
-
-            Logs.logs_record.Add("Pressed Plus Button.");
-        }
-
-        private void MinusButton_Click(object sender, EventArgs e)
-        {
-            string temp_tb_islem = String.Empty;
-            switch (Calculator.selectedRec)
-            {
-                case (""):
-                    temp_tb_islem = mainCalculator.MinusButton();
-                    if (temp_tb_islem != String.Empty)
-                    {
-                        tb_islem.Text = temp_tb_islem;
-                        tb_sonuc.Text = String.Empty;
-                    }
-                    break;
-
-                case ("A"):
-                    temp_tb_islem = aCalculator.MinusButton();
-                    if (temp_tb_islem != String.Empty)
-                    {
-                        tb_islem.Text = temp_tb_islem;
-                        tb_sonuc.Text = String.Empty;
-                    }
-                    break;
-
-                case ("B"):
-                    temp_tb_islem = bCalculator.MinusButton();
-                    if (temp_tb_islem != String.Empty)
-                    {
-                        tb_islem.Text = temp_tb_islem;
-                        tb_sonuc.Text = String.Empty;
-                    }
-                    break;
-
-                case ("C"):
-                    temp_tb_islem = cCalculator.MinusButton();
-                    if (temp_tb_islem != String.Empty)
-                    {
-                        tb_islem.Text = temp_tb_islem;
-                        tb_sonuc.Text = String.Empty;
-                    }
-                    break;
-
-                case ("D"):
-                    temp_tb_islem = dCalculator.MinusButton();
-                    if (temp_tb_islem != String.Empty)
-                    {
-                        tb_islem.Text = temp_tb_islem;
-                        tb_sonuc.Text = String.Empty;
-                    }
-                    break;
-
-                case ("E"):
-                    temp_tb_islem = eCalculator.MinusButton();
-                    if (temp_tb_islem != String.Empty)
-                    {
-                        tb_islem.Text = temp_tb_islem;
-                        tb_sonuc.Text = String.Empty;
-                    }
-                    break;
-
-                case ("F"):
-                    temp_tb_islem = fCalculator.MinusButton();
-                    if (temp_tb_islem != String.Empty)
-                    {
-                        tb_islem.Text = temp_tb_islem;
-                        tb_sonuc.Text = String.Empty;
-                    }
-                    break;
-            }
-
-            //İmleci sona almak için
-            tb_islem.ScrollToCaret();
-            tb_islem.Select(tb_islem.Text.Length, tb_islem.Lines.Length);
-
-            Logs.logs_record.Add("Pressed Minus Button.");
-        }
-
-        private void CrossButton_Click(object sender, EventArgs e)
-        {
-            string temp_tb_islem = String.Empty;
-            switch (Calculator.selectedRec)
-            {
-                case (""):
-                    temp_tb_islem = mainCalculator.CrossButton();
-                    if (temp_tb_islem != String.Empty)
-                    {
-                        tb_islem.Text = temp_tb_islem;
-                        tb_sonuc.Text = String.Empty;
-                    }
-                    break;
-
-                case ("A"):
-                    temp_tb_islem = aCalculator.CrossButton();
-                    if (temp_tb_islem != String.Empty)
-                    {
-                        tb_islem.Text = temp_tb_islem;
-                        tb_sonuc.Text = String.Empty;
-                    }
-                    break;
-
-                case ("B"):
-                    temp_tb_islem = bCalculator.CrossButton();
-                    if (temp_tb_islem != String.Empty)
-                    {
-                        tb_islem.Text = temp_tb_islem;
-                        tb_sonuc.Text = String.Empty;
-                    }
-                    break;
-
-                case ("C"):
-                    temp_tb_islem = cCalculator.CrossButton();
-                    if (temp_tb_islem != String.Empty)
-                    {
-                        tb_islem.Text = temp_tb_islem;
-                        tb_sonuc.Text = String.Empty;
-                    }
-                    break;
-
-                case ("D"):
-                    temp_tb_islem = dCalculator.CrossButton();
-                    if (temp_tb_islem != String.Empty)
-                    {
-                        tb_islem.Text = temp_tb_islem;
-                        tb_sonuc.Text = String.Empty;
-                    }
-                    break;
-
-                case ("E"):
-                    temp_tb_islem = eCalculator.CrossButton();
-                    if (temp_tb_islem != String.Empty)
-                    {
-                        tb_islem.Text = temp_tb_islem;
-                        tb_sonuc.Text = String.Empty;
-                    }
-                    break;
-
-                case ("F"):
-                    temp_tb_islem = fCalculator.CrossButton();
-                    if (temp_tb_islem != String.Empty)
-                    {
-                        tb_islem.Text = temp_tb_islem;
-                        tb_sonuc.Text = String.Empty;
-                    }
-                    break;
-            }
-
-            //İmleci sona almak için
-            tb_islem.ScrollToCaret();
-            tb_islem.Select(tb_islem.Text.Length, tb_islem.Lines.Length);
-
-            Logs.logs_record.Add("Pressed Cross Button.");
-        }
-
-        private void DivisionButton_Click(object sender, EventArgs e)
-        {
-            string temp_tb_islem = String.Empty;
-            switch (Calculator.selectedRec)
-            {
-                case (""):
-                    temp_tb_islem = mainCalculator.DivisionButton();
-                    if (temp_tb_islem != String.Empty)
-                    {
-                        tb_islem.Text = temp_tb_islem;
-                        tb_sonuc.Text = String.Empty;
-                    }
-                    break;
-
-                case ("A"):
-                    temp_tb_islem = aCalculator.DivisionButton();
-                    if (temp_tb_islem != String.Empty)
-                    {
-                        tb_islem.Text = temp_tb_islem;
-                        tb_sonuc.Text = String.Empty;
-                    }
-                    break;
-
-                case ("B"):
-                    temp_tb_islem = bCalculator.DivisionButton();
-                    if (temp_tb_islem != String.Empty)
-                    {
-                        tb_islem.Text = temp_tb_islem;
-                        tb_sonuc.Text = String.Empty;
-                    }
-                    break;
-
-                case ("C"):
-                    temp_tb_islem = cCalculator.DivisionButton();
-                    if (temp_tb_islem != String.Empty)
-                    {
-                        tb_islem.Text = temp_tb_islem;
-                        tb_sonuc.Text = String.Empty;
-                    }
-                    break;
-
-                case ("D"):
-                    temp_tb_islem = dCalculator.DivisionButton();
-                    if (temp_tb_islem != String.Empty)
-                    {
-                        tb_islem.Text = temp_tb_islem;
-                        tb_sonuc.Text = String.Empty;
-                    }
-                    break;
-
-                case ("E"):
-                    temp_tb_islem = eCalculator.DivisionButton();
-                    if (temp_tb_islem != String.Empty)
-                    {
-                        tb_islem.Text = temp_tb_islem;
-                        tb_sonuc.Text = String.Empty;
-                    }
-                    break;
-
-                case ("F"):
-                    temp_tb_islem = fCalculator.DivisionButton();
-                    if (temp_tb_islem != String.Empty)
-                    {
-                        tb_islem.Text = temp_tb_islem;
-                        tb_sonuc.Text = String.Empty;
-                    }
-                    break;
-            }
-
-            //İmleci sona almak için
-            tb_islem.ScrollToCaret();
-            tb_islem.Select(tb_islem.Text.Length, tb_islem.Lines.Length);
-
-            Logs.logs_record.Add("Pressed Division Button.");
         }
 
         private void ExpButton_Click(object sender, EventArgs e)
@@ -1653,8 +1431,6 @@ namespace ScientificCalculation
                 return;
             }
 
-            Console.WriteLine(e.KeyValue);
-
             if (special_key_altGr == false && special_key_ctrl == false && special_key_shift == false)
             {
                 switch (e.KeyCode)
@@ -1714,21 +1490,21 @@ namespace ScientificCalculation
                         break;
 
                     case (Keys.Divide):
-                        DivisionButton_Click(null, null);
+                        Operation_Click("/", null);
                         break;
 
                     case (Keys.Multiply):
-                        CrossButton_Click(null, null);
+                        Operation_Click("*", null);
                         break;
 
                     case (Keys.OemMinus):
                     case (Keys.Subtract):
-                        MinusButton_Click(null, null);
+                        Operation_Click("-", null);
                         break;
 
                     case (Keys.Oemplus):
                     case (Keys.Add):
-                        PlusButton_Click(null, null);
+                        Operation_Click("+", null);
                         break;
 
                     case (Keys.A):
@@ -1764,23 +1540,23 @@ namespace ScientificCalculation
                         break;
 
                     case (111):
-                        DivisionButton_Click(null, null);
+                        Operation_Click("/", null);
                         break;
 
                     case (106):
-                        CrossButton_Click(null, null);
+                        Operation_Click("*", null);
                         break;
 
                     case (109):
-                        MinusButton_Click(null, null);
+                        Operation_Click("-", null);
                         break;
 
                     case (107):
-                        PlusButton_Click(null, null);
+                        Operation_Click("+", null);
                         break;
 
                     case (223):
-                        CrossButton_Click(null, null);
+                        Operation_Click("*", null);
                         break;
 
                     case (8):
@@ -1818,11 +1594,11 @@ namespace ScientificCalculation
                 switch (e.KeyValue)
                 {
                     case (52):
-                        PlusButton_Click(null, null);
+                        Operation_Click("+", null);
                         break;
 
                     case (55):
-                        DivisionButton_Click(null, null);
+                        Operation_Click("/", null);
                         break;
 
                     case (56):

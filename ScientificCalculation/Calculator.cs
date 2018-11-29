@@ -1037,7 +1037,7 @@ namespace ScientificCalculation
             return false;
         }
 
-
+        //Stringin control değişkeni ile bitip bitmediğini kontrol eder.
         public static bool IsTheArrayEndsWithX(string stringparam, string control)
         {
             char[] tempCharStringparam = stringparam.ToCharArray();
@@ -1304,7 +1304,7 @@ namespace ScientificCalculation
         {
             if (isHaveOperation == false && isHaveNumber == true)
             {
-                CrossButton();
+                OperationButton(Operations.CROSS); //Bu kod satırı burda ne ayak? Ne zaman ne için yazmışız bakılacak... :)
             }
             if (isHaveOperation == true && isHaveNumber == false || isFirstStart == true)
             {
@@ -1669,7 +1669,37 @@ namespace ScientificCalculation
             }
         }
 
-        public static string GetOperationString (Operations operations)
+        //Operasyonun string halinden ismini döner.
+        public static Operations GetOperations (string OperationSing)
+        {
+            switch (OperationSing)
+            {
+                case " + ":
+                    return Operations.PLUS;
+
+                case " - ":
+                    return Operations.MINUS;
+
+                case " / ":
+                    return Operations.DIVISION;
+
+                case " * ":
+                    return Operations.CROSS;
+
+                case " ^ ":
+                    return Operations.EXP;
+
+                case " √ ":
+                    return Operations.ROOT;
+
+                case "":
+                default:
+                    return Operations.NULL;
+            }
+        }
+
+        //Verilen operasyonun string halini döner.
+        public static string GetOperationCharSing (Operations operations)
         {
             switch (operations)
             {
@@ -1697,6 +1727,10 @@ namespace ScientificCalculation
             }
         }
 
+        /// <summary>
+        /// Operators for UI
+        /// </summary>
+        /// <returns>Returns operatorScreen</returns>
         public string OperationButton(Operations operations)
         {
             bool kendindenparantez = false;
@@ -1746,7 +1780,7 @@ namespace ScientificCalculation
 
                 operationScreen += resultScreen;
                 resultScreen = "";
-                operationScreen += GetOperationString(operations);
+                operationScreen += GetOperationCharSing(operations);
                 isHaveNumber = false;
                 isHaveComma = false;
                 isHaveNegativeBracket = false;
@@ -1773,7 +1807,7 @@ namespace ScientificCalculation
                 DeleteOneOperationScreenString();
                 DeleteOneOperationScreenString();
 
-                operationScreen += GetOperationString(operations);
+                operationScreen += GetOperationCharSing(operations);
                 isHaveNumber = false;
                 isHaveComma = false;
                 isHaveNegativeBracket = false;
@@ -1787,411 +1821,6 @@ namespace ScientificCalculation
                     //Her zaman parantez_islem_iceriyor_mu dizisinin ilgili olduğu değişkenin hafızadaki yeri
                     //gecici islem önceliği değişkenin gösterdiği değerin bir altıdır.
                     isBracketsHaveOperation[temporaryProcessingPriority - 1] = true;
-                }
-            }
-            return operationScreen;
-        }
-
-        /// <summary>
-        /// Plus Operator for UI
-        /// </summary>
-        /// <returns>Returns operatorScreen</returns>
-        public string PlusButton()
-        {
-            bool kendindenparantez = false;
-            char[] GeciciChar = resultScreen.ToCharArray();
-            string sayınınkendisi = "";
-            //Sayının kendisindeki "-"den dolayı parantezi var mı?
-            if (resultScreen.Length > 2)
-            {
-                if (resultScreen[0] == '(' && resultScreen[1] == '-')
-                {
-                    //Parentezi olan sayının kendisini ortaya çıkarma (Sadece parantez kalkar sayının başındaki eksi durur.
-                    kendindenparantez = true;
-                    int sayac;
-                    for (sayac = 1; sayac < GeciciChar.Length - 1; sayac++)
-                    {
-                        if (sayac == 1)
-                        {
-                            sayınınkendisi = GeciciChar[sayac].ToString();
-                        }
-                        else
-                        {
-                            sayınınkendisi += GeciciChar[sayac].ToString();
-                        }
-                    }
-                }
-            }
-
-            //Farklı bir işlem yoksa veya parantez yeni kapatıldığı için işlem izni varsa.
-            if ((isHaveNumber == true && isHaveOperation == false) || isOperationHavePermit == true)
-            {
-                //Sonuç kısmı islem_izni olduğunda boş olur
-                //Sonuç kısmı boşken işlemlerin hafızaya eklenmeye çalışılması hata oluşturacağı için.
-                if (isOperationHavePermit == false)
-                {
-                    //Sayıyı hafızaya ekleme bölümü
-                    if (kendindenparantez == false)
-                        memorizedNumbers.Add(Convert.ToDouble(resultScreen));
-                    if (kendindenparantez == true)
-                        memorizedNumbers.Add(Convert.ToDouble(sayınınkendisi));
-                    whichNumber++;
-                }
-
-                //İşlemleri hafızaya ekleme bölümü
-                memorizedOperations.Add(Operations.PLUS);
-                memorizedProcessPiority.Add(temporaryProcessingPriority);
-                whichOperation++;
-
-                operationScreen += resultScreen;
-                resultScreen = "";
-                operationScreen += " + ";
-                isHaveNumber = false;
-                isHaveComma = false;
-                isHaveNegativeBracket = false;
-                isHaveOperation = true;
-                isFirstStart = false;
-                isOperationHavePermit = false;
-
-                //Aynı parantez içindeki işlem kontrolü
-                if (temporaryProcessingPriority > 0)
-                {
-                    //İşlem önceliği 1 iken, parantez_islem_iceriyor_mu dizisinin 0. değişkeni kullanılır.
-                    //Her zaman parantez_islem_iceriyor_mu dizisinin ilgili olduğu değişkenin hafızadaki yeri
-                    //gecici islem önceliği değişkenin gösterdiği değerin bir altıdır.
-                    isBracketsHaveOperation[whichBracket] = true;
-                }
-            }
-            //Farklı bir işlem varsa (Son işlem değiştirilir.)
-            else if ((isHaveNumber == false && isHaveOperation == true) && IsTheArrayEndsWithX(operationScreen, " ( ") == false)
-            {
-                memorizedOperations[whichOperation - 1] = Operations.PLUS;
-
-                //ESKİ İŞLEMİ SİLME
-                DeleteOneOperationScreenString();
-                DeleteOneOperationScreenString();
-                DeleteOneOperationScreenString();
-
-                operationScreen += " + ";
-                isHaveNumber = false;
-                isHaveComma = false;
-                isHaveNegativeBracket = false;
-                isHaveOperation = true;
-                isFirstStart = false;
-
-                //Aynı parantez içindeki işlem kontrolü
-                if (temporaryProcessingPriority > 0)
-                {
-                    //İşlem önceliği 1 iken, parantez_islem_iceriyor_mu dizisinin 0. değişkeni kullanılır.
-                    //Her zaman parantez_islem_iceriyor_mu dizisinin ilgili olduğu değişkenin hafızadaki yeri
-                    //gecici islem önceliği değişkenin gösterdiği değerin bir altıdır.
-                    isBracketsHaveOperation[temporaryProcessingPriority - 1] = true;
-                }
-            }
-            return operationScreen;
-        }
-
-
-        /// <summary>
-        /// Minus Operator for UI
-        /// </summary>
-        /// <returns>Returns operatorScreen</returns>
-        public string MinusButton()
-        {
-            bool kendindenparantez = false;
-            char[] GeciciChar = resultScreen.ToCharArray();
-            string sayınınkendisi = "";
-            //Sayının kendisindeki "-"den dolayı parantezi var mı?
-            if (resultScreen.Length > 2)
-            {
-                if (resultScreen[0] == '(' && resultScreen[1] == '-')
-                {
-                    //Sayı "(-a)" şeklindeyse değişkeni true yap.
-                    kendindenparantez = true;
-                    //Parentezi olan sayının kendisini ortaya çıkarma (Sadece parantez kalkar sayının başındaki eksi durur.
-                    int sayac;
-                    for (sayac = 1; sayac < GeciciChar.Length - 1; sayac++)
-                    {
-                        if (sayac == 1)
-                        {
-                            sayınınkendisi = GeciciChar[sayac].ToString();
-                        }
-                        else
-                        {
-                            sayınınkendisi += GeciciChar[sayac].ToString();
-                        }
-                    }
-                }
-            }
-
-            //Farklı bir işlem yoksa veya parantez yeni kapatıldığı için işlem izni varsa.
-            if ((isHaveNumber == true && isHaveOperation == false) || isOperationHavePermit == true)
-            {
-
-                //Sonuç kısmı islem_izni olduğunda boş olur
-                //Sonuç kısmı boşken işlemlerin hafızaya eklenmeye çalışılması hata oluşturacağı için.
-                if (isOperationHavePermit == false)
-                {
-                    //Sayıyı hafızaya ekleme bölümü
-                    if (kendindenparantez == false)
-                        memorizedNumbers.Add(Convert.ToDouble(resultScreen));
-                    if (kendindenparantez == true)
-                        memorizedNumbers.Add(Convert.ToDouble(sayınınkendisi));
-                    whichNumber++;
-                }
-
-                //İşlemleri hafızaya ekleme bölümü
-                memorizedOperations.Add(Operations.MINUS);
-                memorizedProcessPiority.Add(temporaryProcessingPriority);
-                whichOperation++;
-
-                operationScreen += resultScreen;
-                resultScreen = "";
-                operationScreen += " - ";
-                isHaveNumber = false;
-                isHaveComma = false;
-                isHaveNegativeBracket = false;
-                isHaveOperation = true;
-                isFirstStart = false;
-                isOperationHavePermit = false;
-
-                //Aynı parantez içindeki işlem kontrolü
-                if (temporaryProcessingPriority > 0)
-                {
-                    //İşlem önceliği 1 iken, parantez_islem_iceriyor_mu dizisinin 0. değişkeni kullanılır.
-                    //Her zaman parantez_islem_iceriyor_mu dizisinin ilgili olduğu değişkenin hafızadaki yeri
-                    //gecici islem önceliği değişkenin gösterdiği değerin bir altıdır.
-                    isBracketsHaveOperation[whichBracket] = true;
-                }
-            }
-            //Farklı bir işlem varsa (Son işlem değiştirilir.)
-            else if (isHaveNumber == false && isHaveOperation == true)
-            {
-                memorizedOperations[whichOperation - 1] = Operations.MINUS;
-
-                //ESKİ İŞLEMİ SİLME
-                DeleteOneOperationScreenString();
-                DeleteOneOperationScreenString();
-                DeleteOneOperationScreenString();
-
-                operationScreen += " - ";
-                isHaveNumber = false;
-                isHaveComma = false;
-                isHaveNegativeBracket = false;
-                isHaveOperation = true;
-                isFirstStart = false;
-
-                //Aynı parantez içindeki işlem kontrolü
-                if (temporaryProcessingPriority > 0)
-                {
-                    //İşlem önceliği 1 iken, parantez_islem_iceriyor_mu dizisinin 0. değişkeni kullanılır.
-                    //Her zaman parantez_islem_iceriyor_mu dizisinin ilgili olduğu değişkenin hafızadaki yeri
-                    //gecici islem önceliği değişkenin gösterdiği değerin bir altıdır.
-                    isBracketsHaveOperation[whichBracket] = true;
-                }
-            }
-            return operationScreen;
-        }
-
-
-        /// <summary>
-        /// Cross Operator for UI
-        /// </summary>
-        /// <returns>Returns operatorScreen</returns>
-        public string CrossButton()
-        {
-            bool kendindenparantez = false;
-            char[] GeciciChar = resultScreen.ToCharArray();
-            string sayınınkendisi = "";
-            //Sayının kendisindeki "-"den dolayı parantezi var mı?
-            if (resultScreen.Length > 2)
-            {
-                if (resultScreen[0] == '(' && resultScreen[1] == '-')
-                {
-                    //Sayı "(-a)" şeklindeyse değişkeni true yap.
-                    kendindenparantez = true;
-                    //Parentezi olan sayının kendisini ortaya çıkarma (Sadece parantez kalkar sayının başındaki eksi durur.
-                    int sayac;
-                    for (sayac = 1; sayac < GeciciChar.Length - 1; sayac++)
-                    {
-                        if (sayac == 1)
-                        {
-                            sayınınkendisi = GeciciChar[sayac].ToString();
-                        }
-                        else
-                        {
-                            sayınınkendisi += GeciciChar[sayac].ToString();
-                        }
-                    }
-                }
-            }
-
-            //Farklı bir işlem yoksa veya parantez yeni kapatıldığı için işlem izni varsa.
-            if ((isHaveNumber == true && isHaveOperation == false) || isOperationHavePermit == true)
-            {
-
-                //Sonuç kısmı islem_izni olduğunda boş olur
-                //Sonuç kısmı boşken işlemlerin hafızaya eklenmeye çalışılması hata oluşturacağı için.
-                if (isOperationHavePermit == false)
-                {
-                    //Sayıyı hafızaya ekleme bölümü
-                    if (kendindenparantez == false)
-                        memorizedNumbers.Add(Convert.ToDouble(resultScreen));
-                    if (kendindenparantez == true)
-                        memorizedNumbers.Add(Convert.ToDouble(sayınınkendisi));
-                    whichNumber++;
-                }
-
-                //İşlemleri hafızaya ekleme bölümü
-                memorizedOperations.Add(Operations.CROSS);
-                memorizedProcessPiority.Add(temporaryProcessingPriority);
-                whichOperation++;
-
-                operationScreen += resultScreen;
-                resultScreen = "";
-                operationScreen += " * ";
-                isHaveNumber = false;
-                isHaveComma = false;
-                isHaveNegativeBracket = false;
-                isHaveOperation = true;
-                isFirstStart = false;
-                isOperationHavePermit = false;
-
-                //Aynı parantez içindeki işlem kontrolü
-                if (temporaryProcessingPriority > 0)
-                {
-                    //İşlem önceliği 1 iken, parantez_islem_iceriyor_mu dizisinin 0. değişkeni kullanılır.
-                    //Her zaman parantez_islem_iceriyor_mu dizisinin ilgili olduğu değişkenin hafızadaki yeri
-                    //gecici islem önceliği değişkenin gösterdiği değerin bir altıdır.
-                    isBracketsHaveOperation[whichBracket] = true;
-                }
-            }
-            //Farklı bir işlem varsa (Son işlem değiştirilir.)
-            else if (isHaveNumber == false && isHaveOperation == true)
-            {
-                memorizedOperations[whichOperation - 1] = Operations.CROSS;
-
-                //ESKİ İŞLEMİ SİLME
-                DeleteOneOperationScreenString();
-                DeleteOneOperationScreenString();
-                DeleteOneOperationScreenString();
-
-                operationScreen += " * ";
-                isHaveNumber = false;
-                isHaveComma = false;
-                isHaveNegativeBracket = false;
-                isHaveOperation = true;
-                isFirstStart = false;
-
-                //Aynı parantez içindeki işlem kontrolü
-                if (temporaryProcessingPriority > 0)
-                {
-                    //İşlem önceliği 1 iken, parantez_islem_iceriyor_mu dizisinin 0. değişkeni kullanılır.
-                    //Her zaman parantez_islem_iceriyor_mu dizisinin ilgili olduğu değişkenin hafızadaki yeri
-                    //gecici islem önceliği değişkenin gösterdiği değerin bir altıdır.
-                    isBracketsHaveOperation[whichBracket] = true;
-                }
-            }
-            return operationScreen;
-        }
-
-
-        /// <summary>
-        /// Division Operator for UI
-        /// </summary>
-        /// <returns>Returns operatorScreen</returns>
-        public string DivisionButton()
-        {
-            bool kendindenparantez = false;
-            char[] GeciciChar = resultScreen.ToCharArray();
-            string sayınınkendisi = "";
-            //Sayının kendisindeki "-"den dolayı parantezi var mı?
-            if (resultScreen.Length > 2)
-            {
-                if (resultScreen[0] == '(' && resultScreen[1] == '-')
-                {
-                    //Sayı "(-a)" şeklindeyse değişkeni true yap.
-                    kendindenparantez = true;
-                    //Parentezi olan sayının kendisini ortaya çıkarma (Sadece parantez kalkar sayının başındaki eksi durur.
-                    int sayac;
-                    for (sayac = 1; sayac < GeciciChar.Length - 1; sayac++)
-                    {
-                        if (sayac == 1)
-                        {
-                            sayınınkendisi = GeciciChar[sayac].ToString();
-                        }
-                        else
-                        {
-                            sayınınkendisi += GeciciChar[sayac].ToString();
-                        }
-                    }
-                }
-            }
-
-            //Farklı bir işlem yoksa veya parantez yeni kapatıldığı için işlem izni varsa.
-            if ((isHaveNumber == true && isHaveOperation == false) || isOperationHavePermit == true)
-            {
-
-                //Sonuç kısmı islem_izni olduğunda boş olur
-                //Sonuç kısmı boşken işlemlerin hafızaya eklenmeye çalışılması hata oluşturacağı için.
-                if (isOperationHavePermit == false)
-                {
-                    //Sayıyı hafızaya ekleme bölümü
-                    if (kendindenparantez == false)
-                        memorizedNumbers.Add(Convert.ToDouble(resultScreen));
-                    if (kendindenparantez == true)
-                        memorizedNumbers.Add(Convert.ToDouble(sayınınkendisi));
-                    whichNumber++;
-                }
-
-                //İşlemleri hafızaya ekleme bölümü
-                memorizedOperations.Add(Operations.DIVISION);
-                memorizedProcessPiority.Add(temporaryProcessingPriority);
-                whichOperation++;
-
-                operationScreen += resultScreen;
-                resultScreen = "";
-                operationScreen += " / ";
-                isHaveNumber = false;
-                isHaveComma = false;
-                isHaveNegativeBracket = false;
-                isHaveOperation = true;
-                isFirstStart = false;
-                isOperationHavePermit = false;
-
-                //Aynı parantez içindeki işlem kontrolü
-                if (temporaryProcessingPriority > 0)
-                {
-                    //İşlem önceliği 1 iken, parantez_islem_iceriyor_mu dizisinin 0. değişkeni kullanılır.
-                    //Her zaman parantez_islem_iceriyor_mu dizisinin ilgili olduğu değişkenin hafızadaki yeri
-                    //gecici islem önceliği değişkenin gösterdiği değerin bir altıdır.
-                    isBracketsHaveOperation[whichBracket] = true;
-                }
-            }
-            //Farklı bir işlem varsa (Son işlem değiştirilir.)
-            else if (isHaveNumber == false && isHaveOperation == true)
-            {
-                memorizedOperations[whichOperation - 1] = Operations.DIVISION;
-
-                //ESKİ İŞLEMİ SİLME
-                DeleteOneOperationScreenString();
-                DeleteOneOperationScreenString();
-                DeleteOneOperationScreenString();
-
-                operationScreen += " / ";
-                isHaveNumber = false;
-                isHaveComma = false;
-                isHaveNegativeBracket = false;
-                isHaveOperation = true;
-                isFirstStart = false;
-
-                //Aynı parantez içindeki işlem kontrolü
-                if (temporaryProcessingPriority > 0)
-                {
-                    //İşlem önceliği 1 iken, parantez_islem_iceriyor_mu dizisinin 0. değişkeni kullanılır.
-                    //Her zaman parantez_islem_iceriyor_mu dizisinin ilgili olduğu değişkenin hafızadaki yeri
-                    //gecici islem önceliği değişkenin gösterdiği değerin bir altıdır.
-                    isBracketsHaveOperation[whichBracket] = true;
                 }
             }
             return operationScreen;
