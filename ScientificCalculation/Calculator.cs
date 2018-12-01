@@ -1304,7 +1304,7 @@ namespace ScientificCalculation
         {
             if (isHaveOperation == false && isHaveNumber == true)
             {
-                OperationButton(Operations.CROSS); //Bu kod satırı burda ne ayak? Ne zaman ne için yazmışız bakılacak... :)
+                OperationButton(Operations.CROSS); //Parantez işlem yokken açılırsa otomatik bir şekilde çarpma eklemesi için.
             }
             if (isHaveOperation == true && isHaveNumber == false || isFirstStart == true)
             {
@@ -1885,106 +1885,31 @@ namespace ScientificCalculation
         }
 
 
-        public void EqualsProcess()
+        public ErrorEnumerators EqualsProcess()
         {
-
-            //Farklı bir işlem yoksa veya parantez yeni kapatıldığı için işlem izni varsa.
-            if ((isHaveNumber == true && isHaveOperation == false) || isOperationHavePermit == true)
+            if (TemporaryProcessingPriority == 0)
             {
-
-                //Sonuç kısmı islem_izni olduğunda boş olur
-                //Sonuç kısmı boşken işlemlerin hafızaya eklenmeye çalışılması hata oluşturacağı için.
-                if (isOperationHavePermit == false)
+                if ( ( (IsHaveOperation == false) && (IsHaveNumber == true) ) || (IsOperationHavePermit == true) )
                 {
-                    //Sayıyı hafızaya ekleme bölümü
-                    if (IsHaveNumberSelfBracketing(resultScreen))
-                        memorizedNumbers.Add(Convert.ToDouble(NumberItself(resultScreen)));
+                    if (ResultScreen != "")
+                    {
+                        //Son sayıyı işleme al.
+                    }
+                    if (ResultScreen == "")
+                    {
+                        while (MemorizedOperations.Count > 1)
+                        {
+                            //En yüksek öncelikli işlemi bul ve bir işlemi yap ve listeyi düzenle.
+                        }
+                        return ErrorEnumerators.SUCCESSFUL;
+                    }
                     else
-                        memorizedNumbers.Add(Convert.ToDouble(resultScreen));
-
-                    whichNumber++;
-                }
-
-                int maximumMemorizedProcessPiority = -1;
-                int maximumMemorizedProcessPiorityIndex = 0;
-                int x;
-
-                for (x = 0; x < memorizedProcessPiority.Count; x++)
-                {
-                    if (memorizedProcessPiority.ElementAt(x) > maximumMemorizedProcessPiority)
                     {
-                        maximumMemorizedProcessPiority = memorizedProcessPiority.ElementAt(x);
-                        maximumMemorizedProcessPiorityIndex = x;
+                        //Son sayı işleme alındığı halde result screen boş değil. Debug kodudur, normalde çalışmaması gerekir!.
                     }
                 }
-
-                List<int> maximumMemorizedProcessPiorityIndexs = new List<int>();
-
-                int x2;
-                for (x2 = maximumMemorizedProcessPiorityIndex; x2 < memorizedProcessPiority.Count; x2++)
-                {
-                    if (memorizedProcessPiority.ElementAt(x2) == maximumMemorizedProcessPiority)
-                    {
-                        maximumMemorizedProcessPiorityIndexs.Add(x2);
-                    }
-                }
-
-                //Parantezlerden dolayı oluşan işlem önceliğinde en öncelikli işlemler arasından işlem olarak öncelikli olanı bulmak
-                int maximumOperationPiority = int.MaxValue;
-                int maximumOperationPiorityIndex = -1;
-                int x3;
-                for (x3 = 0; x3 < maximumMemorizedProcessPiorityIndexs.Count; x3++)
-                {
-                    if (Convert.ToInt32(memorizedOperations.ElementAt(x3)) < maximumOperationPiority)
-                    {
-                        maximumOperationPiorityIndex = x3;
-                        maximumOperationPiority = Convert.ToInt32(memorizedOperations.ElementAt(x3));
-                    }
-                }
-
-                //İslemin yapılması
-                double newNumber = 0;
-                switch (maximumOperationPiority)
-                {
-                    case (3):
-                        newNumber = memorizedNumbers.ElementAt(maximumOperationPiorityIndex) * memorizedNumbers.ElementAt(maximumOperationPiorityIndex + 1);
-                        break;
-                    case (4):
-                        newNumber = memorizedNumbers.ElementAt(maximumOperationPiorityIndex) / memorizedNumbers.ElementAt(maximumOperationPiorityIndex + 1);
-                        break;
-                    case (5):
-                        newNumber = memorizedNumbers.ElementAt(maximumOperationPiorityIndex) + memorizedNumbers.ElementAt(maximumOperationPiorityIndex + 1);
-                        break;
-                    case (6):
-                        newNumber = memorizedNumbers.ElementAt(maximumOperationPiorityIndex) - memorizedNumbers.ElementAt(maximumOperationPiorityIndex + 1);
-                        break;
-                }
-
-
-                memorizedNumbers.RemoveAt(maximumOperationPiorityIndex + 1);
-                memorizedNumbers.Insert(maximumOperationPiorityIndex + 1, newNumber);
-
-                //Listede bir kaydırma işlemi
-
-                //double tempNumber;
-                //int tempOperation;
-                //int tempProcessPiority;
-
-                int x4;
-                for (x4 = maximumOperationPiorityIndex; x4 < memorizedNumbers.Count - 1; x4++)
-                {
-                    memorizedNumbers.RemoveAt(x4);
-                    memorizedOperations.RemoveAt(x4);
-                    memorizedProcessPiority.RemoveAt(x4);
-                }
-
-                //DEBUG
-                foreach (double number in memorizedNumbers)
-                {
-                    Console.WriteLine(number);
-                }
-
             }
+            return ErrorEnumerators.UNSUCCESSFUL;
         }
     }
 }
