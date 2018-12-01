@@ -106,7 +106,7 @@
             resources.ApplyResources(this.btn_auto_refresh, "btn_auto_refresh");
             this.btn_auto_refresh.Name = "btn_auto_refresh";
             this.btn_auto_refresh.UseVisualStyleBackColor = false;
-            this.btn_auto_refresh.Click += new System.EventHandler(this.btn_auto_refresh_Click);
+            this.btn_auto_refresh.Click += new System.EventHandler(this.Btn_auto_refresh_Click);
             // 
             // tmr_auto_refresh
             // 

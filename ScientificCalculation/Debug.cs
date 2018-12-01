@@ -715,7 +715,7 @@ namespace ScientificCalculation
             RefreshRecA();
         }
 
-        private void btn_auto_refresh_Click(object sender, EventArgs e)
+        private void Btn_auto_refresh_Click(object sender, EventArgs e)
         {
             if (btn_auto_refresh.BackColor == Color.SlateGray)
             {

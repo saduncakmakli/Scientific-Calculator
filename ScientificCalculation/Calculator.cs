@@ -1055,7 +1055,7 @@ namespace ScientificCalculation
             else return false;
          }
 
-
+        //Sayıda negatiflik parantezi yok ise olduğu gibi çıkar.
         public static string NumberItself(string Number)
         {
             bool isHaveSelfBracketing = false;
@@ -1733,31 +1733,6 @@ namespace ScientificCalculation
         /// <returns>Returns operatorScreen</returns>
         public string OperationButton(Operations operations)
         {
-            bool kendindenparantez = false;
-            char[] GeciciChar = resultScreen.ToCharArray();
-            string sayınınkendisi = "";
-            //Sayının kendisindeki "-"den dolayı parantezi var mı?
-            if (resultScreen.Length > 2)
-            {
-                if (resultScreen[0] == '(' && resultScreen[1] == '-')
-                {
-                    //Parentezi olan sayının kendisini ortaya çıkarma (Sadece parantez kalkar sayının başındaki eksi durur.
-                    kendindenparantez = true;
-                    int sayac;
-                    for (sayac = 1; sayac < GeciciChar.Length - 1; sayac++)
-                    {
-                        if (sayac == 1)
-                        {
-                            sayınınkendisi = GeciciChar[sayac].ToString();
-                        }
-                        else
-                        {
-                            sayınınkendisi += GeciciChar[sayac].ToString();
-                        }
-                    }
-                }
-            }
-
             //Farklı bir işlem yoksa veya parantez yeni kapatıldığı için işlem izni varsa.
             if ((isHaveNumber == true && isHaveOperation == false) || isOperationHavePermit == true)
             {
@@ -1766,10 +1741,7 @@ namespace ScientificCalculation
                 if (isOperationHavePermit == false)
                 {
                     //Sayıyı hafızaya ekleme bölümü
-                    if (kendindenparantez == false)
-                        memorizedNumbers.Add(Convert.ToDouble(resultScreen));
-                    if (kendindenparantez == true)
-                        memorizedNumbers.Add(Convert.ToDouble(sayınınkendisi));
+                    memorizedNumbers.Add(Convert.ToDouble(NumberItself(resultScreen)));
                     whichNumber++;
                 }
 
@@ -1884,6 +1856,236 @@ namespace ScientificCalculation
 
         }
 
+        private void ProcessOneOperation()
+        {
+
+        } //Henüz tamamlanmadı akış şemasına göre yazılacak..
+
+        private List<int> ReturnHighProcessPiorityOperationIndexs()
+        {
+            List<int> list = new List<int>();
+            int timer;
+            for (timer = 0; timer < MemorizedProcessPiority.Count; timer++)
+            {
+                if (MemorizedProcessPiority[timer] == ReturnHighProcessPiorityOperationIndex())
+                {
+                    list.Add(timer);
+                }
+            }
+            return list;
+        } //Test edilecek..
+
+        private int ReturnHighProcessPiorityOperationIndex()
+        {
+            return SearchHighIntIndex(memorizedProcessPiority);
+        } //Test edilecek..
+
+        /// <summary>
+        /// Search and return highest element in Array
+        /// If the array empty, this method throws ArgumentNullException.
+        /// </summary>
+        /// <param name="parameter">Int Array</param>
+        /// <returns>Highest element(int) this array</returns>
+        public static int SearchHighInt(int[] parameter)
+        {
+            int highest;
+            int timer;
+            if (parameter.Length == 1)
+            {
+                return parameter[0];
+            }
+            else if (parameter.Length >= 2)
+            {
+                highest = parameter[0];
+                for (timer = 1; timer < parameter.Length; timer++)
+                {
+                    if (parameter[timer] > highest)
+                    {
+                        highest = parameter[timer];
+                    }
+                }
+                return highest;
+            }
+            else
+            {
+                throw new ArgumentNullException();
+            }
+        } //Test edilecek..
+
+        /// <summary>
+        /// Search and return highest element in List
+        /// If the list empty, this method throws ArgumentNullException.
+        /// </summary>
+        /// <param name="parameter">Int List</param>
+        /// <returns>Highest element(int) this list</returns>
+        public static int SearchHighInt(List<int> parameter)
+        {
+            int highest;
+            int timer;
+            if (parameter.Count == 1)
+            {
+                return parameter[0];
+            }
+            else if (parameter.Count >= 2)
+            {
+                highest = parameter[0];
+                for (timer = 1; timer < parameter.Count; timer++)
+                {
+                    if (parameter[timer] > highest)
+                    {
+                        highest = parameter[timer];
+                    }
+                }
+                return highest;
+            }
+            else
+            {
+                throw new ArgumentNullException();
+            }
+        } //Test edilecek..
+
+        /// <summary>
+        /// Search and return highest element index in Array
+        /// If the array empty, this method throws ArgumentNullException.
+        /// </summary>
+        /// <param name="parameter">Int Array</param>
+        /// <returns>Highest element(int) index this array</returns>
+        public static int SearchHighIntIndex(int[] parameter)
+        {
+            int highest;
+            int index;
+            int timer;
+            if (parameter.Length == 1)
+            {
+                return 0;
+            }
+            else if (parameter.Length >= 2)
+            {
+                highest = parameter[0];
+                index = 0;
+                for (timer = 1; timer < parameter.Length; timer++)
+                {
+                    if (parameter[timer] > highest)
+                    {
+                        highest = parameter[timer];
+                        index = timer;
+                    }
+                }
+                return index;
+            }
+            else
+            {
+                throw new ArgumentNullException();
+            }
+        } //Test edilecek..
+
+        /// <summary>
+        /// Search and return highest element index in List
+        /// If the list empty, this method throws ArgumentNullException.
+        /// </summary>
+        /// <param name="parameter">Int List</param>
+        /// <returns>Highest element(int) index this list</returns>
+        public static int SearchHighIntIndex(List<int> parameter)
+        {
+            int highest;
+            int index;
+            int timer;
+            if (parameter.Count == 1)
+            {
+                return 0;
+            }
+            else if (parameter.Count >= 2)
+            {
+                highest = parameter[0];
+                index = 0;
+                for (timer = 1; timer < parameter.Count; timer++)
+                {
+                    if (parameter[timer] > highest)
+                    {
+                        highest = parameter[timer];
+                        index = timer;
+                    }
+                }
+                return index;
+            }
+            else
+            {
+                throw new ArgumentNullException();
+            }
+        } //Test edilecek..
+
+        //Tekrar gözden geçirilecek, sadece istenen indexlerin, bir parametre listesinde en büyüğünü bulmak..
+        // public static int SearchHighIntIndex(List<int> parameter,  List<int> indexs_to_search)
+            /*
+        {
+            //index_to_search'da tekrar eden değer olmamalı.
+            List<int> unique_elements_indexs_to_search = indexs_to_search.Distinct().ToList<int>();
+
+            foreach (int indexs in unique_elements_indexs_to_search)
+            {
+                //Indexler pozitif veya sıfır olmalı
+                //En büyük indexs_to_search, parameter.count-1 den büyük olamaz.
+                if ( (indexs >= 0) && (SearchHighInt(unique_elements_indexs_to_search) <= parameter.Count - 1) )
+                {
+                    int highest;
+                    int index;
+                    int timer;
+                    if (parameter.Count == 1)
+                    {
+                        if (unique_elements_indexs_to_search.Contains(0))
+                        {
+                            return 0;
+                        }
+                        else
+                        {
+                            throw new ArgumentNullException();
+                        }
+                    }
+                    else if (parameter.Count >= 2)
+                    {
+                        highest = parameter[unique_elements_indexs_to_search[0]];
+                        index = unique_elements_indexs_to_search[0];
+
+                        for (timer = 1; timer < parameter.Count; timer++)
+                        {
+                            if (parameter[timer] > highest)
+                            {
+                                highest = parameter[unique_elements_indexs_to_search[timer]];
+                                index = unique_elements_indexs_to_search[timer];
+                            }
+                        }
+                        return index;
+                    }
+                    else
+                    {
+                        throw new ArgumentNullException();
+                    }
+                }
+
+                else
+                {
+                    throw new ArgumentException();
+                }
+            }
+        }
+        */
+
+        private void LastNumberAddMemory()
+        {
+            if (TemporaryProcessingPriority == 0)
+            {
+                if (((IsHaveOperation == false) && (IsHaveNumber == true)) || (IsOperationHavePermit == true))
+                {
+                    if (ResultScreen != "")
+                    {
+                        //Son sayıyı işleme al.
+                        memorizedNumbers.Add(Convert.ToDouble(NumberItself(resultScreen)));
+                        operationScreen += resultScreen;
+                        resultScreen = "";
+                    }
+                }
+            }
+        } //Test edilecek..
 
         public ErrorEnumerators EqualsProcess()
         {
@@ -1893,7 +2095,7 @@ namespace ScientificCalculation
                 {
                     if (ResultScreen != "")
                     {
-                        //Son sayıyı işleme al.
+                        LastNumberAddMemory();
                     }
                     if (ResultScreen == "")
                     {
@@ -1910,6 +2112,6 @@ namespace ScientificCalculation
                 }
             }
             return ErrorEnumerators.UNSUCCESSFUL;
-        }
+        } //Henüz tamamlanmadı akış şemasına göre yazılacak..
     }
 }
