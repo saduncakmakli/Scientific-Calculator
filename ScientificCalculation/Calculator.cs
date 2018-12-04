@@ -853,7 +853,6 @@ namespace ScientificCalculation
             }
         }
 
-
         public static string DotNotationResultScreen(string resultScreen)
         {
             //ALGORTİMASI!
@@ -942,7 +941,11 @@ namespace ScientificCalculation
             }
         }
 
-
+        /// <summary>
+        /// Split float number, two integer.
+        /// </summary>
+        /// <param name="resultScreenNumberItSelf">Number</param>
+        /// <returns> [0]integerSection [1]decimalSection </returns>
         public static string[] CommaFreeStateResultScreen(string resultScreenNumberItSelf)
         {
             bool isHaveComma = false;
@@ -998,7 +1001,6 @@ namespace ScientificCalculation
 
         }
 
-
         public static bool IsHaveNumberComma(string Number)
         {
             bool isHaveComma = false;
@@ -1020,7 +1022,6 @@ namespace ScientificCalculation
             }
             return isHaveComma;
         }
-
 
         public static bool IsHaveNumberSelfBracketing(string Number)
         {
