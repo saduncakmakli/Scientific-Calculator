@@ -824,7 +824,7 @@ namespace ScientificCalculation
             switch (Calculator.selectedRec)
             {
                 case (""):
-                    temp_tb_islem = mainCalculator.OperationButton(Calculator.GetOperations(" "+operation+" "));
+                    temp_tb_islem = mainCalculator.OperationButton(Calculator.GetOperations(operation));
                     if (temp_tb_islem != String.Empty)
                     {
                         tb_islem.Text = temp_tb_islem;
@@ -833,7 +833,7 @@ namespace ScientificCalculation
                     break;
 
                 case ("A"):
-                    temp_tb_islem = aCalculator.OperationButton(Calculator.GetOperations(" " + operation + " "));
+                    temp_tb_islem = aCalculator.OperationButton(Calculator.GetOperations(operation));
                     if (temp_tb_islem != String.Empty)
                     {
                         tb_islem.Text = temp_tb_islem;
@@ -842,7 +842,7 @@ namespace ScientificCalculation
                     break;
 
                 case ("B"):
-                    temp_tb_islem = bCalculator.OperationButton(Calculator.GetOperations(" " + operation + " "));
+                    temp_tb_islem = bCalculator.OperationButton(Calculator.GetOperations(operation));
                     if (temp_tb_islem != String.Empty)
                     {
                         tb_islem.Text = temp_tb_islem;
@@ -851,7 +851,7 @@ namespace ScientificCalculation
                     break;
 
                 case ("C"):
-                    temp_tb_islem = cCalculator.OperationButton(Calculator.GetOperations(" " + operation + " "));
+                    temp_tb_islem = cCalculator.OperationButton(Calculator.GetOperations(operation));
                     if (temp_tb_islem != String.Empty)
                     {
                         tb_islem.Text = temp_tb_islem;
@@ -860,7 +860,7 @@ namespace ScientificCalculation
                     break;
 
                 case ("D"):
-                    temp_tb_islem = dCalculator.OperationButton(Calculator.GetOperations(" " + operation + " "));
+                    temp_tb_islem = dCalculator.OperationButton(Calculator.GetOperations(operation));
                     if (temp_tb_islem != String.Empty)
                     {
                         tb_islem.Text = temp_tb_islem;
@@ -869,7 +869,7 @@ namespace ScientificCalculation
                     break;
 
                 case ("E"):
-                    temp_tb_islem = eCalculator.OperationButton(Calculator.GetOperations(" " + operation + " "));
+                    temp_tb_islem = eCalculator.OperationButton(Calculator.GetOperations(operation));
                     if (temp_tb_islem != String.Empty)
                     {
                         tb_islem.Text = temp_tb_islem;
@@ -878,7 +878,7 @@ namespace ScientificCalculation
                     break;
 
                 case ("F"):
-                    temp_tb_islem = fCalculator.OperationButton(Calculator.GetOperations(" " + operation + " "));
+                    temp_tb_islem = fCalculator.OperationButton(Calculator.GetOperations(operation));
                     if (temp_tb_islem != String.Empty)
                     {
                         tb_islem.Text = temp_tb_islem;

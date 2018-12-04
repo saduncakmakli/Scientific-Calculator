@@ -1321,7 +1321,7 @@ namespace ScientificCalculation
                 temporaryProcessingPriority += 1;
                 whichBracket++;
                 highestProcessPriorityInLastParanthesesGroup++;
-                operationScreen += " ( ";
+                operationScreen += "(";
             }
             return operationScreen;
         }
@@ -1346,7 +1346,7 @@ namespace ScientificCalculation
 
                 operationScreen += resultScreen;
                 resultScreen = "";
-                operationScreen += " ) ";
+                operationScreen += ")";
 
                 wasEqualZeroTheTemporaryOperationPriorityInThePreviousStep = temporaryProcessingPriority == 0;
                 wasEqualTrueTheCriticalPointInThePreviousStep = temporaryProcessingPriority == 0 && wasEqualZeroTheTemporaryOperationPriorityInThePreviousStep == false;
@@ -1675,22 +1675,22 @@ namespace ScientificCalculation
         {
             switch (OperationSing)
             {
-                case " + ":
+                case "+":
                     return Operations.PLUS;
 
-                case " - ":
+                case "-":
                     return Operations.MINUS;
 
-                case " / ":
+                case "/":
                     return Operations.DIVISION;
 
-                case " * ":
+                case "*":
                     return Operations.CROSS;
 
-                case " ^ ":
+                case "^":
                     return Operations.EXP;
 
-                case " √ ":
+                case "√":
                     return Operations.ROOT;
 
                 case "":
@@ -1705,22 +1705,22 @@ namespace ScientificCalculation
             switch (operations)
             {
                 case Operations.PLUS:
-                    return " + ";
+                    return "+";
 
                 case Operations.MINUS:
-                    return " - ";
+                    return "-";
 
                 case Operations.DIVISION:
-                    return " / ";
+                    return "/";
 
                 case Operations.CROSS:
-                    return " * ";
+                    return "*";
 
                 case Operations.EXP:
-                    return " ^ ";
+                    return "^";
 
                 case Operations.ROOT:
-                    return " √ ";
+                    return "√";
 
                 case Operations.NULL:
                 default:
@@ -1771,13 +1771,11 @@ namespace ScientificCalculation
                 }
             }
             //Farklı bir işlem varsa (Son işlem değiştirilir.)
-            else if ((isHaveNumber == false && isHaveOperation == true) && IsTheArrayEndsWithX(operationScreen, " ( ") == false)
+            else if ((isHaveNumber == false && isHaveOperation == true) && IsTheArrayEndsWithX(operationScreen, "(") == false)
             {
                 memorizedOperations[whichOperation - 1] = operations;
 
                 //ESKİ İŞLEMİ SİLME
-                DeleteOneOperationScreenString();
-                DeleteOneOperationScreenString();
                 DeleteOneOperationScreenString();
 
                 operationScreen += GetOperationCharSing(operations);
@@ -1825,12 +1823,12 @@ namespace ScientificCalculation
         {
             whichNumber = 0;
             whichOperation = 0;
+            whichBracket = 0;
 
             isHaveOperation = false;
             isHaveNumber = false;
             isHaveComma = false;
             isFirstStart = true;
-            whichBracket = 0;
             isHaveNegativeBracket = false;
             isOperationHavePermit = false;
             wasEqualZeroTheTemporaryOperationPriorityInThePreviousStep = true;
