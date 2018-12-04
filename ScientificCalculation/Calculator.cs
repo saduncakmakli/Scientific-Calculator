@@ -1302,7 +1302,7 @@ namespace ScientificCalculation
         /// <returns></returns>
         public string BracketOpenButton()
         {
-            if (isHaveOperation == false && isHaveNumber == true)
+            if ( (isHaveOperation == false && isHaveNumber == true) || IsOperationHavePermit == true )
             {
                 OperationButton(Operations.CROSS); //Parantez işlem yokken açılırsa otomatik bir şekilde çarpma eklemesi için.
             }
@@ -1884,7 +1884,7 @@ namespace ScientificCalculation
         /// Search and return highest element in Array
         /// If the array empty, this method throws ArgumentNullException.
         /// </summary>
-        /// <param name="parameter">Int Array</param>
+        /// <param name="parameter">Int search Array</param>
         /// <returns>Highest element(int) this array</returns>
         public static int SearchHighInt(int[] parameter)
         {
@@ -1916,7 +1916,7 @@ namespace ScientificCalculation
         /// Search and return highest element in List
         /// If the list empty, this method throws ArgumentNullException.
         /// </summary>
-        /// <param name="parameter">Int List</param>
+        /// <param name="parameter">Int search List</param>
         /// <returns>Highest element(int) this list</returns>
         public static int SearchHighInt(List<int> parameter)
         {
@@ -1948,7 +1948,7 @@ namespace ScientificCalculation
         /// Search and return highest element index in Array
         /// If the array empty, this method throws ArgumentNullException.
         /// </summary>
-        /// <param name="parameter">Int Array</param>
+        /// <param name="parameter">Int search Array</param>
         /// <returns>Highest element(int) index this array</returns>
         public static int SearchHighIntIndex(int[] parameter)
         {
@@ -1983,7 +1983,7 @@ namespace ScientificCalculation
         /// Search and return highest element index in List
         /// If the list empty, this method throws ArgumentNullException.
         /// </summary>
-        /// <param name="parameter">Int List</param>
+        /// <param name="parameter">Int search list</param>
         /// <returns>Highest element(int) index this list</returns>
         public static int SearchHighIntIndex(List<int> parameter)
         {
@@ -2014,61 +2014,75 @@ namespace ScientificCalculation
             }
         } //Test edilecek..
 
-        //Tekrar gözden geçirilecek, sadece istenen indexlerin, bir parametre listesinde en büyüğünü bulmak..
-        // public static int SearchHighIntIndex(List<int> parameter,  List<int> indexs_to_search)
-            /*
+        //Sadece istenen indexlerin, bir parametre listesinde en büyüğünü bulmak..
+        /// <summary>
+        /// Search and return highest element index in List
+        /// Only specified indexes are searched
+        /// If the list empty, this method throws ArgumentNullException.
+        /// </summary>
+        /// <param name="parameter">Search list</param>
+        /// <param name="indexs_to_search">List of indexes to search</param>
+        /// <returns></returns>
+        public static int SearchHighIntIndex(List<int> parameter,  List<int> indexs_to_search)
         {
             //index_to_search'da tekrar eden değer olmamalı.
             List<int> unique_elements_indexs_to_search = indexs_to_search.Distinct().ToList<int>();
-
-            foreach (int indexs in unique_elements_indexs_to_search)
+            if (unique_elements_indexs_to_search.Count != 0)
             {
-                //Indexler pozitif veya sıfır olmalı
-                //En büyük indexs_to_search, parameter.count-1 den büyük olamaz.
-                if ( (indexs >= 0) && (SearchHighInt(unique_elements_indexs_to_search) <= parameter.Count - 1) )
+                foreach (int indexs in unique_elements_indexs_to_search)
                 {
-                    int highest;
-                    int index;
-                    int timer;
-                    if (parameter.Count == 1)
+                    //Indexler pozitif veya sıfır olmalı
+                    //En büyük indexs_to_search, parameter.count-1 den büyük olamaz.
+                    if ((indexs >= 0) && (SearchHighInt(unique_elements_indexs_to_search) <= parameter.Count - 1))
                     {
-                        if (unique_elements_indexs_to_search.Contains(0))
+                        int highest;
+                        int highest_index;
+                        int timer;
+                        if (parameter.Count == 1)
                         {
-                            return 0;
+                            if (unique_elements_indexs_to_search.Contains(0))
+                            {
+                                return 0;
+                            }
+                            else
+                            {
+                                throw new ArgumentNullException();
+                            }
+                        }
+                        else if (parameter.Count >= 2)
+                        {
+                            highest = parameter[unique_elements_indexs_to_search[0]];
+                            highest_index = unique_elements_indexs_to_search[0];
+
+                            for (timer = 1; timer < unique_elements_indexs_to_search.Count; timer++)
+                            {
+                                if (parameter[unique_elements_indexs_to_search[timer]] > highest)
+                                {
+                                    highest = parameter[unique_elements_indexs_to_search[timer]];
+                                    highest_index = unique_elements_indexs_to_search[timer];
+                                }
+                            }
+                            return highest_index;
                         }
                         else
                         {
                             throw new ArgumentNullException();
                         }
                     }
-                    else if (parameter.Count >= 2)
-                    {
-                        highest = parameter[unique_elements_indexs_to_search[0]];
-                        index = unique_elements_indexs_to_search[0];
 
-                        for (timer = 1; timer < parameter.Count; timer++)
-                        {
-                            if (parameter[timer] > highest)
-                            {
-                                highest = parameter[unique_elements_indexs_to_search[timer]];
-                                index = unique_elements_indexs_to_search[timer];
-                            }
-                        }
-                        return index;
-                    }
                     else
                     {
-                        throw new ArgumentNullException();
+                        throw new ArgumentException();
                     }
                 }
-
-                else
-                {
-                    throw new ArgumentException();
-                }
             }
+            else
+            {
+                throw new ArgumentNullException();
+            }
+
+            throw new Exception(); //Buraya düşmemesi gerekiyor sonra çözülecek!
         }
-        */
 
         private void LastNumberAddMemory()
         {
