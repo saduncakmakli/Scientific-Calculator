@@ -708,28 +708,15 @@ namespace ScientificCalculation
 
         internal void RewriteResultScreen()
         {
-            if (Calculator.selectedRec == String.Empty)
-                tb_sonuc.Text = mainCalculator.ResultScreen;
-            else if (Calculator.selectedRec == "A")
-                tb_sonuc.Text = aCalculator.ResultScreen;
-            else if (Calculator.selectedRec == "B")
-                tb_sonuc.Text = bCalculator.ResultScreen;
-            else if (Calculator.selectedRec == "C")
-                tb_sonuc.Text = cCalculator.ResultScreen;
-            else if (Calculator.selectedRec == "D")
-                tb_sonuc.Text = dCalculator.ResultScreen;
-            else if (Calculator.selectedRec == "E")
-                tb_sonuc.Text = eCalculator.ResultScreen;
-            else if (Calculator.selectedRec == "F")
-                tb_sonuc.Text = fCalculator.ResultScreen;
+            tb_sonuc.Text = Calculator.selectedCalculator.ResultScreen;
 
-            if (options.IsEnableOtomatikComma() == true)
-                tb_sonuc.Text = Calculator.DotNotationResultScreen(tb_sonuc.Text);
+            if (options.IsEnableOtomatikComma() == true) tb_sonuc.Text = Calculator.DotNotationResultScreen(tb_sonuc.Text);
         }
 
         private void CalculatorUI_Load(object sender, EventArgs e)
         {
             Calculator.selectedRec = String.Empty;
+            Calculator.selectedCalculator = mainCalculator;
             Logs.logs_record.Add("Form Loaded.");
         }
 
@@ -746,21 +733,7 @@ namespace ScientificCalculation
 
             Logs.logs_record.Add("Pressed "+ number + " button.");
 
-
-            if (Calculator.selectedRec == String.Empty)
-                tb_sonuc.Text = mainCalculator.EnterNumber(number);
-            else if (Calculator.selectedRec == "A")
-                tb_sonuc.Text = aCalculator.EnterNumber(number);
-            else if (Calculator.selectedRec == "B")
-                tb_sonuc.Text = bCalculator.EnterNumber(number);
-            else if (Calculator.selectedRec == "C")
-                tb_sonuc.Text = cCalculator.EnterNumber(number);
-            else if (Calculator.selectedRec == "D")
-                tb_sonuc.Text = dCalculator.EnterNumber(number);
-            else if (Calculator.selectedRec == "E")
-                tb_sonuc.Text = eCalculator.EnterNumber(number);
-            else if (Calculator.selectedRec == "F")
-                tb_sonuc.Text = fCalculator.EnterNumber(number);
+            tb_sonuc.Text = Calculator.selectedCalculator.EnterNumber(number);
 
             //Optionsla istenirse kapatma özelliği gelecek.
             if(options.IsEnableOtomatikComma() == true)
@@ -769,46 +742,11 @@ namespace ScientificCalculation
 
         private void PositiveNegativeButton_Click(object sender, EventArgs e)
         {
-            if (Calculator.selectedRec == String.Empty)
-            {
-                tb_sonuc.Text = mainCalculator.PositiveNegativeButton();
-            }
-
-            else if (Calculator.selectedRec == "A")
-            {
-                tb_sonuc.Text = aCalculator.PositiveNegativeButton();
-            }
-
-            else if (Calculator.selectedRec == "B")
-            {
-                tb_sonuc.Text = bCalculator.PositiveNegativeButton();
-            }
-
-            else if (Calculator.selectedRec == "C")
-            {
-                tb_sonuc.Text = cCalculator.PositiveNegativeButton();
-            }
-
-            else if (Calculator.selectedRec == "D")
-            {
-                tb_sonuc.Text = dCalculator.PositiveNegativeButton();
-            }
-
-            else if (Calculator.selectedRec == "E")
-            {
-                tb_sonuc.Text = eCalculator.PositiveNegativeButton();
-            }
-
-            else if (Calculator.selectedRec == "F")
-            {
-                tb_sonuc.Text = fCalculator.PositiveNegativeButton();
-            }
-
+            tb_sonuc.Text = Calculator.selectedCalculator.PositiveNegativeButton();
             Logs.logs_record.Add("Pressed positive/negative brackets button.");
 
             //Optionsla istenirse kapatma özelliği gelecek.
-            if (options.IsEnableOtomatikComma() == true)
-                tb_sonuc.Text = Calculator.DotNotationResultScreen(tb_sonuc.Text);
+            if (options.IsEnableOtomatikComma() == true) tb_sonuc.Text = Calculator.DotNotationResultScreen(tb_sonuc.Text);
         }
 
         private void Operation_Click(object sender, EventArgs e)
@@ -820,71 +758,11 @@ namespace ScientificCalculation
             operation_string = sender.ToString();
             operation = (operation_string[operation_string.Length - 1]).ToString();
 
-            string temp_tb_islem = String.Empty;
-            switch (Calculator.selectedRec)
+            string temp_tb_islem = Calculator.selectedCalculator.OperationButton(Calculator.GetOperations(operation));
+            if (temp_tb_islem != String.Empty)
             {
-                case (""):
-                    temp_tb_islem = mainCalculator.OperationButton(Calculator.GetOperations(operation));
-                    if (temp_tb_islem != String.Empty)
-                    {
-                        tb_islem.Text = temp_tb_islem;
-                        tb_sonuc.Text = String.Empty;
-                    }
-                    break;
-
-                case ("A"):
-                    temp_tb_islem = aCalculator.OperationButton(Calculator.GetOperations(operation));
-                    if (temp_tb_islem != String.Empty)
-                    {
-                        tb_islem.Text = temp_tb_islem;
-                        tb_sonuc.Text = String.Empty;
-                    }
-                    break;
-
-                case ("B"):
-                    temp_tb_islem = bCalculator.OperationButton(Calculator.GetOperations(operation));
-                    if (temp_tb_islem != String.Empty)
-                    {
-                        tb_islem.Text = temp_tb_islem;
-                        tb_sonuc.Text = String.Empty;
-                    }
-                    break;
-
-                case ("C"):
-                    temp_tb_islem = cCalculator.OperationButton(Calculator.GetOperations(operation));
-                    if (temp_tb_islem != String.Empty)
-                    {
-                        tb_islem.Text = temp_tb_islem;
-                        tb_sonuc.Text = String.Empty;
-                    }
-                    break;
-
-                case ("D"):
-                    temp_tb_islem = dCalculator.OperationButton(Calculator.GetOperations(operation));
-                    if (temp_tb_islem != String.Empty)
-                    {
-                        tb_islem.Text = temp_tb_islem;
-                        tb_sonuc.Text = String.Empty;
-                    }
-                    break;
-
-                case ("E"):
-                    temp_tb_islem = eCalculator.OperationButton(Calculator.GetOperations(operation));
-                    if (temp_tb_islem != String.Empty)
-                    {
-                        tb_islem.Text = temp_tb_islem;
-                        tb_sonuc.Text = String.Empty;
-                    }
-                    break;
-
-                case ("F"):
-                    temp_tb_islem = fCalculator.OperationButton(Calculator.GetOperations(operation));
-                    if (temp_tb_islem != String.Empty)
-                    {
-                        tb_islem.Text = temp_tb_islem;
-                        tb_sonuc.Text = String.Empty;
-                    }
-                    break;
+                tb_islem.Text = temp_tb_islem;
+                tb_sonuc.Text = String.Empty;
             }
 
             //İmleci sona almak için
@@ -896,41 +774,7 @@ namespace ScientificCalculation
 
         private void CommaButton_Click(object sender, EventArgs e)
         {
-            if (Calculator.selectedRec == String.Empty)
-            {
-                tb_sonuc.Text = mainCalculator.CommaButton();
-            }
-
-            else if (Calculator.selectedRec == "A")
-            {
-                tb_sonuc.Text = aCalculator.CommaButton();
-            }
-
-            else if (Calculator.selectedRec == "B")
-            {
-                tb_sonuc.Text = bCalculator.CommaButton();
-            }
-
-            else if (Calculator.selectedRec == "C")
-            {
-                tb_sonuc.Text = cCalculator.CommaButton();
-            }
-
-            else if (Calculator.selectedRec == "D")
-            {
-                tb_sonuc.Text = dCalculator.CommaButton();
-            }
-
-            else if (Calculator.selectedRec == "E")
-            {
-                tb_sonuc.Text = eCalculator.CommaButton();
-            }
-
-            else if (Calculator.selectedRec == "F")
-            {
-                tb_sonuc.Text = fCalculator.CommaButton();
-            }
-
+            tb_sonuc.Text = Calculator.selectedCalculator.CommaButton();
             Logs.logs_record.Add("Pressed Comma Button.");
 
             if (options.IsEnableOtomatikComma() == true)
@@ -947,167 +791,66 @@ namespace ScientificCalculation
 
         }
 
-        private void RecAButton_Click(object sender, EventArgs e)
+        private void LogCalculatorChange()
         {
-            Logs.logs_record.Add("Pressed REC A button.");
-            if (Calculator.selectedRec != "A")
-            {
-                button_rec_A.BackColor = Color.MediumAquamarine;
-                Calculator.selectedRec = "A";
-                tb_sonuc.Text = aCalculator.ResultScreen;
-                tb_islem.Text = aCalculator.OperationScreen;
-                Logs.logs_record.Add("A Calculator is active.");
-            }
-            else
-            {
-                button_rec_A.BackColor = Color.SlateGray;
-                Calculator.selectedRec = String.Empty;
-                tb_sonuc.Text = mainCalculator.ResultScreen;
-                tb_islem.Text = mainCalculator.OperationScreen;
-                Logs.logs_record.Add("A Calculator is passive.");
-                Logs.logs_record.Add("Main Calculator is active.");
-            }
+            Logs.logs_record.Add(((Calculator.selectedRec == String.Empty) ? "Main" : Calculator.selectedRec)  + " Calculator is active.");
+        }
+
+        private void UpdateScreen()
+        {
+            tb_sonuc.Text = Calculator.selectedCalculator.ResultScreen;
+            tb_islem.Text = Calculator.selectedCalculator.OperationScreen;
+        }
+
+        private void ChangeCalculator(Calculator calculator, string calculatorName, Button senderButton)
+        {
+            Calculator.selectedCalculator = calculator;
+            Calculator.selectedRec = calculatorName;
+            button_rec_A.BackColor = Color.SlateGray;
             button_rec_B.BackColor = Color.SlateGray;
             button_rec_C.BackColor = Color.SlateGray;
             button_rec_D.BackColor = Color.SlateGray;
             button_rec_E.BackColor = Color.SlateGray;
             button_rec_F.BackColor = Color.SlateGray;
+            if (Calculator.selectedCalculator != mainCalculator) senderButton.BackColor = Color.MediumAquamarine;
+            LogCalculatorChange();
+            UpdateScreen();
+        }
+
+        private void RecAButton_Click(object sender, EventArgs e)
+        {
+            Logs.logs_record.Add("Pressed REC A button.");
+            if (sender is Button) ChangeCalculator((Calculator.selectedRec != "A") ? aCalculator : mainCalculator, (Calculator.selectedRec != "A") ? "A" : String.Empty, (Button)sender);
         }
 
         private void RecBButton_Click(object sender, EventArgs e)
         {
             Logs.logs_record.Add("Pressed REC B button.");
-            if (Calculator.selectedRec != "B")
-            {
-                button_rec_B.BackColor = Color.MediumAquamarine;
-                Calculator.selectedRec = "B";
-                tb_sonuc.Text = bCalculator.ResultScreen;
-                tb_islem.Text = bCalculator.OperationScreen;
-                Logs.logs_record.Add("B Calculator is active.");
-            }
-            else
-            {
-                button_rec_B.BackColor = Color.SlateGray;
-                Calculator.selectedRec = String.Empty;
-                tb_sonuc.Text = mainCalculator.ResultScreen;
-                tb_islem.Text = mainCalculator.OperationScreen;
-                Logs.logs_record.Add("B Calculator is passive.");
-                Logs.logs_record.Add("Main Calculator is active.");
-            }
-            button_rec_A.BackColor = Color.SlateGray;
-            button_rec_C.BackColor = Color.SlateGray;
-            button_rec_D.BackColor = Color.SlateGray;
-            button_rec_E.BackColor = Color.SlateGray;
-            button_rec_F.BackColor = Color.SlateGray;
+            if (sender is Button) ChangeCalculator((Calculator.selectedRec != "B") ? bCalculator : mainCalculator, (Calculator.selectedRec != "B") ? "B" : String.Empty, (Button)sender);
         }
 
         private void RecCButton_Click(object sender, EventArgs e)
         {
             Logs.logs_record.Add("Pressed REC C button.");
-            if (Calculator.selectedRec != "C")
-            {
-                button_rec_C.BackColor = Color.MediumAquamarine;
-                Calculator.selectedRec = "C";
-                tb_sonuc.Text = cCalculator.ResultScreen;
-                tb_islem.Text = cCalculator.OperationScreen;
-                Logs.logs_record.Add("C Calculator is active.");
-            }
-            else
-            {
-                button_rec_C.BackColor = Color.SlateGray;
-                Calculator.selectedRec = String.Empty;
-                tb_sonuc.Text = mainCalculator.ResultScreen;
-                tb_islem.Text = mainCalculator.OperationScreen;
-                Logs.logs_record.Add("C Calculator is passive.");
-                Logs.logs_record.Add("Main Calculator is active.");
-            }
-            button_rec_B.BackColor = Color.SlateGray;
-            button_rec_A.BackColor = Color.SlateGray;
-            button_rec_D.BackColor = Color.SlateGray;
-            button_rec_E.BackColor = Color.SlateGray;
-            button_rec_F.BackColor = Color.SlateGray;
+            if (sender is Button) ChangeCalculator((Calculator.selectedRec != "C") ? cCalculator : mainCalculator, (Calculator.selectedRec != "C") ? "C" : String.Empty, (Button)sender);
         }
 
         private void RecDButton_Click(object sender, EventArgs e)
         {
             Logs.logs_record.Add("Pressed REC D button.");
-            if (Calculator.selectedRec != "D")
-            {
-                button_rec_D.BackColor = Color.MediumAquamarine;
-                Calculator.selectedRec = "D";
-                tb_sonuc.Text = dCalculator.ResultScreen;
-                tb_islem.Text = dCalculator.OperationScreen;
-                Logs.logs_record.Add("D Calculator is active.");
-            }
-            else
-            {
-                button_rec_D.BackColor = Color.SlateGray;
-                Calculator.selectedRec = String.Empty;
-                tb_sonuc.Text = mainCalculator.ResultScreen;
-                tb_islem.Text = mainCalculator.OperationScreen;
-                Logs.logs_record.Add("D Calculator is passive.");
-                Logs.logs_record.Add("Main Calculator is active.");
-            }
-            button_rec_B.BackColor = Color.SlateGray;
-            button_rec_C.BackColor = Color.SlateGray;
-            button_rec_A.BackColor = Color.SlateGray;
-            button_rec_E.BackColor = Color.SlateGray;
-            button_rec_F.BackColor = Color.SlateGray;
+            if (sender is Button) ChangeCalculator((Calculator.selectedRec != "D") ? dCalculator : mainCalculator, (Calculator.selectedRec != "D") ? "D" : String.Empty, (Button)sender);
         }
 
         private void RecEButton_Click(object sender, EventArgs e)
         {
             Logs.logs_record.Add("Pressed REC E button.");
-            if (Calculator.selectedRec != "E")
-            {
-                button_rec_E.BackColor = Color.MediumAquamarine;
-                Calculator.selectedRec = "E";
-                tb_sonuc.Text = eCalculator.ResultScreen;
-                tb_islem.Text = eCalculator.OperationScreen;
-                Logs.logs_record.Add("E Calculator is active.");
-            }
-            else
-            {
-                button_rec_E.BackColor = Color.SlateGray;
-                Calculator.selectedRec = String.Empty;
-                tb_sonuc.Text = mainCalculator.ResultScreen;
-                tb_islem.Text = mainCalculator.OperationScreen;
-                Logs.logs_record.Add("E Calculator is passive.");
-                Logs.logs_record.Add("Main Calculator is active.");
-            }
-            button_rec_B.BackColor = Color.SlateGray;
-            button_rec_C.BackColor = Color.SlateGray;
-            button_rec_D.BackColor = Color.SlateGray;
-            button_rec_A.BackColor = Color.SlateGray;
-            button_rec_F.BackColor = Color.SlateGray;
+            if (sender is Button) ChangeCalculator((Calculator.selectedRec != "E") ? eCalculator : mainCalculator, (Calculator.selectedRec != "E") ? "E" : String.Empty, (Button)sender);
         }
 
         private void RecFButton_Click(object sender, EventArgs e)
         {
             Logs.logs_record.Add("Pressed REC F button.");
-            if (Calculator.selectedRec != "F")
-            {
-                button_rec_F.BackColor = Color.MediumAquamarine;
-                Calculator.selectedRec = "F";
-                tb_sonuc.Text = fCalculator.ResultScreen;
-                tb_islem.Text = fCalculator.OperationScreen;
-                Logs.logs_record.Add("F Calculator is active.");
-            }
-            else
-            {
-                button_rec_F.BackColor = Color.SlateGray;
-                Calculator.selectedRec = String.Empty;
-                tb_sonuc.Text = mainCalculator.ResultScreen;
-                tb_islem.Text = mainCalculator.OperationScreen;
-                Logs.logs_record.Add("F Calculator is passive.");
-                Logs.logs_record.Add("Main Calculator is active.");
-            }
-
-            button_rec_B.BackColor = Color.SlateGray;
-            button_rec_C.BackColor = Color.SlateGray;
-            button_rec_D.BackColor = Color.SlateGray;
-            button_rec_E.BackColor = Color.SlateGray;
-            button_rec_A.BackColor = Color.SlateGray;
+            if (sender is Button) ChangeCalculator((Calculator.selectedRec != "F") ? fCalculator : mainCalculator, (Calculator.selectedRec != "F") ? "F" : String.Empty, (Button)sender);
         }
 
         private void RecRecordButton_Click(object sender, EventArgs e)
@@ -1121,47 +864,9 @@ namespace ScientificCalculation
             tb_islem.Text = String.Empty;
 
             Logs.logs_record.Add("Pressed Rec Clear Button.");
-            if (button_rec_A.BackColor == Color.MediumAquamarine)
-            {
-                aCalculator.CalculatorReset();
-                Logs.logs_record.Add("Recordable Number A is Cleared.");
-            }
-                
-            else if (button_rec_B.BackColor == Color.MediumAquamarine)
-            {
-                bCalculator.CalculatorReset();
-                Logs.logs_record.Add("Recordable Number B is Cleared.");
-            }
-                
-            else if (button_rec_C.BackColor == Color.MediumAquamarine)
-            {
-                cCalculator.CalculatorReset();
-                Logs.logs_record.Add("Recordable Number C is Cleared.");
-            }
-
-            else if (button_rec_D.BackColor == Color.MediumAquamarine)
-            {
-                dCalculator.CalculatorReset();
-                Logs.logs_record.Add("Recordable Number D is Cleared.");
-            }
-                
-            else if (button_rec_E.BackColor == Color.MediumAquamarine)
-            {
-                eCalculator.CalculatorReset();
-                Logs.logs_record.Add("Recordable Number E is Cleared.");
-            }
-
-            else if (button_rec_F.BackColor == Color.MediumAquamarine)
-            {
-                fCalculator.CalculatorReset();
-                Logs.logs_record.Add("Recordable Number F is Cleared.");
-            }
+            Calculator.selectedCalculator.CalculatorReset();
+            Logs.logs_record.Add((Calculator.selectedRec != String.Empty ? "Recordable Number "+Calculator.selectedRec : "Main Calculator") + " is Cleared.");
             
-            else
-            {
-                mainCalculator.CalculatorReset();
-                Logs.logs_record.Add("Main Calculation is Cleared.");
-            }
         }
 
         internal void VersionLabel_DoubleClick(object sender, EventArgs e)
@@ -1186,93 +891,15 @@ namespace ScientificCalculation
         private void BracketOpenButton_Click(object sender, EventArgs e)
         {
             Logs.logs_record.Add("Pressed Brackets Open Button.");
-            if (Calculator.selectedRec == String.Empty)
-            {
-                tb_islem.Text = mainCalculator.BracketOpenButton();
-                tb_sonuc.Text = mainCalculator.ResultScreen;
-            }
-
-            else if (Calculator.selectedRec == "A")
-            {
-                tb_islem.Text = aCalculator.BracketOpenButton();
-                tb_sonuc.Text = aCalculator.ResultScreen;
-            }
-
-            else if (Calculator.selectedRec == "B")
-            {
-                tb_islem.Text = bCalculator.BracketOpenButton();
-                tb_sonuc.Text = bCalculator.ResultScreen;
-            }
-
-            else if (Calculator.selectedRec == "C")
-            {
-                tb_islem.Text = cCalculator.BracketOpenButton();
-                tb_sonuc.Text = cCalculator.ResultScreen;
-            }
-
-            else if (Calculator.selectedRec == "D")
-            {
-                tb_islem.Text = dCalculator.BracketOpenButton();
-                tb_sonuc.Text = dCalculator.ResultScreen;
-            }
-
-            else if (Calculator.selectedRec == "E")
-            {
-                tb_islem.Text = eCalculator.BracketOpenButton();
-                tb_sonuc.Text = eCalculator.ResultScreen;
-            }
-
-            else if (Calculator.selectedRec == "F")
-            {
-                tb_islem.Text = fCalculator.BracketOpenButton();
-                tb_sonuc.Text = fCalculator.ResultScreen;
-            }
+            tb_islem.Text = Calculator.selectedCalculator.BracketOpenButton();
+            tb_sonuc.Text = Calculator.selectedCalculator.ResultScreen;
         }
 
         private void BracketsCloseButton_Click(object sender, EventArgs e)
         {
             Logs.logs_record.Add("Pressed Brackets Close Button.");
-            if (Calculator.selectedRec == String.Empty)
-            {
-                tb_islem.Text = mainCalculator.BracketCloseButton();
-                tb_sonuc.Text = mainCalculator.ResultScreen;
-            }
-
-            else if (Calculator.selectedRec == "A")
-            {
-                tb_islem.Text = aCalculator.BracketCloseButton();
-                tb_sonuc.Text = aCalculator.ResultScreen;
-            }
-
-            else if (Calculator.selectedRec == "B")
-            {
-                tb_islem.Text = bCalculator.BracketCloseButton();
-                tb_sonuc.Text = bCalculator.ResultScreen;
-            }
-
-            else if (Calculator.selectedRec == "C")
-            {
-                tb_islem.Text = cCalculator.BracketCloseButton();
-                tb_sonuc.Text = cCalculator.ResultScreen;
-            }
-
-            else if (Calculator.selectedRec == "D")
-            {
-                tb_islem.Text = dCalculator.BracketCloseButton();
-                tb_sonuc.Text = dCalculator.ResultScreen;
-            }
-
-            else if (Calculator.selectedRec == "E")
-            {
-                tb_islem.Text = eCalculator.BracketCloseButton();
-                tb_sonuc.Text = eCalculator.ResultScreen;
-            }
-
-            else if (Calculator.selectedRec == "F")
-            {
-                tb_islem.Text = fCalculator.BracketCloseButton();
-                tb_sonuc.Text = fCalculator.ResultScreen;
-            }
+            tb_islem.Text = Calculator.selectedCalculator.BracketCloseButton();
+            tb_sonuc.Text = Calculator.selectedCalculator.ResultScreen;
         }
 
         private void CButton_Click(object sender, EventArgs e)
@@ -1292,103 +919,19 @@ namespace ScientificCalculation
         private void DELButton_Click(object sender, EventArgs e)
         {
             Logs.logs_record.Add("Pressed DEL button.");
-            switch (Calculator.selectedRec)
+            try
             {
-                case (""):
-                    try
-                    {
-                        tb_sonuc.Text = mainCalculator.DeleteButton();
-                        Logs.logs_record.Add("Deleted a character from the main result screen.");
-                    }
-                    catch (Exception exception)
-                    {
-                        Console.WriteLine(exception.StackTrace +"\n"+ exception.Message);
-                        Logs.logs_record.Add(exception.Message);
-                    }
-                    break;
-
-                case ("A"):
-                    try
-                    {
-                        tb_sonuc.Text = aCalculator.DeleteButton();
-                        Logs.logs_record.Add("Deleted a character from the A result screen.");
-                    }
-                    catch (Exception exception)
-                    {
-                        Console.WriteLine(exception.StackTrace + "\n" + exception.Message);
-                        Logs.logs_record.Add(exception.Message);
-                    }
-                    break;
-
-                case ("B"):
-                    try
-                    {
-                        tb_sonuc.Text = bCalculator.DeleteButton();
-                        Logs.logs_record.Add("Deleted a character from the B result screen.");
-                    }
-                    catch (Exception exception)
-                    {
-                        Console.WriteLine(exception.StackTrace + "\n" + exception.Message);
-                        Logs.logs_record.Add(exception.Message);
-                    }
-                    break;
-
-                case ("C"):
-                    try
-                    {
-                        tb_sonuc.Text = cCalculator.DeleteButton();
-                        Logs.logs_record.Add("Deleted a character from the C result screen.");
-                    }
-                    catch (Exception exception)
-                    {
-                        Console.WriteLine(exception.StackTrace + "\n" + exception.Message);
-                        Logs.logs_record.Add(exception.Message);
-                    }
-                    break;
-
-                case ("D"):
-                    try
-                    {
-                        tb_sonuc.Text = dCalculator.DeleteButton();
-                        Logs.logs_record.Add("Deleted a character from the D result screen.");
-                    }
-                    catch (Exception exception)
-                    {
-                        Console.WriteLine(exception.StackTrace + "\n" + exception.Message);
-                        Logs.logs_record.Add(exception.Message);
-                    }
-                    break;
-
-                case ("E"):
-                    try
-                    {
-                        tb_sonuc.Text = eCalculator.DeleteButton();
-                        Logs.logs_record.Add("Deleted a character from the E result screen.");
-                    }
-                    catch (Exception exception)
-                    {
-                        Console.WriteLine(exception.StackTrace + "\n" + exception.Message);
-                        Logs.logs_record.Add(exception.Message);
-                    }
-                    break;
-
-                case ("F"):
-                    try
-                    {
-                        tb_sonuc.Text = fCalculator.DeleteButton();
-                        Logs.logs_record.Add("Deleted a character from the F result screen.");
-                    }
-                    catch (Exception exception)
-                    {
-                        Console.WriteLine(exception.StackTrace + "\n" + exception.Message);
-                        Logs.logs_record.Add(exception.Message);
-                    }
-                    break;
+                tb_sonuc.Text = Calculator.selectedCalculator.DeleteButton();
+                Logs.logs_record.Add("Deleted a character from the "+ (Calculator.selectedRec != String.Empty ? Calculator.selectedRec : "main") + " result screen.");
+            }
+            catch (Exception exception)
+            {
+                Console.WriteLine(exception.StackTrace +"\n"+ exception.Message);
+                Logs.logs_record.Add(exception.Message);
             }
 
             //Optionsla istenirse kapatma özelliği gelecek.
-            if (options.IsEnableOtomatikComma() == true)
-                tb_sonuc.Text = Calculator.DotNotationResultScreen(tb_sonuc.Text);
+            if (options.IsEnableOtomatikComma() == true) tb_sonuc.Text = Calculator.DotNotationResultScreen(tb_sonuc.Text);
         }
 
         private void CEButton_Click(object sender, EventArgs e)

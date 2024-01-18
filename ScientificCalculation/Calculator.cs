@@ -700,6 +700,7 @@ namespace ScientificCalculation
         /// </param>
         public Calculator(int whichRec)
         {
+            if (whichRec == 0) selectedCalculator = this;
             rec = whichRec;
             CalculatorReset();
         }
@@ -792,6 +793,7 @@ namespace ScientificCalculation
         /// Displays the active rec button.
         /// </summary>
         public static string selectedRec = String.Empty;
+        public static Calculator selectedCalculator;
 
         //ENCAPSULATİON------------------------------------------------------------------------
 
@@ -833,8 +835,7 @@ namespace ScientificCalculation
             //Eğer sayının başında eksi varsa
             if (IsHaveNumberSelfBracketing(resultScreen))
             {
-                int timer;
-                for (timer = 2; timer < tempChar.Length - 1; timer++)
+                for (int timer = 2; timer < tempChar.Length - 1; timer++)
                 {
                     //Sayının ilk rakamını al ve
                     if (timer == 2)
